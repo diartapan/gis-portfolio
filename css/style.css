@@ -1,6 +1,7 @@
 /* =========================================================
    DIARTA GIS PORTFOLIO
-   BLACK + PURPLE EDITION
+   HOME PAGE
+   BLACK + PURPLE DESIGN
    ========================================================= */
 
 
@@ -10,21 +11,21 @@
 
 :root {
 
-    --black: #07070b;
+    --bg: #07070b;
 
-    --black-soft: #0b0b11;
+    --bg-soft: #0c0b11;
 
-    --white: #f7f5fa;
+    --text: #f5f2f7;
 
-    --gray: #a5a1ae;
+    --text-soft: #aaa6b3;
 
-    --gray-dark: #686572;
+    --text-muted: #777280;
 
     --purple: #9b6cff;
 
-    --purple-light: #b18cff;
+    --purple-light: #b28aff;
 
-    --purple-dark: #6f42d8;
+    --purple-dark: #6f45c7;
 
     --border: rgba(255, 255, 255, 0.08);
 
@@ -55,12 +56,17 @@ html {
 
 body {
 
-    background: var(--black);
+    min-height: 100%;
 
-    color: var(--white);
+    background: var(--bg);
+
+    color: var(--text);
 
     font-family:
         "DM Sans",
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
         sans-serif;
 
     -webkit-font-smoothing: antialiased;
@@ -80,7 +86,76 @@ a {
 
 
 /* =========================================================
-   03. NAVIGATION
+   03. HOME PAGE
+   ========================================================= */
+
+.home-page {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 100svh;
+
+    min-height: 680px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(155, 108, 255, 0.045),
+            transparent 35%
+        ),
+        var(--bg);
+
+}
+
+
+/* =========================================================
+   04. SUBTLE GRID
+   ========================================================= */
+
+.home-page::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background-image:
+
+        linear-gradient(
+            rgba(155, 108, 255, 0.035) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(155, 108, 255, 0.035) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        64px 64px;
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            transparent 0%,
+            black 15%,
+            black 85%,
+            transparent 100%
+        );
+
+}
+
+
+/* =========================================================
+   05. NAVIGATION
    ========================================================= */
 
 .navbar {
@@ -91,9 +166,11 @@ a {
 
     left: 0;
 
+    z-index: 20;
+
     width: 100%;
 
-    height: 125px;
+    height: 105px;
 
     padding:
         0 7%;
@@ -104,22 +181,23 @@ a {
 
     justify-content: space-between;
 
-    z-index: 100;
-
 }
 
+
+/* Logo */
 
 .logo {
 
     font-family:
         "Cormorant Garamond",
+        Georgia,
         serif;
 
-    font-size: 32px;
+    font-size: 30px;
 
     font-weight: 600;
 
-    letter-spacing: -0.5px;
+    letter-spacing: 1px;
 
 }
 
@@ -130,6 +208,8 @@ a {
 
 }
 
+
+/* Navigation */
 
 .nav-links {
 
@@ -146,9 +226,9 @@ a {
 
     position: relative;
 
-    color: var(--gray);
+    color: var(--text-muted);
 
-    font-size: 15px;
+    font-size: 14px;
 
     font-weight: 500;
 
@@ -160,7 +240,7 @@ a {
 
 .nav-links a:hover {
 
-    color: var(--white);
+    color: var(--text);
 
 }
 
@@ -184,158 +264,18 @@ a {
 
     bottom: -12px;
 
-    height: 2px;
+    height: 1px;
 
     background: var(--purple);
 
-    border-radius: 10px;
-
 }
 
 
 /* =========================================================
-   04. HERO
+   06. HERO
    ========================================================= */
 
 .hero {
-
-    position: relative;
-
-    min-height: 100vh;
-
-    height: 100vh;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    text-align: center;
-
-    overflow: hidden;
-
-    background:
-
-        radial-gradient(
-            circle at 50% 50%,
-            rgba(155, 108, 255, 0.035),
-            transparent 42%
-        ),
-
-        var(--black);
-
-}
-
-
-/* =========================================================
-   05. GRID BACKGROUND
-   ========================================================= */
-
-.grid-background {
-
-    position: absolute;
-
-    inset: 0;
-
-    opacity: 0.55;
-
-    background-image:
-
-        linear-gradient(
-            rgba(155, 108, 255, 0.045) 1px,
-            transparent 1px
-        ),
-
-        linear-gradient(
-            90deg,
-            rgba(155, 108, 255, 0.045) 1px,
-            transparent 1px
-        );
-
-    background-size:
-        65px 65px;
-
-    mask-image:
-        linear-gradient(
-            to bottom,
-            black 0%,
-            rgba(0,0,0,.7) 70%,
-            transparent 100%
-        );
-
-}
-
-
-/* =========================================================
-   06. DECORATIVE CIRCLES
-   ========================================================= */
-
-.circle {
-
-    position: absolute;
-
-    border:
-        1px solid
-        rgba(155, 108, 255, 0.12);
-
-    border-radius: 50%;
-
-    pointer-events: none;
-
-}
-
-
-.circle-one {
-
-    width: 330px;
-
-    height: 330px;
-
-    left: -110px;
-
-    bottom: 60px;
-
-}
-
-
-.circle-two {
-
-    width: 520px;
-
-    height: 520px;
-
-    right: -250px;
-
-    top: 90px;
-
-    border-color:
-        rgba(155, 108, 255, 0.09);
-
-}
-
-
-.circle-three {
-
-    width: 190px;
-
-    height: 190px;
-
-    right: 8%;
-
-    bottom: 18%;
-
-    border-color:
-        rgba(155, 108, 255, 0.08);
-
-}
-
-
-/* =========================================================
-   07. HERO CONTENT
-   ========================================================= */
-
-.hero-content {
 
     position: relative;
 
@@ -343,55 +283,68 @@ a {
 
     width: 100%;
 
-    max-width: 1050px;
+    height: 100%;
 
     padding:
-        150px 30px 100px;
 
-    animation:
-        heroEnter 1.2s
-        cubic-bezier(.22,1,.36,1)
-        both;
+        105px 20px 80px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
 
 }
 
 
 /* =========================================================
-   08. STATUS
+   07. STATUS BADGE
    ========================================================= */
 
-.status {
+.status-badge {
 
     display: inline-flex;
 
     align-items: center;
 
-    gap: 10px;
+    gap: 11px;
 
     padding:
-        9px 21px;
+        9px 20px;
 
-    margin-bottom: 38px;
+    margin-bottom: 31px;
 
     border:
         1px solid
-        rgba(155, 108, 255, 0.4);
+        rgba(155, 108, 255, 0.45);
 
     border-radius: 50px;
 
     background:
-        rgba(155, 108, 255, 0.07);
+        rgba(155, 108, 255, 0.06);
 
     color: var(--purple-light);
 
-    font-size: 12px;
+    font-size: 11px;
 
     font-weight: 500;
 
     letter-spacing: 3px;
 
+    text-transform: uppercase;
+
+    animation:
+        fadeDown 0.8s ease both;
+
 }
 
+
+/* Purple dot */
 
 .status-dot {
 
@@ -405,37 +358,36 @@ a {
 
     box-shadow:
         0 0 12px
-        rgba(155, 108, 255, 0.9);
-
-    animation:
-        pulse 2s infinite;
+        rgba(155, 108, 255, 0.8);
 
 }
 
 
 /* =========================================================
-   09. HERO HEADING
+   08. HERO HEADING
    ========================================================= */
 
 .hero-heading {
 
-    margin-bottom: 35px;
+    animation:
+        fadeUp 1s ease 0.1s both;
 
 }
 
 
 .welcome {
 
-    margin-bottom: -2px;
+    margin-bottom: 4px;
 
-    color: var(--gray);
+    color: var(--text-soft);
 
     font-family:
         "Cormorant Garamond",
+        Georgia,
         serif;
 
     font-size:
-        clamp(44px, 4vw, 60px);
+        clamp(42px, 4vw, 60px);
 
     font-style: italic;
 
@@ -443,14 +395,10 @@ a {
 
     line-height: 1;
 
-    letter-spacing: -1px;
-
 }
 
 
-/* =========================================================
-   10. MAIN NAME
-   ========================================================= */
+/* Main title */
 
 .hero h1 {
 
@@ -462,121 +410,139 @@ a {
 
     margin: 0;
 
+}
+
+
+/* Main white text */
+
+.name-main {
+
+    color: var(--text);
+
     font-family:
         "Cormorant Garamond",
+        Georgia,
         serif;
 
-    font-weight: 600;
+    font-size:
+        clamp(100px, 10vw, 155px);
+
+    font-weight: 500;
 
     line-height: 0.78;
 
-    letter-spacing: -3px;
+    letter-spacing:
+        -4px;
 
 }
 
 
-.name {
+/* Outline purple text */
 
-    display: block;
+.name-outline {
 
-    color: var(--white);
-
-    font-size:
-        clamp(82px, 10vw, 155px);
-
-}
-
-
-.surname {
-
-    display: block;
-
-    margin-top: 8px;
+    margin-top: 5px;
 
     color: transparent;
 
-    -webkit-text-stroke:
-        2px
-        var(--purple);
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
 
     font-size:
-        clamp(85px, 10.5vw, 165px);
+        clamp(105px, 10.5vw, 160px);
 
-    font-weight: 500;
+    font-weight: 400;
+
+    line-height: 0.85;
+
+    letter-spacing:
+        -3px;
+
+    -webkit-text-stroke:
+        1.5px var(--purple);
+
+    text-shadow:
+        0 0 20px
+        rgba(155, 108, 255, 0.08);
 
 }
 
 
 /* =========================================================
-   11. PORTFOLIO LABEL
+   09. PORTFOLIO LABEL
    ========================================================= */
 
 .portfolio-label {
 
-    margin-top: 35px;
+    margin-top: 27px;
 
     color: var(--purple-light);
 
-    font-family:
-        "DM Sans",
-        sans-serif;
-
-    font-size: 12px;
+    font-size: 11px;
 
     font-weight: 600;
 
-    letter-spacing: 6px;
+    letter-spacing: 5px;
 
 }
 
 
 /* =========================================================
-   12. DESCRIPTION
+   10. DESCRIPTION
    ========================================================= */
 
 .hero-description {
 
-    max-width: 650px;
+    max-width: 700px;
 
-    margin:
-        0 auto 40px;
+    margin-top: 31px;
 
-    color: var(--gray);
+    color: var(--text-soft);
 
     font-size: 17px;
 
     font-weight: 400;
 
-    line-height: 1.8;
+    line-height: 1.7;
+
+    animation:
+        fadeUp 1s ease 0.25s both;
 
 }
 
 
 /* =========================================================
-   13. HERO ACTIONS
+   11. BUTTONS
    ========================================================= */
 
 .hero-actions {
 
     display: flex;
 
-    justify-content: center;
-
     align-items: center;
 
+    justify-content: center;
+
     gap: 17px;
+
+    margin-top: 29px;
+
+    animation:
+        fadeUp 1s ease 0.35s both;
 
 }
 
 
-/* Primary Button */
+/* Primary */
 
 .primary-button {
 
-    min-width: 190px;
+    min-width: 170px;
 
     padding:
-        16px 25px;
+        15px 25px;
 
     display: inline-flex;
 
@@ -584,11 +550,10 @@ a {
 
     justify-content: center;
 
-    gap: 14px;
+    gap: 13px;
 
     border:
-        1px solid
-        var(--purple);
+        1px solid var(--purple);
 
     border-radius: 50px;
 
@@ -600,14 +565,19 @@ a {
 
     font-weight: 600;
 
-    box-shadow:
-        0 0 30px
-        rgba(155, 108, 255, 0.18);
-
     transition:
-        transform .3s ease,
-        background .3s ease,
-        box-shadow .3s ease;
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.primary-button span {
+
+    font-size: 19px;
+
+    line-height: 0;
 
 }
 
@@ -621,44 +591,36 @@ a {
         var(--purple-dark);
 
     box-shadow:
-        0 0 40px
-        rgba(155, 108, 255, 0.3);
+        0 10px 30px
+        rgba(155, 108, 255, 0.25);
 
 }
 
 
-.arrow {
-
-    font-size: 18px;
-
-}
-
-
-/* Secondary Button */
+/* Secondary */
 
 .secondary-button {
 
-    min-width: 150px;
+    min-width: 145px;
 
     padding:
-        15px 27px;
+        15px 25px;
 
     border:
         1px solid
-        rgba(255,255,255,.18);
+        rgba(255, 255, 255, 0.18);
 
     border-radius: 50px;
 
-    color: var(--gray);
+    color: var(--text);
 
     font-size: 14px;
 
     font-weight: 500;
 
     transition:
-        border-color .3s ease,
-        color .3s ease,
-        transform .3s ease;
+        border-color 0.3s ease,
+        background 0.3s ease;
 
 }
 
@@ -668,26 +630,25 @@ a {
     border-color:
         var(--purple);
 
-    color:
-        var(--white);
-
-    transform:
-        translateY(-3px);
+    background:
+        rgba(155, 108, 255, 0.06);
 
 }
 
 
 /* =========================================================
-   14. SCROLL INDICATOR
+   12. SCROLL INDICATOR
    ========================================================= */
 
 .scroll-indicator {
 
     position: absolute;
 
+    z-index: 10;
+
     left: 50%;
 
-    bottom: 30px;
+    bottom: 31px;
 
     transform:
         translateX(-50%);
@@ -698,25 +659,16 @@ a {
 
     align-items: center;
 
-    gap: 7px;
+    gap: 8px;
 
-    z-index: 10;
+    color: var(--text-muted);
 
-    animation:
-        scrollFloat 2.2s ease-in-out infinite;
-
-}
-
-
-.scroll-indicator span {
-
-    color: var(--gray-dark);
-
-    font-size: 9px;
-
-    font-weight: 500;
+    font-size: 8px;
 
     letter-spacing: 4px;
+
+    animation:
+        scrollFloat 2s ease-in-out infinite;
 
 }
 
@@ -739,134 +691,116 @@ a {
 
 .scroll-arrow {
 
-    color: var(--purple);
+    color: var(--purple-light);
 
-    font-size: 18px;
+    font-size: 16px;
+
+    letter-spacing: 0;
 
 }
 
 
 /* =========================================================
-   15. PAGE NUMBER
+   13. PAGE NUMBER
    ========================================================= */
 
 .page-number {
 
     position: absolute;
 
-    right: 5%;
+    right: 6%;
 
-    bottom: 40px;
+    bottom: 45px;
+
+    z-index: 5;
 
     color:
-        rgba(155,108,255,.08);
+        rgba(155, 108, 255, 0.12);
 
     font-family:
         "Cormorant Garamond",
+        Georgia,
         serif;
 
-    font-size: 70px;
-
-    font-weight: 600;
-
-}
-
-
-/* =========================================================
-   16. ABOUT PREVIEW
-   ========================================================= */
-
-.about-preview {
-
-    min-height: 100vh;
-
-    padding:
-        140px 10%;
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: center;
-
-    background:
-        var(--black-soft);
-
-}
-
-
-.section-label {
-
-    margin-bottom: 25px;
-
-    color: var(--purple);
-
-    font-size: 11px;
-
-    font-weight: 600;
-
-    letter-spacing: 4px;
-
-}
-
-
-.about-preview h2 {
-
-    max-width: 900px;
-
-    margin-bottom: 30px;
-
-    font-family:
-        "Cormorant Garamond",
-        serif;
-
-    font-size:
-        clamp(55px, 7vw, 100px);
+    font-size: 52px;
 
     font-weight: 500;
 
-    line-height: .95;
+}
+
+
+/* =========================================================
+   14. DECORATIVE CIRCLES
+   ========================================================= */
+
+.circle {
+
+    position: absolute;
+
+    z-index: 1;
+
+    border:
+        1px solid
+        rgba(155, 108, 255, 0.16);
+
+    border-radius: 50%;
+
+    pointer-events: none;
 
 }
 
 
-.about-preview h2 span {
+.circle-left {
 
-    color: transparent;
+    width: 350px;
 
-    -webkit-text-stroke:
-        1.5px
-        var(--purple);
+    height: 350px;
+
+    left: -105px;
+
+    bottom: 65px;
 
 }
 
 
-.about-preview > p:last-child {
+.circle-right {
 
-    max-width: 600px;
+    width: 570px;
 
-    color: var(--gray);
+    height: 570px;
 
-    font-size: 18px;
+    right: -290px;
 
-    line-height: 1.8;
+    top: 145px;
+
+}
+
+
+.circle-small {
+
+    width: 215px;
+
+    height: 215px;
+
+    right: 9%;
+
+    bottom: 105px;
 
 }
 
 
 /* =========================================================
-   17. ANIMATIONS
+   15. ANIMATIONS
    ========================================================= */
 
-@keyframes heroEnter {
+@keyframes fadeUp {
 
     from {
 
         opacity: 0;
 
         transform:
-            translateY(35px)
-            scale(.98);
+            translateY(25px);
 
     }
 
@@ -875,30 +809,30 @@ a {
         opacity: 1;
 
         transform:
-            translateY(0)
-            scale(1);
+            translateY(0);
 
     }
 
 }
 
 
-@keyframes pulse {
+@keyframes fadeDown {
 
-    0%,
-    100% {
+    from {
 
-        opacity: 1;
+        opacity: 0;
 
-        transform: scale(1);
+        transform:
+            translateY(-18px);
 
     }
 
-    50% {
+    to {
 
-        opacity: .45;
+        opacity: 1;
 
-        transform: scale(.75);
+        transform:
+            translateY(0);
 
     }
 
@@ -911,16 +845,14 @@ a {
     100% {
 
         transform:
-            translateX(-50%)
-            translateY(0);
+            translate(-50%, 0);
 
     }
 
     50% {
 
         transform:
-            translateX(-50%)
-            translateY(7px);
+            translate(-50%, 7px);
 
     }
 
@@ -928,10 +860,10 @@ a {
 
 
 /* =========================================================
-   18. TABLET
+   16. TABLET
    ========================================================= */
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
 
     .navbar {
 
@@ -948,26 +880,25 @@ a {
     }
 
 
-    .hero-content {
+    .name-main {
 
-        padding:
-            145px 25px 100px;
+        font-size:
+            clamp(80px, 11vw, 125px);
 
     }
 
 
-    .name {
+    .name-outline {
 
         font-size:
-            clamp(70px, 11vw, 115px);
+            clamp(85px, 11.5vw, 130px);
 
     }
 
 
-    .surname {
+    .hero-description {
 
-        font-size:
-            clamp(75px, 11vw, 125px);
+        max-width: 620px;
 
     }
 
@@ -975,19 +906,24 @@ a {
 
 
 /* =========================================================
-   19. MOBILE
+   17. MOBILE
    ========================================================= */
 
 @media (max-width: 650px) {
 
+    .home-page {
+
+        min-height: 100svh;
+
+    }
+
+
     .navbar {
 
-        height: 95px;
+        height: 80px;
 
         padding:
             0 20px;
-
-        align-items: center;
 
     }
 
@@ -1013,65 +949,73 @@ a {
     }
 
 
-    .nav-links a.active::after {
+    .nav-links a:nth-child(4),
+    .nav-links a:nth-child(5) {
 
-        bottom: -7px;
-
-    }
-
-
-    .hero-content {
-
-        padding:
-            125px 18px 90px;
+        display: none;
 
     }
 
 
-    .status {
+    .hero {
 
         padding:
-            8px 15px;
+            85px 20px 85px;
 
-        margin-bottom: 30px;
+    }
 
-        font-size: 9px;
 
-        letter-spacing: 2.2px;
+    .status-badge {
+
+        margin-bottom: 27px;
+
+        padding:
+            8px 14px;
+
+        font-size: 8px;
+
+        letter-spacing: 2.3px;
 
     }
 
 
     .welcome {
 
-        font-size: 39px;
+        font-size: 38px;
 
     }
 
 
-    .name {
+    .name-main {
 
-        font-size: 65px;
+        font-size:
+            clamp(64px, 19vw, 100px);
+
+        line-height: 0.82;
 
         letter-spacing: -2px;
 
     }
 
 
-    .surname {
+    .name-outline {
 
-        font-size: 70px;
+        font-size:
+            clamp(70px, 20vw, 105px);
+
+        line-height: 0.85;
+
+        letter-spacing: -2px;
 
         -webkit-text-stroke:
-            1.3px
-            var(--purple);
+            1px var(--purple);
 
     }
 
 
     .portfolio-label {
 
-        margin-top: 27px;
+        margin-top: 23px;
 
         font-size: 9px;
 
@@ -1082,73 +1026,67 @@ a {
 
     .hero-description {
 
-        max-width: 430px;
+        max-width: 390px;
 
-        font-size: 14px;
+        margin-top: 25px;
+
+        font-size: 13px;
 
         line-height: 1.7;
-
-        margin-bottom: 30px;
 
     }
 
 
     .hero-actions {
 
-        flex-direction: row;
+        margin-top: 25px;
 
         gap: 10px;
 
     }
 
 
-    .primary-button {
+    .primary-button,
+    .secondary-button {
 
-        min-width: 165px;
+        min-width: 130px;
 
         padding:
-            14px 18px;
+            12px 18px;
 
         font-size: 12px;
 
     }
 
 
-    .secondary-button {
+    .scroll-indicator {
 
-        min-width: 120px;
-
-        padding:
-            13px 18px;
-
-        font-size: 12px;
+        bottom: 20px;
 
     }
 
 
     .page-number {
 
-        right: 20px;
-
-        bottom: 30px;
-
-        font-size: 45px;
+        display: none;
 
     }
 
 
-    .circle-one {
+    .circle-left {
 
-        width: 200px;
+        width: 220px;
 
-        height: 200px;
+        height: 220px;
 
-        left: -130px;
+        left: -120px;
+
+        bottom: 90px;
 
     }
 
 
-    .circle-two {
+    .circle-right {
 
         width: 300px;
 
@@ -1156,35 +1094,15 @@ a {
 
         right: -180px;
 
-    }
-
-
-    .circle-three {
-
-        width: 120px;
-
-        height: 120px;
-
-        right: -20px;
-
-        bottom: 20%;
+        top: 170px;
 
     }
 
 
-    .about-preview {
+    .circle-small {
 
-        padding:
-            100px 25px;
-
-    }
-
-
-    .about-preview h2 {
-
-        font-size: 55px;
+        display: none;
 
     }
-
 
 }
