@@ -1,26 +1,27 @@
 /* =========================================================
    DIARTA GIS PORTFOLIO
-   DESIGN SYSTEM
+   VISUAL SYSTEM
    ========================================================= */
 
 
 /* =========================================================
-   01. ROOT
+   01. VARIABLES
    ========================================================= */
 
 :root {
 
-    --bg: #08080d;
-    --bg-soft: #0d0d13;
+    --bg: #08080c;
+    --surface: #0d0d13;
 
-    --text: #f4f2f7;
-    --text-soft: #aaa8b4;
-    --text-muted: #777582;
+    --white: #f5f3f7;
+    --gray-1: #b5b2bd;
+    --gray-2: #85818d;
+    --gray-3: #5f5c66;
 
     --purple: #9b6cff;
-    --purple-soft: #b08cff;
+    --purple-light: #b18aff;
 
-    --border: rgba(255, 255, 255, 0.075);
+    --border: rgba(255,255,255,0.07);
 
 }
 
@@ -45,7 +46,7 @@ body {
 
     background: var(--bg);
 
-    color: var(--text);
+    color: var(--white);
 
     font-family:
         "DM Sans",
@@ -55,8 +56,6 @@ body {
         sans-serif;
 
     font-weight: 400;
-
-    line-height: 1.6;
 
     -webkit-font-smoothing: antialiased;
 
@@ -75,7 +74,7 @@ a {
 
 .navbar {
 
-    height: 94px;
+    height: 92px;
 
     padding: 0 7%;
 
@@ -97,13 +96,11 @@ a {
         "Manrope",
         sans-serif;
 
-    font-size: 20px;
+    font-size: 19px;
 
     font-weight: 700;
 
-    letter-spacing: 5px;
-
-    color: var(--text);
+    letter-spacing: 4px;
 
 }
 
@@ -114,7 +111,7 @@ a {
 
     align-items: center;
 
-    gap: 42px;
+    gap: 40px;
 
 }
 
@@ -123,28 +120,27 @@ a {
 
     position: relative;
 
-    color: var(--text-muted);
+    color: var(--gray-2);
 
     font-size: 13px;
 
     font-weight: 400;
 
-    transition:
-        color 0.25s ease;
+    transition: color .25s ease;
 
 }
 
 
 .nav-links a:hover {
 
-    color: var(--text);
+    color: var(--white);
 
 }
 
 
 .nav-links a.active {
 
-    color: var(--purple-soft);
+    color: var(--purple-light);
 
 }
 
@@ -157,9 +153,9 @@ a {
 
     left: 0;
 
-    bottom: -13px;
+    right: 0;
 
-    width: 100%;
+    bottom: -14px;
 
     height: 1px;
 
@@ -174,32 +170,33 @@ a {
 
 .hero {
 
+    position: relative;
+
     min-height:
-        calc(100vh - 94px);
+        calc(100vh - 92px);
 
     padding:
-        80px 7% 105px;
+        72px 7% 110px;
 
     display: grid;
 
     grid-template-columns:
-        minmax(0, 1.05fr)
-        minmax(330px, 0.75fr);
+        1fr 0.72fr;
 
     align-items: center;
 
-    column-gap: 110px;
+    gap: 90px;
 
 }
 
 
 /* =========================================================
-   05. HERO CONTENT
+   05. LEFT CONTENT
    ========================================================= */
 
 .hero-content {
 
-    max-width: 760px;
+    max-width: 680px;
 
 }
 
@@ -210,87 +207,87 @@ a {
 
 .eyebrow {
 
-    margin-bottom: 34px;
+    margin-bottom: 30px;
 
-    color: var(--purple-soft);
+    color: var(--purple-light);
 
     font-size: 10px;
 
     font-weight: 600;
 
-    letter-spacing: 3.8px;
+    letter-spacing: 3.6px;
 
-    text-transform: uppercase;
+    line-height: 1;
 
 }
 
 
 /* =========================================================
-   07. MAIN HEADING
+   07. HERO TITLE
    ========================================================= */
 
 .hero-heading {
 
-    margin-bottom: 38px;
+    margin-bottom: 35px;
 
 }
 
 
 .welcome {
 
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 
-    color: var(--text-soft);
+    color: var(--gray-1);
 
     font-family:
         "Manrope",
         sans-serif;
 
     font-size:
-        clamp(28px, 3vw, 42px);
+        clamp(30px, 3vw, 40px);
 
     font-weight: 400;
 
-    line-height: 1.15;
+    line-height: 1.1;
 
-    letter-spacing: -1.5px;
+    letter-spacing: -1.7px;
 
 }
 
 
 .hero h1 {
 
-    max-width: 750px;
+    max-width: 650px;
 
-    color: var(--text);
+    color: var(--white);
 
     font-family:
         "Manrope",
         sans-serif;
 
     font-size:
-        clamp(50px, 5.8vw, 82px);
+        clamp(52px, 5.4vw, 76px);
 
-    font-weight: 600;
+    font-weight: 500;
 
     line-height: 0.98;
 
-    letter-spacing: -4px;
+    letter-spacing: -3.8px;
 
 }
 
 
+/* =========================================================
+   08. PORTFOLIO LABEL
+   ========================================================= */
+
 .portfolio-label {
 
-    margin-top: 21px;
+    margin-top: 22px;
 
-    color: var(--purple-soft);
+    color: var(--purple-light);
 
-    font-family:
-        "DM Sans",
-        sans-serif;
-
-    font-size: 11px;
+    font-size: 10px;
 
     font-weight: 500;
 
@@ -300,33 +297,33 @@ a {
 
 
 /* =========================================================
-   08. HERO DESCRIPTION
+   09. DESCRIPTION
    ========================================================= */
 
 .hero-info {
 
-    max-width: 590px;
+    max-width: 580px;
 
 }
 
 
 .hero-description {
 
-    margin-bottom: 23px;
+    margin-bottom: 22px;
 
-    color: var(--text-soft);
+    color: var(--gray-1);
 
-    font-size: 15px;
+    font-size: 14px;
 
     font-weight: 400;
 
-    line-height: 1.85;
+    line-height: 1.8;
 
 }
 
 
 /* =========================================================
-   09. PROFESSIONAL INFORMATION
+   10. PROFESSIONAL INFO
    ========================================================= */
 
 .professional-info {
@@ -335,11 +332,11 @@ a {
 
     align-items: center;
 
-    gap: 11px;
+    gap: 10px;
 
-    margin-bottom: 34px;
+    margin-bottom: 30px;
 
-    color: var(--text-muted);
+    color: var(--gray-2);
 
     font-size: 12px;
 
@@ -348,9 +345,7 @@ a {
 
 .professional-info span:first-child {
 
-    color: var(--text-soft);
-
-    font-weight: 500;
+    color: var(--gray-1);
 
 }
 
@@ -363,7 +358,7 @@ a {
 
 
 /* =========================================================
-   10. HERO LINKS
+   11. CTA
    ========================================================= */
 
 .hero-links {
@@ -372,91 +367,61 @@ a {
 
     align-items: center;
 
-    gap: 30px;
+    gap: 28px;
 
 }
 
 
 .hero-button {
 
-    padding: 12px 21px;
+    padding: 11px 20px;
 
     background: var(--purple);
 
     border: 1px solid var(--purple);
 
-    color: #ffffff;
+    color: #fff;
 
     font-size: 12px;
 
     font-weight: 500;
 
     transition:
-        background 0.25s ease,
-        color 0.25s ease,
-        border-color 0.25s ease;
+        transform .25s ease,
+        background .25s ease;
 
 }
 
 
 .hero-button:hover {
 
-    background: transparent;
+    background: var(--purple-light);
 
-    color: var(--purple-soft);
+    transform: translateY(-2px);
 
 }
 
 
 .text-link {
 
-    position: relative;
-
-    color: var(--text-soft);
+    color: var(--gray-1);
 
     font-size: 12px;
 
-}
-
-
-.text-link::after {
-
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-
-    bottom: -5px;
-
-    width: 0;
-
-    height: 1px;
-
-    background: var(--purple);
-
-    transition:
-        width 0.25s ease;
+    transition: color .25s ease;
 
 }
 
 
 .text-link:hover {
 
-    color: var(--text);
-
-}
-
-
-.text-link:hover::after {
-
-    width: 100%;
+    color: var(--white);
 
 }
 
 
 /* =========================================================
-   11. HERO IMAGE
+   12. PHOTO
    ========================================================= */
 
 .hero-visual {
@@ -472,14 +437,12 @@ a {
 
     position: relative;
 
-    width: min(390px, 100%);
+    width: min(360px, 100%);
 
 }
 
 
-/*
-   Main image container
-*/
+/* main frame */
 
 .photo-placeholder {
 
@@ -495,18 +458,16 @@ a {
 
     justify-content: center;
 
-    background: var(--bg-soft);
+    background: var(--surface);
 
     border:
         1px solid
-        rgba(255, 255, 255, 0.08);
+        rgba(255,255,255,0.08);
 
 }
 
 
-/*
-   Purple offset frame
-*/
+/* purple offset */
 
 .photo-placeholder::after {
 
@@ -514,9 +475,9 @@ a {
 
     position: absolute;
 
-    top: 13px;
+    top: 12px;
 
-    right: -13px;
+    right: -12px;
 
     width: 100%;
 
@@ -524,16 +485,16 @@ a {
 
     border:
         1px solid
-        rgba(155, 108, 255, 0.45);
+        rgba(155,108,255,0.42);
 
-    pointer-events: none;
+    z-index: -1;
 
 }
 
 
 .photo-placeholder span {
 
-    color: var(--purple-soft);
+    color: var(--purple-light);
 
     font-size: 9px;
 
@@ -545,7 +506,7 @@ a {
 
 
 /* =========================================================
-   12. SCROLL INDICATOR
+   13. SCROLL
    ========================================================= */
 
 .scroll-indicator {
@@ -554,20 +515,20 @@ a {
 
     left: 7%;
 
-    bottom: 31px;
+    bottom: 28px;
 
     display: flex;
 
     align-items: center;
 
-    gap: 12px;
+    gap: 11px;
 
 }
 
 
 .scroll-indicator span {
 
-    color: var(--text-muted);
+    color: var(--gray-3);
 
     font-size: 8px;
 
@@ -580,14 +541,14 @@ a {
 
 .scroll-indicator .scroll-number {
 
-    color: var(--purple-soft);
+    color: var(--purple-light);
 
 }
 
 
 .scroll-line {
 
-    width: 48px;
+    width: 45px;
 
     height: 1px;
 
@@ -597,30 +558,22 @@ a {
 
 
 /* =========================================================
-   13. TABLET
+   14. TABLET
    ========================================================= */
 
-@media (max-width: 1000px) {
+@media (max-width: 1050px) {
 
     .hero {
 
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 0.75fr;
 
-        row-gap: 75px;
-
-    }
-
-
-    .hero-visual {
-
-        justify-content: flex-start;
+        gap: 55px;
 
     }
 
+    .hero h1 {
 
-    .image-frame {
-
-        width: min(370px, 100%);
+        font-size: 58px;
 
     }
 
@@ -628,22 +581,20 @@ a {
 
 
 /* =========================================================
-   14. MOBILE
+   15. MOBILE
    ========================================================= */
 
-@media (max-width: 650px) {
+@media (max-width: 760px) {
 
     .navbar {
 
         height: auto;
 
-        min-height: 80px;
-
-        padding: 20px;
+        padding: 24px 6%;
 
         align-items: flex-start;
 
-        gap: 20px;
+        gap: 25px;
 
     }
 
@@ -652,14 +603,12 @@ a {
 
         font-size: 17px;
 
-        letter-spacing: 4px;
-
     }
 
 
     .nav-links {
 
-        gap: 13px;
+        gap: 15px;
 
         flex-wrap: wrap;
 
@@ -680,18 +629,11 @@ a {
         min-height: auto;
 
         padding:
-            65px 20px 90px;
+            70px 6% 100px;
 
-    }
+        grid-template-columns: 1fr;
 
-
-    .eyebrow {
-
-        margin-bottom: 27px;
-
-        font-size: 9px;
-
-        letter-spacing: 3px;
+        gap: 70px;
 
     }
 
@@ -700,39 +642,28 @@ a {
 
         font-size: 30px;
 
-        letter-spacing: -1px;
-
     }
 
 
     .hero h1 {
 
-        font-size: 46px;
+        font-size: 48px;
 
         letter-spacing: -2.5px;
 
     }
 
 
-    .portfolio-label {
+    .hero-visual {
 
-        font-size: 10px;
-
-        letter-spacing: 3px;
+        justify-content: flex-start;
 
     }
 
 
-    .hero-description {
+    .image-frame {
 
-        font-size: 14px;
-
-    }
-
-
-    .professional-info {
-
-        flex-wrap: wrap;
+        width: min(330px, 90%);
 
     }
 
