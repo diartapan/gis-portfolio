@@ -1,5 +1,5 @@
 /* ==================================================
-   GIS PORTFOLIO
+   DIARTA GIS PORTFOLIO
    Main Stylesheet
    ================================================== */
 
@@ -10,15 +10,15 @@
 
 :root {
 
-    --bg: #08080d;
+    --black: #08080d;
 
-    --surface: #101017;
+    --black-soft: #0d0d13;
 
-    --surface-light: #161620;
+    --white: #f5f5f7;
 
-    --text: #ffffff;
+    --gray: #8f8f9c;
 
-    --text-muted: #9999a6;
+    --gray-light: #b4b4c0;
 
     --purple: #8b5cf6;
 
@@ -53,17 +53,19 @@ html {
 
 body {
 
-    background: var(--bg);
+    background: var(--black);
 
-    color: var(--text);
+    color: var(--white);
 
     font-family:
         Inter,
-        Arial,
         Helvetica,
+        Arial,
         sans-serif;
 
     line-height: 1.6;
+
+    -webkit-font-smoothing: antialiased;
 
 }
 
@@ -83,29 +85,16 @@ a {
 
 .navbar {
 
-    position: sticky;
-
-    top: 0;
-
-    z-index: 100;
-
-    width: 100%;
+    height: 94px;
 
     padding:
-        24px
-        7%;
+        0 7%;
 
     display: flex;
 
     align-items: center;
 
     justify-content: space-between;
-
-    background:
-        rgba(8, 8, 13, 0.88);
-
-    backdrop-filter:
-        blur(12px);
 
     border-bottom:
         1px solid var(--border);
@@ -115,11 +104,13 @@ a {
 
 .logo {
 
-    font-size: 20px;
+    color: var(--white);
+
+    font-size: 22px;
 
     font-weight: 700;
 
-    letter-spacing: 3px;
+    letter-spacing: 5px;
 
 }
 
@@ -130,7 +121,7 @@ a {
 
     align-items: center;
 
-    gap: 34px;
+    gap: 40px;
 
 }
 
@@ -139,9 +130,11 @@ a {
 
     position: relative;
 
-    color: var(--text-muted);
+    color: var(--gray);
 
     font-size: 14px;
+
+    font-weight: 400;
 
     transition:
         color 0.3s ease;
@@ -151,7 +144,7 @@ a {
 
 .nav-links a:hover {
 
-    color: var(--text);
+    color: var(--white);
 
 }
 
@@ -172,14 +165,14 @@ a {
 
     left: 0;
 
-    bottom: -8px;
+    right: 0;
 
-    width: 100%;
+    bottom: -11px;
 
     height: 1px;
 
     background:
-        var(--purple);
+        var(--purple-light);
 
 }
 
@@ -191,19 +184,19 @@ a {
 .hero {
 
     min-height:
-        calc(100vh - 80px);
+        calc(100vh - 94px);
 
     padding:
-        80px 7%;
+        80px 7% 100px;
 
     display: grid;
 
     grid-template-columns:
-        1.1fr 0.9fr;
+        1.15fr 0.85fr;
 
     align-items: center;
 
-    gap: 80px;
+    column-gap: 90px;
 
 }
 
@@ -215,7 +208,7 @@ a {
 .hero-content {
 
     max-width:
-        720px;
+        760px;
 
 }
 
@@ -223,7 +216,7 @@ a {
 .eyebrow {
 
     margin-bottom:
-        24px;
+        28px;
 
     color:
         var(--purple-light);
@@ -235,7 +228,7 @@ a {
         600;
 
     letter-spacing:
-        3px;
+        3.5px;
 
 }
 
@@ -243,16 +236,19 @@ a {
 .hero h1 {
 
     margin-bottom:
-        8px;
+        28px;
+
+    color:
+        var(--white);
 
     font-size:
-        clamp(52px, 7vw, 92px);
+        clamp(48px, 5.6vw, 82px);
 
     font-weight:
         600;
 
     line-height:
-        1.02;
+        1.05;
 
     letter-spacing:
         -3px;
@@ -260,22 +256,22 @@ a {
 }
 
 
-.hero h2 {
+.hero-role {
 
     margin-bottom:
-        28px;
+        24px;
 
     color:
         var(--purple-light);
 
     font-size:
-        clamp(24px, 3vw, 38px);
+        22px;
 
     font-weight:
         500;
 
     letter-spacing:
-        5px;
+        4px;
 
 }
 
@@ -283,19 +279,19 @@ a {
 .hero-description {
 
     max-width:
-        600px;
+        610px;
 
     margin-bottom:
-        18px;
+        20px;
 
     color:
-        var(--text-muted);
+        var(--gray-light);
 
     font-size:
-        18px;
+        17px;
 
     line-height:
-        1.8;
+        1.85;
 
 }
 
@@ -303,10 +299,10 @@ a {
 .location {
 
     margin-bottom:
-        34px;
+        38px;
 
     color:
-        var(--text-muted);
+        var(--gray);
 
     font-size:
         14px;
@@ -327,7 +323,7 @@ a {
         center;
 
     gap:
-        26px;
+        28px;
 
     flex-wrap:
         wrap;
@@ -338,7 +334,7 @@ a {
 .hero-button {
 
     padding:
-        12px 22px;
+        13px 24px;
 
     border:
         1px solid var(--purple);
@@ -346,11 +342,17 @@ a {
     background:
         var(--purple);
 
-    border-radius:
-        4px;
+    color:
+        #ffffff;
 
     font-size:
-        14px;
+        13px;
+
+    font-weight:
+        500;
+
+    letter-spacing:
+        0.2px;
 
     transition:
         all 0.3s ease;
@@ -361,21 +363,21 @@ a {
 .hero-button:hover {
 
     background:
-        var(--purple-light);
-
-    border-color:
-        var(--purple-light);
+        transparent;
 
     color:
-        #08080d;
+        var(--purple-light);
 
 }
 
 
 .text-link {
 
+    position:
+        relative;
+
     color:
-        var(--text-muted);
+        var(--gray-light);
 
     font-size:
         14px;
@@ -386,10 +388,47 @@ a {
 }
 
 
+.text-link::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    left:
+        0;
+
+    bottom:
+        -5px;
+
+    width:
+        0;
+
+    height:
+        1px;
+
+    background:
+        var(--purple-light);
+
+    transition:
+        width 0.3s ease;
+
+}
+
+
 .text-link:hover {
 
     color:
-        var(--purple-light);
+        var(--white);
+
+}
+
+
+.text-link:hover::after {
+
+    width:
+        100%;
 
 }
 
@@ -404,7 +443,7 @@ a {
         flex;
 
     justify-content:
-        center;
+        flex-end;
 
 }
 
@@ -415,7 +454,7 @@ a {
         relative;
 
     width:
-        min(420px, 100%);
+        min(430px, 100%);
 
     aspect-ratio:
         4 / 5;
@@ -430,20 +469,17 @@ a {
         center;
 
     background:
-        var(--surface);
+        var(--black-soft);
 
     border:
         1px solid var(--border);
 
-    overflow:
-        hidden;
-
 }
 
 
-/* Purple frame effect */
+/* Purple offset frame */
 
-.photo-placeholder::before {
+.photo-placeholder::after {
 
     content:
         "";
@@ -452,10 +488,10 @@ a {
         absolute;
 
     top:
-        18px;
+        16px;
 
     right:
-        -18px;
+        -16px;
 
     width:
         100%;
@@ -467,8 +503,8 @@ a {
         1px solid
         rgba(139, 92, 246, 0.45);
 
-    z-index:
-        -1;
+    pointer-events:
+        none;
 
 }
 
@@ -479,10 +515,65 @@ a {
         var(--purple-light);
 
     font-size:
+        11px;
+
+    letter-spacing:
+        4px;
+
+}
+
+
+/* ==================================================
+   SCROLL INDICATOR
+   ================================================== */
+
+.scroll-indicator {
+
+    position:
+        absolute;
+
+    left:
+        7%;
+
+    bottom:
+        32px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
         12px;
+
+}
+
+
+.scroll-indicator span {
+
+    color:
+        var(--gray);
+
+    font-size:
+        9px;
 
     letter-spacing:
         3px;
+
+}
+
+
+.scroll-line {
+
+    width:
+        45px;
+
+    height:
+        1px;
+
+    background:
+        var(--purple);
 
 }
 
@@ -491,18 +582,34 @@ a {
    RESPONSIVE
    ================================================== */
 
-@media (max-width: 900px) {
+@media (max-width: 950px) {
+
+    .navbar {
+
+        padding:
+            0 5%;
+
+    }
+
+
+    .nav-links {
+
+        gap:
+            25px;
+
+    }
+
 
     .hero {
+
+        padding:
+            70px 5% 100px;
 
         grid-template-columns:
             1fr;
 
-        padding-top:
+        row-gap:
             70px;
-
-        gap:
-            60px;
 
     }
 
@@ -518,7 +625,15 @@ a {
     .photo-placeholder {
 
         width:
-            min(380px, 100%);
+            min(400px, 100%);
+
+    }
+
+
+    .scroll-indicator {
+
+        left:
+            5%;
 
     }
 
@@ -529,8 +644,31 @@ a {
 
     .navbar {
 
+        height:
+            auto;
+
+        min-height:
+            80px;
+
         padding:
             20px;
+
+        align-items:
+            flex-start;
+
+        gap:
+            20px;
+
+    }
+
+
+    .logo {
+
+        font-size:
+            18px;
+
+        letter-spacing:
+            4px;
 
     }
 
@@ -538,7 +676,13 @@ a {
     .nav-links {
 
         gap:
-            14px;
+            12px;
+
+        flex-wrap:
+            wrap;
+
+        justify-content:
+            flex-end;
 
     }
 
@@ -554,7 +698,7 @@ a {
     .hero {
 
         padding:
-            70px 20px;
+            65px 20px 100px;
 
     }
 
@@ -562,7 +706,7 @@ a {
     .hero h1 {
 
         font-size:
-            52px;
+            48px;
 
         letter-spacing:
             -2px;
@@ -570,10 +714,10 @@ a {
     }
 
 
-    .hero h2 {
+    .hero-role {
 
         font-size:
-            24px;
+            18px;
 
         letter-spacing:
             3px;
@@ -584,7 +728,15 @@ a {
     .hero-description {
 
         font-size:
-            16px;
+            15px;
+
+    }
+
+
+    .scroll-indicator {
+
+        display:
+            none;
 
     }
 
