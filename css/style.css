@@ -1,6 +1,6 @@
 /* =========================================================
    DIARTA GIS PORTFOLIO
-   BLACK × PURPLE DESIGN SYSTEM
+   BLACK + PURPLE EDITION
    ========================================================= */
 
 
@@ -10,38 +10,23 @@
 
 :root {
 
-    /* BACKGROUND */
+    --black: #07070b;
 
-    --black: #07070a;
-    --black-soft: #0b0b10;
-    --black-card: #101016;
+    --black-soft: #0b0b11;
 
+    --white: #f7f5fa;
 
-    /* TEXT */
+    --gray: #a5a1ae;
 
-    --white: #f5f3f8;
-    --white-soft: #c7c3d0;
-    --gray: #85808f;
-    --gray-dark: #55515e;
+    --gray-dark: #686572;
 
+    --purple: #9b6cff;
 
-    /* PURPLE */
+    --purple-light: #b18cff;
 
-    --purple: #8b5cf6;
-    --purple-light: #a78bfa;
-    --purple-bright: #b794ff;
+    --purple-dark: #6f42d8;
 
-
-    /* EFFECTS */
-
-    --border:
-        rgba(167, 139, 250, 0.16);
-
-    --purple-glow:
-        rgba(139, 92, 246, 0.25);
-
-    --purple-glow-strong:
-        rgba(139, 92, 246, 0.40);
+    --border: rgba(255, 255, 255, 0.08);
 
 }
 
@@ -53,6 +38,7 @@
 * {
 
     margin: 0;
+
     padding: 0;
 
     box-sizing: border-box;
@@ -69,13 +55,7 @@ html {
 
 body {
 
-    background:
-        radial-gradient(
-            circle at 50% 45%,
-            rgba(139, 92, 246, 0.045),
-            transparent 42%
-        ),
-        var(--black);
+    background: var(--black);
 
     color: var(--white);
 
@@ -83,13 +63,9 @@ body {
         "DM Sans",
         sans-serif;
 
-    font-weight: 400;
-
-    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
 
     overflow-x: hidden;
-
-    -webkit-font-smoothing: antialiased;
 
 }
 
@@ -104,92 +80,20 @@ a {
 
 
 /* =========================================================
-   03. BACKGROUND GRID
-   ========================================================= */
-
-body::before {
-
-    content: "";
-
-    position: fixed;
-
-    inset: 0;
-
-    z-index: -5;
-
-    pointer-events: none;
-
-    background-image:
-
-        linear-gradient(
-            rgba(139, 92, 246, 0.035) 1px,
-            transparent 1px
-        ),
-
-        linear-gradient(
-            90deg,
-            rgba(139, 92, 246, 0.035) 1px,
-            transparent 1px
-        );
-
-    background-size:
-        64px 64px;
-
-    mask-image:
-        linear-gradient(
-            to bottom,
-            black 0%,
-            rgba(0,0,0,0.7) 65%,
-            transparent 100%
-        );
-
-}
-
-
-/* =========================================================
-   04. DECORATIVE PURPLE GLOW
-   ========================================================= */
-
-body::after {
-
-    content: "";
-
-    position: fixed;
-
-    width: 520px;
-    height: 520px;
-
-    top: 10%;
-    right: -220px;
-
-    z-index: -4;
-
-    border-radius: 50%;
-
-    border:
-        1px solid
-        rgba(139, 92, 246, 0.10);
-
-    box-shadow:
-        0 0 120px
-        rgba(139, 92, 246, 0.06);
-
-    pointer-events: none;
-
-}
-
-
-/* =========================================================
-   05. NAVIGATION
+   03. NAVIGATION
    ========================================================= */
 
 .navbar {
 
-    position: relative;
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
 
     width: 100%;
 
-    height: 94px;
+    height: 125px;
 
     padding:
         0 7%;
@@ -200,53 +104,32 @@ body::after {
 
     justify-content: space-between;
 
-    border-bottom:
-        1px solid
-        rgba(255,255,255,0.055);
-
-    background:
-        rgba(7,7,10,0.72);
-
-    backdrop-filter:
-        blur(12px);
-
-    z-index: 20;
+    z-index: 100;
 
 }
 
-
-/* LOGO */
 
 .logo {
 
     font-family:
-        "DM Sans",
-        sans-serif;
+        "Cormorant Garamond",
+        serif;
 
-    font-size: 20px;
+    font-size: 32px;
 
-    font-weight: 700;
+    font-weight: 600;
 
-    letter-spacing: 6px;
-
-    color:
-        var(--white);
-
-    transition:
-        color 0.3s ease;
+    letter-spacing: -0.5px;
 
 }
 
 
-.logo:hover {
+.logo span {
 
-    color:
-        var(--purple-light);
+    color: var(--purple);
 
 }
 
-
-/* NAVIGATION LINKS */
 
 .nav-links {
 
@@ -263,12 +146,11 @@ body::after {
 
     position: relative;
 
-    color:
-        var(--gray);
+    color: var(--gray);
 
-    font-size: 13px;
+    font-size: 15px;
 
-    font-weight: 400;
+    font-weight: 500;
 
     transition:
         color 0.3s ease;
@@ -278,16 +160,14 @@ body::after {
 
 .nav-links a:hover {
 
-    color:
-        var(--white);
+    color: var(--white);
 
 }
 
 
 .nav-links a.active {
 
-    color:
-        var(--purple-light);
+    color: var(--purple-light);
 
 }
 
@@ -300,39 +180,32 @@ body::after {
 
     left: 0;
 
-    bottom: -14px;
+    right: 0;
 
-    width: 100%;
+    bottom: -12px;
 
-    height: 1px;
+    height: 2px;
 
-    background:
-        var(--purple);
+    background: var(--purple);
 
-    box-shadow:
-        0 0 8px
-        var(--purple-glow);
+    border-radius: 10px;
 
 }
 
 
 /* =========================================================
-   06. HOME / HERO
+   04. HERO
    ========================================================= */
 
 .hero {
 
     position: relative;
 
-    min-height:
-        calc(100vh - 94px);
+    min-height: 100vh;
 
-    padding:
-        55px 7% 70px;
+    height: 100vh;
 
     display: flex;
-
-    flex-direction: column;
 
     align-items: center;
 
@@ -341,6 +214,119 @@ body::after {
     text-align: center;
 
     overflow: hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(155, 108, 255, 0.035),
+            transparent 42%
+        ),
+
+        var(--black);
+
+}
+
+
+/* =========================================================
+   05. GRID BACKGROUND
+   ========================================================= */
+
+.grid-background {
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: 0.55;
+
+    background-image:
+
+        linear-gradient(
+            rgba(155, 108, 255, 0.045) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(155, 108, 255, 0.045) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        65px 65px;
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            black 0%,
+            rgba(0,0,0,.7) 70%,
+            transparent 100%
+        );
+
+}
+
+
+/* =========================================================
+   06. DECORATIVE CIRCLES
+   ========================================================= */
+
+.circle {
+
+    position: absolute;
+
+    border:
+        1px solid
+        rgba(155, 108, 255, 0.12);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+}
+
+
+.circle-one {
+
+    width: 330px;
+
+    height: 330px;
+
+    left: -110px;
+
+    bottom: 60px;
+
+}
+
+
+.circle-two {
+
+    width: 520px;
+
+    height: 520px;
+
+    right: -250px;
+
+    top: 90px;
+
+    border-color:
+        rgba(155, 108, 255, 0.09);
+
+}
+
+
+.circle-three {
+
+    width: 190px;
+
+    height: 190px;
+
+    right: 8%;
+
+    bottom: 18%;
+
+    border-color:
+        rgba(155, 108, 255, 0.08);
 
 }
 
@@ -351,28 +337,30 @@ body::after {
 
 .hero-content {
 
+    position: relative;
+
+    z-index: 5;
+
     width: 100%;
 
-    max-width: 1100px;
+    max-width: 1050px;
 
-    margin: 0 auto;
+    padding:
+        150px 30px 100px;
 
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
+    animation:
+        heroEnter 1.2s
+        cubic-bezier(.22,1,.36,1)
+        both;
 
 }
 
 
 /* =========================================================
-   08. EYEBROW / STATUS
+   08. STATUS
    ========================================================= */
 
-.eyebrow {
-
-    position: relative;
+.status {
 
     display: inline-flex;
 
@@ -380,58 +368,47 @@ body::after {
 
     gap: 10px;
 
-    margin-bottom: 32px;
-
     padding:
-        9px 20px;
+        9px 21px;
 
-    color:
-        var(--purple-light);
-
-    background:
-        rgba(139, 92, 246, 0.08);
+    margin-bottom: 38px;
 
     border:
         1px solid
-        rgba(139, 92, 246, 0.28);
+        rgba(155, 108, 255, 0.4);
 
-    border-radius: 999px;
+    border-radius: 50px;
 
-    font-size: 10px;
+    background:
+        rgba(155, 108, 255, 0.07);
 
-    font-weight: 600;
+    color: var(--purple-light);
+
+    font-size: 12px;
+
+    font-weight: 500;
 
     letter-spacing: 3px;
-
-    text-transform: uppercase;
-
-    animation:
-        fadeUp 0.8s ease both;
 
 }
 
 
-/* PURPLE DOT */
+.status-dot {
 
-.eyebrow::before {
+    width: 7px;
 
-    content: "";
-
-    width: 6px;
-
-    height: 6px;
+    height: 7px;
 
     border-radius: 50%;
 
-    background:
-        var(--purple);
+    background: var(--purple);
 
     box-shadow:
-        0 0 10px
-        var(--purple);
+        0 0 12px
+        rgba(155, 108, 255, 0.9);
 
     animation:
-        pulse 2s ease-in-out infinite;
+        pulse 2s infinite;
 
 }
 
@@ -442,33 +419,23 @@ body::after {
 
 .hero-heading {
 
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 
 }
 
-
-/* WELCOME */
 
 .welcome {
 
     margin-bottom: -2px;
 
-    color:
-        var(--white-soft);
+    color: var(--gray);
 
     font-family:
         "Cormorant Garamond",
-        Georgia,
         serif;
 
     font-size:
-        clamp(34px, 4vw, 58px);
+        clamp(44px, 4vw, 60px);
 
     font-style: italic;
 
@@ -478,79 +445,14 @@ body::after {
 
     letter-spacing: -1px;
 
-    animation:
-        fadeUp 0.9s 0.1s ease both;
-
 }
 
 
-/* MAIN NAME */
+/* =========================================================
+   10. MAIN NAME
+   ========================================================= */
 
 .hero h1 {
-
-    max-width: 1000px;
-
-    color:
-        var(--white);
-
-    font-family:
-        "Cormorant Garamond",
-        Georgia,
-        serif;
-
-    font-size:
-        clamp(68px, 8.5vw, 128px);
-
-    font-weight: 600;
-
-    line-height: 0.88;
-
-    letter-spacing: -4px;
-
-    animation:
-        fadeUp 0.9s 0.2s ease both;
-
-}
-
-
-/* =========================================================
-   10. GIS PORTFOLIO LABEL
-   ========================================================= */
-
-.portfolio-label {
-
-    margin-top: 25px;
-
-    color:
-        var(--purple-light);
-
-    font-family:
-        "DM Sans",
-        sans-serif;
-
-    font-size: 11px;
-
-    font-weight: 600;
-
-    letter-spacing: 5px;
-
-    text-transform: uppercase;
-
-    animation:
-        fadeUp 0.9s 0.3s ease both;
-
-}
-
-
-/* =========================================================
-   11. HERO INFO
-   ========================================================= */
-
-.hero-info {
-
-    width: 100%;
-
-    max-width: 700px;
 
     display: flex;
 
@@ -558,165 +460,123 @@ body::after {
 
     align-items: center;
 
-}
+    margin: 0;
 
+    font-family:
+        "Cormorant Garamond",
+        serif;
 
-/* DESCRIPTION */
+    font-weight: 600;
 
-.hero-description {
+    line-height: 0.78;
 
-    max-width: 650px;
-
-    margin-bottom: 25px;
-
-    color:
-        var(--gray);
-
-    font-size: 15px;
-
-    line-height: 1.8;
-
-    animation:
-        fadeUp 0.9s 0.4s ease both;
+    letter-spacing: -3px;
 
 }
 
 
-/* =========================================================
-   12. PROFESSIONAL INFORMATION
-   ========================================================= */
+.name {
 
-.professional-info {
+    display: block;
 
-    display: flex;
+    color: var(--white);
 
-    align-items: center;
-
-    justify-content: center;
-
-    gap: 12px;
-
-    margin-bottom: 28px;
-
-    color:
-        var(--gray);
-
-    font-size: 12px;
-
-    animation:
-        fadeUp 0.9s 0.5s ease both;
+    font-size:
+        clamp(82px, 10vw, 155px);
 
 }
 
 
-.professional-info span:first-child {
+.surname {
 
-    color:
-        var(--white-soft);
+    display: block;
+
+    margin-top: 8px;
+
+    color: transparent;
+
+    -webkit-text-stroke:
+        2px
+        var(--purple);
+
+    font-size:
+        clamp(85px, 10.5vw, 165px);
 
     font-weight: 500;
 
 }
 
 
-.separator {
-
-    color:
-        var(--purple);
-
-}
-
-
 /* =========================================================
-   13. HERO BUTTONS
+   11. PORTFOLIO LABEL
    ========================================================= */
 
-.hero-links {
+.portfolio-label {
 
-    display: flex;
+    margin-top: 35px;
 
-    align-items: center;
+    color: var(--purple-light);
 
-    justify-content: center;
-
-    gap: 16px;
-
-    animation:
-        fadeUp 0.9s 0.6s ease both;
-
-}
-
-
-/* PRIMARY BUTTON */
-
-.hero-button {
-
-    position: relative;
-
-    display: inline-flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    min-width: 165px;
-
-    padding:
-        14px 26px;
-
-    background:
-        var(--purple);
-
-    border:
-        1px solid
-        var(--purple);
-
-    border-radius: 999px;
-
-    color:
-        #ffffff;
+    font-family:
+        "DM Sans",
+        sans-serif;
 
     font-size: 12px;
 
     font-weight: 600;
 
-    transition:
-        transform 0.3s ease,
-        background 0.3s ease,
-        box-shadow 0.3s ease;
+    letter-spacing: 6px;
 
 }
 
 
-.hero-button::after {
+/* =========================================================
+   12. DESCRIPTION
+   ========================================================= */
 
-    content: "↓";
+.hero-description {
 
-    margin-left: 12px;
+    max-width: 650px;
 
-    font-size: 16px;
+    margin:
+        0 auto 40px;
 
-}
+    color: var(--gray);
 
+    font-size: 17px;
 
-.hero-button:hover {
+    font-weight: 400;
 
-    transform:
-        translateY(-3px);
-
-    background:
-        var(--purple-light);
-
-    box-shadow:
-        0 12px 35px
-        var(--purple-glow-strong);
+    line-height: 1.8;
 
 }
 
 
-/* LINKEDIN */
+/* =========================================================
+   13. HERO ACTIONS
+   ========================================================= */
 
-.text-link {
+.hero-actions {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 17px;
+
+}
+
+
+/* Primary Button */
+
+.primary-button {
+
+    min-width: 190px;
+
+    padding:
+        16px 25px;
 
     display: inline-flex;
 
@@ -724,119 +584,110 @@ body::after {
 
     justify-content: center;
 
-    min-width: 140px;
-
-    padding:
-        14px 26px;
+    gap: 14px;
 
     border:
         1px solid
-        rgba(255,255,255,0.16);
+        var(--purple);
 
-    border-radius: 999px;
+    border-radius: 50px;
 
-    color:
-        var(--white-soft);
+    background: var(--purple);
 
-    font-size: 12px;
+    color: #ffffff;
 
-    font-weight: 500;
+    font-size: 14px;
+
+    font-weight: 600;
+
+    box-shadow:
+        0 0 30px
+        rgba(155, 108, 255, 0.18);
 
     transition:
-        border-color 0.3s ease,
-        color 0.3s ease,
-        background 0.3s ease,
-        transform 0.3s ease;
+        transform .3s ease,
+        background .3s ease,
+        box-shadow .3s ease;
 
 }
 
 
-.text-link:hover {
+.primary-button:hover {
 
     transform:
         translateY(-3px);
 
+    background:
+        var(--purple-dark);
+
+    box-shadow:
+        0 0 40px
+        rgba(155, 108, 255, 0.3);
+
+}
+
+
+.arrow {
+
+    font-size: 18px;
+
+}
+
+
+/* Secondary Button */
+
+.secondary-button {
+
+    min-width: 150px;
+
+    padding:
+        15px 27px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.18);
+
+    border-radius: 50px;
+
+    color: var(--gray);
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    transition:
+        border-color .3s ease,
+        color .3s ease,
+        transform .3s ease;
+
+}
+
+
+.secondary-button:hover {
+
+    border-color:
+        var(--purple);
+
     color:
         var(--white);
 
-    border-color:
-        rgba(139, 92, 246, 0.55);
-
-    background:
-        rgba(139, 92, 246, 0.07);
+    transform:
+        translateY(-3px);
 
 }
 
 
 /* =========================================================
-   14. DECORATIVE CIRCLE
-   ========================================================= */
-
-.hero::before {
-
-    content: "";
-
-    position: absolute;
-
-    width: 360px;
-
-    height: 360px;
-
-    left: -190px;
-
-    bottom: -100px;
-
-    border-radius: 50%;
-
-    border:
-        1px solid
-        rgba(139, 92, 246, 0.10);
-
-    pointer-events: none;
-
-}
-
-
-.hero::after {
-
-    content: "";
-
-    position: absolute;
-
-    width: 230px;
-
-    height: 230px;
-
-    right: 7%;
-
-    top: 30%;
-
-    border-radius: 50%;
-
-    border:
-        1px solid
-        rgba(139, 92, 246, 0.09);
-
-    box-shadow:
-        0 0 80px
-        rgba(139, 92, 246, 0.04);
-
-    pointer-events: none;
-
-}
-
-
-/* =========================================================
-   15. SCROLL INDICATOR
+   14. SCROLL INDICATOR
    ========================================================= */
 
 .scroll-indicator {
 
     position: absolute;
 
-    bottom: 27px;
-
     left: 50%;
+
+    bottom: 30px;
 
     transform:
         translateX(-50%);
@@ -849,25 +700,23 @@ body::after {
 
     gap: 7px;
 
-    color:
-        var(--gray-dark);
-
-    font-size: 8px;
-
-    font-weight: 500;
-
-    letter-spacing: 3px;
+    z-index: 10;
 
     animation:
-        fadeUp 1s 0.9s ease both;
+        scrollFloat 2.2s ease-in-out infinite;
 
 }
 
 
 .scroll-indicator span {
 
-    color:
-        var(--gray-dark);
+    color: var(--gray-dark);
+
+    font-size: 9px;
+
+    font-weight: 500;
+
+    letter-spacing: 4px;
 
 }
 
@@ -876,7 +725,7 @@ body::after {
 
     width: 1px;
 
-    height: 35px;
+    height: 32px;
 
     background:
         linear-gradient(
@@ -885,34 +734,139 @@ body::after {
             transparent
         );
 
-    animation:
-        scrollPulse 2s ease-in-out infinite;
-
 }
 
 
-.scroll-number {
+.scroll-arrow {
 
-    color:
-        var(--purple-light) !important;
+    color: var(--purple);
 
-    font-size: 8px;
+    font-size: 18px;
 
 }
 
 
 /* =========================================================
-   16. ANIMATIONS
+   15. PAGE NUMBER
    ========================================================= */
 
-@keyframes fadeUp {
+.page-number {
+
+    position: absolute;
+
+    right: 5%;
+
+    bottom: 40px;
+
+    color:
+        rgba(155,108,255,.08);
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 70px;
+
+    font-weight: 600;
+
+}
+
+
+/* =========================================================
+   16. ABOUT PREVIEW
+   ========================================================= */
+
+.about-preview {
+
+    min-height: 100vh;
+
+    padding:
+        140px 10%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    background:
+        var(--black-soft);
+
+}
+
+
+.section-label {
+
+    margin-bottom: 25px;
+
+    color: var(--purple);
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+}
+
+
+.about-preview h2 {
+
+    max-width: 900px;
+
+    margin-bottom: 30px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(55px, 7vw, 100px);
+
+    font-weight: 500;
+
+    line-height: .95;
+
+}
+
+
+.about-preview h2 span {
+
+    color: transparent;
+
+    -webkit-text-stroke:
+        1.5px
+        var(--purple);
+
+}
+
+
+.about-preview > p:last-child {
+
+    max-width: 600px;
+
+    color: var(--gray);
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   17. ANIMATIONS
+   ========================================================= */
+
+@keyframes heroEnter {
 
     from {
 
         opacity: 0;
 
         transform:
-            translateY(25px);
+            translateY(35px)
+            scale(.98);
 
     }
 
@@ -921,7 +875,8 @@ body::after {
         opacity: 1;
 
         transform:
-            translateY(0);
+            translateY(0)
+            scale(1);
 
     }
 
@@ -933,41 +888,39 @@ body::after {
     0%,
     100% {
 
-        opacity: 0.5;
+        opacity: 1;
 
-        transform:
-            scale(0.8);
+        transform: scale(1);
 
     }
 
     50% {
 
-        opacity: 1;
+        opacity: .45;
 
-        transform:
-            scale(1);
+        transform: scale(.75);
 
     }
 
 }
 
 
-@keyframes scrollPulse {
+@keyframes scrollFloat {
 
     0%,
     100% {
 
-        opacity: 0.3;
-
-        height: 25px;
+        transform:
+            translateX(-50%)
+            translateY(0);
 
     }
 
     50% {
 
-        opacity: 1;
-
-        height: 38px;
+        transform:
+            translateX(-50%)
+            translateY(7px);
 
     }
 
@@ -975,30 +928,46 @@ body::after {
 
 
 /* =========================================================
-   17. TABLET
+   18. TABLET
    ========================================================= */
 
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
 
-    .hero {
+    .navbar {
 
         padding:
-            55px 5% 70px;
-
-    }
-
-
-    .hero h1 {
-
-        font-size:
-            clamp(62px, 10vw, 100px);
+            0 5%;
 
     }
 
 
     .nav-links {
 
-        gap: 27px;
+        gap: 25px;
+
+    }
+
+
+    .hero-content {
+
+        padding:
+            145px 25px 100px;
+
+    }
+
+
+    .name {
+
+        font-size:
+            clamp(70px, 11vw, 115px);
+
+    }
+
+
+    .surname {
+
+        font-size:
+            clamp(75px, 11vw, 125px);
 
     }
 
@@ -1006,43 +975,33 @@ body::after {
 
 
 /* =========================================================
-   18. MOBILE
+   19. MOBILE
    ========================================================= */
 
 @media (max-width: 650px) {
 
     .navbar {
 
-        height: auto;
-
-        min-height: 78px;
+        height: 95px;
 
         padding:
-            20px;
+            0 20px;
 
         align-items: center;
-
-        gap: 20px;
 
     }
 
 
     .logo {
 
-        font-size: 16px;
-
-        letter-spacing: 4px;
+        font-size: 25px;
 
     }
 
 
     .nav-links {
 
-        gap: 13px;
-
-        flex-wrap: wrap;
-
-        justify-content: flex-end;
+        gap: 12px;
 
     }
 
@@ -1056,182 +1015,176 @@ body::after {
 
     .nav-links a.active::after {
 
-        bottom: -8px;
+        bottom: -7px;
 
     }
 
 
-    .hero {
-
-        min-height:
-            calc(100vh - 78px);
+    .hero-content {
 
         padding:
-            50px 20px 75px;
+            125px 18px 90px;
 
     }
 
 
-    .eyebrow {
-
-        margin-bottom: 28px;
+    .status {
 
         padding:
             8px 15px;
 
-        font-size: 8px;
+        margin-bottom: 30px;
 
-        letter-spacing: 2.5px;
+        font-size: 9px;
+
+        letter-spacing: 2.2px;
 
     }
 
 
     .welcome {
 
-        font-size: 36px;
+        font-size: 39px;
 
     }
 
 
-    .hero h1 {
+    .name {
 
-        max-width: 100%;
-
-        font-size:
-            clamp(54px, 15vw, 78px);
-
-        line-height: 0.9;
+        font-size: 65px;
 
         letter-spacing: -2px;
 
     }
 
 
+    .surname {
+
+        font-size: 70px;
+
+        -webkit-text-stroke:
+            1.3px
+            var(--purple);
+
+    }
+
+
     .portfolio-label {
 
-        margin-top: 20px;
+        margin-top: 27px;
 
         font-size: 9px;
 
-        letter-spacing: 3.5px;
+        letter-spacing: 4px;
 
     }
 
 
     .hero-description {
 
-        max-width: 90%;
+        max-width: 430px;
 
-        font-size: 13px;
+        font-size: 14px;
 
-        line-height: 1.75;
+        line-height: 1.7;
 
-    }
-
-
-    .professional-info {
-
-        flex-wrap: wrap;
-
-        font-size: 11px;
+        margin-bottom: 30px;
 
     }
 
 
-    .hero-links {
+    .hero-actions {
 
-        flex-wrap: wrap;
+        flex-direction: row;
+
+        gap: 10px;
 
     }
 
 
-    .hero-button,
-    .text-link {
+    .primary-button {
 
-        min-width: 145px;
+        min-width: 165px;
 
         padding:
-            13px 20px;
-
-    }
-
-
-    .hero::after {
-
-        width: 160px;
-
-        height: 160px;
-
-        right: -80px;
-
-    }
-
-
-    .hero::before {
-
-        width: 250px;
-
-        height: 250px;
-
-        left: -150px;
-
-    }
-
-
-    .scroll-indicator {
-
-        display: none;
-
-    }
-
-}
-
-
-/* =========================================================
-   19. VERY SMALL MOBILE
-   ========================================================= */
-
-@media (max-width: 420px) {
-
-    .navbar {
-
-        align-items: flex-start;
-
-    }
-
-
-    .nav-links {
-
-        max-width: 220px;
-
-    }
-
-
-    .hero {
-
-        padding-top: 40px;
-
-    }
-
-
-    .welcome {
-
-        font-size: 31px;
-
-    }
-
-
-    .hero h1 {
-
-        font-size: 52px;
-
-    }
-
-
-    .hero-description {
+            14px 18px;
 
         font-size: 12px;
 
     }
+
+
+    .secondary-button {
+
+        min-width: 120px;
+
+        padding:
+            13px 18px;
+
+        font-size: 12px;
+
+    }
+
+
+    .page-number {
+
+        right: 20px;
+
+        bottom: 30px;
+
+        font-size: 45px;
+
+    }
+
+
+    .circle-one {
+
+        width: 200px;
+
+        height: 200px;
+
+        left: -130px;
+
+    }
+
+
+    .circle-two {
+
+        width: 300px;
+
+        height: 300px;
+
+        right: -180px;
+
+    }
+
+
+    .circle-three {
+
+        width: 120px;
+
+        height: 120px;
+
+        right: -20px;
+
+        bottom: 20%;
+
+    }
+
+
+    .about-preview {
+
+        padding:
+            100px 25px;
+
+    }
+
+
+    .about-preview h2 {
+
+        font-size: 55px;
+
+    }
+
 
 }
