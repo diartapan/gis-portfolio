@@ -11,14 +11,10 @@
     >
 
     <title>
-        Muhammad Syeh Diarta | GIS Analyst
+        Muhammad Syeh Diarta | GIS Portfolio
     </title>
 
-
-    <!-- =========================
-         GOOGLE FONTS
-         ========================= -->
-
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link
@@ -28,18 +24,13 @@
     >
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
         rel="stylesheet"
     >
 
-
-    <!-- =========================
-         MAIN CSS
-         ========================= -->
-
     <link
         rel="stylesheet"
-        href="css/style.css?v=3"
+        href="css/style.css"
     >
 
 </head>
@@ -49,51 +40,29 @@
 
 
     <!-- =========================
-         BACKGROUND
-         ========================= -->
-
-    <div class="background">
-
-        <div class="grid"></div>
-
-        <div class="glow glow-one"></div>
-
-        <div class="glow glow-two"></div>
-
-        <div class="circle circle-one"></div>
-
-        <div class="circle circle-two"></div>
-
-        <div class="circle circle-three"></div>
-
-    </div>
-
-
-
-    <!-- =========================
          NAVIGATION
          ========================= -->
 
     <header class="navbar">
 
         <a
-            href="index.html"
+            href="#home"
             class="logo"
         >
-            DIARTA<span>.</span>
+            DIARTA.
         </a>
 
 
         <nav class="nav-links">
 
             <a
-                href="index.html"
+                href="#home"
                 class="active"
             >
                 Home
             </a>
 
-            <a href="about.html">
+            <a href="#about">
                 About
             </a>
 
@@ -116,108 +85,169 @@
 
 
     <!-- =========================
-         HERO
+         HOME
          ========================= -->
 
     <main>
 
-        <section class="hero">
+
+        <section
+            id="home"
+            class="hero"
+        >
 
 
-            <!-- STATUS -->
+            <!-- Background decoration -->
 
-            <div class="status">
+            <div class="hero-glow"></div>
 
-                <span class="status-dot"></span>
+            <div class="grid-background"></div>
 
-                OPEN TO OPPORTUNITIES
+
+            <!-- HERO CONTENT -->
+
+            <div class="hero-content">
+
+
+                <div class="eyebrow reveal">
+
+                    <span class="status-dot"></span>
+
+                    OPEN TO OPPORTUNITIES
+
+                </div>
+
+
+                <div class="hero-heading">
+
+
+                    <p class="welcome reveal">
+                        Welcome to
+                    </p>
+
+
+                    <h1 class="reveal reveal-delay-1">
+
+                        Muhammad Syeh
+                        <br>
+                        <span>Diarta</span>
+
+                    </h1>
+
+
+                    <p class="portfolio-label reveal reveal-delay-2">
+
+                        GIS PORTFOLIO
+
+                    </p>
+
+                </div>
+
+
+                <div class="hero-description reveal reveal-delay-2">
+
+                    Turning spatial data into meaningful insights
+                    through GIS, spatial analysis, mapping,
+                    and geospatial technologies.
+
+                </div>
+
+
+                <div class="professional-info reveal reveal-delay-3">
+
+                    <span>
+                        GIS Analyst
+                    </span>
+
+                    <span class="separator">
+                        /
+                    </span>
+
+                    <span>
+                        Surakarta, Indonesia
+                    </span>
+
+                </div>
+
+
+                <div class="hero-links reveal reveal-delay-3">
+
+
+                    <a
+                        href="projects.html"
+                        class="hero-button"
+                    >
+
+                        Explore Projects
+
+                        <span>
+                            →
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="#about"
+                        class="text-link"
+                    >
+                        About Me
+                    </a>
+
+
+                </div>
+
 
             </div>
 
 
 
-            <!-- INTRO -->
+            <!-- HERO VISUAL -->
 
-            <p class="welcome">
-                Welcome to
-            </p>
+            <div class="hero-visual reveal reveal-delay-2">
 
 
-
-            <!-- MAIN TITLE -->
-
-            <h1>
-
-                Muhammad Syeh Diarta
-
-                <span class="outline">
-                    GIS Portfolio
-                </span>
-
-            </h1>
+                <div class="image-frame">
 
 
+                    <div class="photo-placeholder">
 
-            <!-- DESCRIPTION -->
+                        <span>
+                            PHOTO
+                        </span>
 
-            <p class="description">
-
-                Turning spatial data into meaningful insights —
-                through spatial analysis, remote sensing,
-                mapping, and geospatial technologies.
-
-            </p>
+                    </div>
 
 
-
-            <!-- BUTTONS -->
-
-            <div class="hero-actions">
-
-                <a
-                    href="projects.html"
-                    class="primary-button"
-                >
-
-                    Explore Projects
-
-                    <span>↓</span>
-
-                </a>
+                    <div class="image-number">
+                        01
+                    </div>
 
 
-                <a
-                    href="#"
-                    class="secondary-button"
-                >
+                </div>
 
-                    LinkedIn
-
-                    <span>↗</span>
-
-                </a>
 
             </div>
 
 
+            <!-- SCROLL -->
 
-            <!-- ROLE -->
-
-            <div class="hero-meta">
+            <a
+                href="#about"
+                class="scroll-indicator"
+            >
 
                 <span>
-                    GIS ANALYST
+                    SCROLL
                 </span>
 
-                <span class="dot">
-                    •
-                </span>
+                <div class="scroll-line"></div>
 
                 <span>
-                    SURAKARTA, INDONESIA
+                    ↓
                 </span>
 
-            </div>
+            </a>
 
 
         </section>
@@ -225,26 +255,84 @@
 
 
         <!-- =========================
-             SCROLL
+             ABOUT
              ========================= -->
 
-        <div class="scroll">
+        <section
+            id="about"
+            class="about-section"
+        >
 
-            <span>
-                SCROLL
-            </span>
 
-            <div class="scroll-line"></div>
+            <div class="about-inner">
 
-            <span>
-                01
-            </span>
 
-        </div>
+                <div class="section-label">
+
+                    <span>
+                        01
+                    </span>
+
+                    ABOUT
+
+                </div>
+
+
+                <div class="about-content">
+
+
+                    <div class="about-title">
+
+                        <p>
+                            A GIS professional
+                        </p>
+
+                        <h2>
+                            Turning spatial data
+                            <br>
+                            into <em>insight.</em>
+                        </h2>
+
+                    </div>
+
+
+                    <div class="about-text">
+
+                        <p>
+                            I am a GIS Analyst with an interest in
+                            spatial analysis, mapping, remote sensing,
+                            and geospatial technologies.
+                        </p>
+
+
+                        <p>
+                            My work focuses on transforming spatial
+                            data into clear visual information that
+                            can support analysis, planning, and
+                            better decision-making.
+                        </p>
+
+
+                        <a
+                            href="about.html"
+                            class="about-link"
+                        >
+                            More About Me →
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
 
 
     </main>
-
 
 
     <script src="js/script.js"></script>
