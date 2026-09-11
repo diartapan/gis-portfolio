@@ -19,7 +19,7 @@
 
     <!-- =====================================================
          GOOGLE FONTS
-    ====================================================== -->
+         ===================================================== -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
@@ -30,24 +30,14 @@
     >
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600;700&display=swap"
         rel="stylesheet"
     >
 
 
     <!-- =====================================================
-         ICONS
-    ====================================================== -->
-
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    >
-
-
-    <!-- =====================================================
-         MAIN CSS
-    ====================================================== -->
+         STYLE
+         ===================================================== -->
 
     <link
         rel="stylesheet"
@@ -61,12 +51,17 @@
 
 
     <!-- =====================================================
-         NAVIGATION
-    ====================================================== -->
+         PAGE WRAPPER
+         ===================================================== -->
 
-    <header class="site-header">
+    <div class="page-wrapper">
 
-        <div class="nav-container">
+
+        <!-- =================================================
+             NAVBAR
+             ================================================= -->
+
+        <header class="navbar">
 
             <a
                 href="#home"
@@ -76,7 +71,7 @@
             </a>
 
 
-            <nav class="navigation">
+            <nav class="nav-menu">
 
                 <a
                     href="#home"
@@ -115,632 +110,772 @@
 
             </nav>
 
-        </div>
-
-    </header>
+        </header>
 
 
 
-    <!-- =====================================================
-         HOME
-    ====================================================== -->
+        <!-- =================================================
+             FULL PAGE SECTIONS
+             ================================================= -->
 
-    <main>
-
-        <section
-            id="home"
-            class="hero"
-        >
+        <main id="fullpage">
 
 
-            <!-- Background Grid -->
+            <!-- =============================================
+                 HOME
+                 ============================================= -->
 
-            <div class="hero-grid"></div>
-
-
-            <!-- Decorative Circles -->
-
-            <div class="hero-circle hero-circle-left"></div>
-
-            <div class="hero-circle hero-circle-right"></div>
-
-            <div class="hero-circle hero-circle-small"></div>
+            <section
+                id="home"
+                class="page-section home-section"
+            >
 
 
-            <!-- Decorative Number -->
+                <!-- Background decoration -->
 
-            <div class="hero-number">
-                01
-            </div>
+                <div class="background-grid"></div>
 
+                <div class="orb orb-left"></div>
 
-            <!-- =================================================
-                 OPEN TO OPPORTUNITIES
-            ================================================== -->
+                <div class="orb orb-right"></div>
 
-            <div class="availability">
-
-                <span class="status-dot"></span>
-
-                <span>
-                    OPEN TO OPPORTUNITIES
-                </span>
-
-            </div>
+                <div class="orb orb-small"></div>
 
 
-            <!-- =================================================
-                 HERO CONTENT
-            ================================================== -->
+                <!-- Home content -->
 
-            <div class="hero-content">
+                <div class="hero-content">
 
 
-                <!-- Welcome -->
+                    <!-- Availability -->
 
-                <div class="welcome">
-                    Welcome to
-                </div>
+                    <div class="availability">
 
-
-                <!-- Name -->
-
-                <div class="hero-title">
-
-                    <div class="hero-name">
-                        Muhammad Syeh
-                    </div>
-
-                    <div class="hero-surname">
-                        Diarta
-                    </div>
-
-                </div>
-
-
-                <!-- Portfolio Label -->
-
-                <div class="hero-subtitle">
-                    GIS PORTFOLIO
-                </div>
-
-
-                <!-- Description -->
-
-                <p class="hero-description">
-
-                    Turning spatial data into meaningful insights —
-                    through spatial analysis, mapping, and
-                    geospatial technologies.
-
-                </p>
-
-
-                <!-- Buttons -->
-
-                <div class="hero-buttons">
-
-
-                    <a
-                        href="#about"
-                        class="btn-primary"
-                    >
+                        <span class="availability-dot"></span>
 
                         <span>
-                            Explore Me
+                            OPEN TO OPPORTUNITIES
                         </span>
 
-                        <span class="button-arrow">
-                            ↓
+                    </div>
+
+
+                    <!-- Welcome -->
+
+                    <p class="welcome">
+                        Welcome to
+                    </p>
+
+
+                    <!-- Name -->
+
+                    <h1 class="hero-title">
+
+                        <span class="name-white">
+                            Muhammad Syeh
                         </span>
 
-                    </a>
+                        <span class="name-purple">
+                            Diarta
+                        </span>
+
+                    </h1>
+
+
+                    <!-- Portfolio label -->
+
+                    <div class="portfolio-label">
+                        GIS PORTFOLIO
+                    </div>
+
+
+                    <!-- Description -->
+
+                    <p class="hero-description">
+                        Turning spatial data into meaningful insights
+                        — through spatial analysis, mapping, and
+                        geospatial technologies.
+                    </p>
+
+
+                    <!-- Buttons -->
+
+                    <div class="hero-buttons">
+
+                        <a
+                            href="#about"
+                            class="btn-primary"
+                        >
+                            <span>
+                                Explore Me
+                            </span>
+
+                            <span class="button-arrow">
+                                ↓
+                            </span>
+                        </a>
+
+
+                        <a
+                            href="#"
+                            class="btn-secondary"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+
+                            <span class="linkedin-icon">
+                                in
+                            </span>
+
+                            <span>
+                                LinkedIn
+                            </span>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Scroll indicator -->
+
+                <div class="scroll-indicator">
+
+                    <span>
+                        SCROLL
+                    </span>
+
+                    <div class="scroll-line"></div>
+
+                    <div class="scroll-arrow">
+                        ↓
+                    </div>
+
+                </div>
+
+
+                <!-- Page number -->
+
+                <div class="page-number">
+                    01
+                </div>
+
+            </section>
+
+
+
+            <!-- =============================================
+                 ABOUT
+                 ============================================= -->
+
+            <section
+                id="about"
+                class="page-section about-section"
+            >
+
+                <div class="section-inner">
+
+
+                    <div class="section-heading">
+
+                        <span class="section-kicker">
+                            ABOUT ME
+                        </span>
+
+                        <h2>
+                            About
+                        </h2>
+
+                    </div>
+
+
+                    <div class="about-layout">
+
+
+                        <div class="about-text">
+
+                            <p>
+                                I am a GIS enthusiast with an interest
+                                in spatial analysis, mapping,
+                                remote sensing, and geospatial
+                                technologies.
+                            </p>
+
+                            <p>
+                                I enjoy transforming spatial data into
+                                meaningful information that can support
+                                planning, environmental analysis,
+                                and decision making.
+                            </p>
+
+                        </div>
+
+
+                        <div class="about-info">
+
+                            <div class="info-item">
+
+                                <span class="info-label">
+                                    FIELD
+                                </span>
+
+                                <span class="info-value">
+                                    Geographic Information System
+                                </span>
+
+                            </div>
+
+
+                            <div class="info-item">
+
+                                <span class="info-label">
+                                    INTEREST
+                                </span>
+
+                                <span class="info-value">
+                                    Spatial Analysis
+                                </span>
+
+                            </div>
+
+
+                            <div class="info-item">
+
+                                <span class="info-label">
+                                    TOOLS
+                                </span>
+
+                                <span class="info-value">
+                                    QGIS · ArcGIS · AutoCAD
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="page-number">
+                    02
+                </div>
+
+            </section>
+
+
+
+            <!-- =============================================
+                 PROJECTS
+                 ============================================= -->
+
+            <section
+                id="projects"
+                class="page-section projects-section"
+            >
+
+                <div class="section-inner">
+
+
+                    <div class="section-heading">
+
+                        <span class="section-kicker">
+                            SELECTED WORK
+                        </span>
+
+                        <h2>
+                            Projects
+                        </h2>
+
+                    </div>
+
+
+                    <div class="projects-grid">
+
+
+                        <article class="project-card">
+
+                            <span class="project-number">
+                                01
+                            </span>
+
+                            <h3>
+                                GIS Spatial Analysis
+                            </h3>
+
+                            <p>
+                                Spatial analysis and mapping project
+                                using GIS techniques.
+                            </p>
+
+                            <span class="project-link">
+                                Explore Project →
+                            </span>
+
+                        </article>
+
+
+                        <article class="project-card">
+
+                            <span class="project-number">
+                                02
+                            </span>
+
+                            <h3>
+                                Environmental Mapping
+                            </h3>
+
+                            <p>
+                                Environmental suitability and
+                                geographic data analysis.
+                            </p>
+
+                            <span class="project-link">
+                                Explore Project →
+                            </span>
+
+                        </article>
+
+
+                        <article class="project-card">
+
+                            <span class="project-number">
+                                03
+                            </span>
+
+                            <h3>
+                                Urban Mapping
+                            </h3>
+
+                            <p>
+                                Mapping and spatial visualization
+                                for urban environments.
+                            </p>
+
+                            <span class="project-link">
+                                Explore Project →
+                            </span>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+
+                <div class="page-number">
+                    03
+                </div>
+
+            </section>
+
+
+
+            <!-- =============================================
+                 CERTIFICATES
+                 ============================================= -->
+
+            <section
+                id="certificates"
+                class="page-section certificates-section"
+            >
+
+                <div class="section-inner">
+
+
+                    <div class="section-heading">
+
+                        <span class="section-kicker">
+                            ACHIEVEMENTS
+                        </span>
+
+                        <h2>
+                            Certificates
+                        </h2>
+
+                    </div>
+
+
+                    <div class="certificate-grid">
+
+
+                        <div class="certificate-card">
+
+                            <span class="certificate-number">
+                                01
+                            </span>
+
+                            <h3>
+                                GIS & Geospatial
+                            </h3>
+
+                            <p>
+                                Professional learning and
+                                geospatial training.
+                            </p>
+
+                        </div>
+
+
+                        <div class="certificate-card">
+
+                            <span class="certificate-number">
+                                02
+                            </span>
+
+                            <h3>
+                                Remote Sensing
+                            </h3>
+
+                            <p>
+                                Remote sensing and spatial
+                                data interpretation.
+                            </p>
+
+                        </div>
+
+
+                        <div class="certificate-card">
+
+                            <span class="certificate-number">
+                                03
+                            </span>
+
+                            <h3>
+                                Technical Skills
+                            </h3>
+
+                            <p>
+                                Technical and professional
+                                development.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="page-number">
+                    04
+                </div>
+
+            </section>
+
+
+
+            <!-- =============================================
+                 CONTACT
+                 ============================================= -->
+
+            <section
+                id="contact"
+                class="page-section contact-section"
+            >
+
+                <div class="section-inner contact-inner">
+
+
+                    <span class="section-kicker">
+                        GET IN TOUCH
+                    </span>
+
+
+                    <h2>
+                        Let's Work
+                        <span>Together.</span>
+                    </h2>
+
+
+                    <p>
+                        Interested in GIS, spatial analysis,
+                        mapping, or geospatial projects?
+                    </p>
 
 
                     <a
-                        href="#"
-                        class="btn-secondary"
-                        aria-label="LinkedIn"
-                    >
-
-                        <span class="linkedin-icon">
-                            in
-                        </span>
-
-                        <span>
-                            LinkedIn
-                        </span>
-
-                    </a>
-
-
-                </div>
-
-            </div>
-
-
-            <!-- =================================================
-                 SCROLL INDICATOR
-            ================================================== -->
-
-            <div class="scroll-indicator">
-
-                <span class="scroll-text">
-                    SCROLL
-                </span>
-
-                <span class="scroll-line"></span>
-
-                <span class="scroll-arrow">
-                    ↓
-                </span>
-
-            </div>
-
-
-        </section>
-
-
-
-        <!-- =====================================================
-             ABOUT
-        ====================================================== -->
-
-        <section
-            id="about"
-            class="content-section about-section"
-        >
-
-            <div class="section-inner">
-
-                <div class="section-label">
-                    ABOUT
-                </div>
-
-                <h2 class="section-title">
-                    About Me
-                </h2>
-
-                <div class="section-line"></div>
-
-                <p class="section-description">
-
-                    I am a GIS enthusiast focused on spatial data,
-                    mapping, remote sensing, and geospatial
-                    technologies.
-
-                    I am interested in transforming spatial data
-                    into clear and meaningful information that can
-                    support analysis and decision making.
-
-                </p>
-
-
-                <div class="about-grid">
-
-
-                    <div class="about-card">
-
-                        <span class="card-number">
-                            01
-                        </span>
-
-                        <h3>
-                            GIS & Mapping
-                        </h3>
-
-                        <p>
-                            Spatial analysis, thematic mapping,
-                            cartography, and geospatial data
-                            visualization.
-                        </p>
-
-                    </div>
-
-
-                    <div class="about-card">
-
-                        <span class="card-number">
-                            02
-                        </span>
-
-                        <h3>
-                            Remote Sensing
-                        </h3>
-
-                        <p>
-                            Satellite imagery processing,
-                            land cover analysis, and
-                            environmental mapping.
-                        </p>
-
-                    </div>
-
-
-                    <div class="about-card">
-
-                        <span class="card-number">
-                            03
-                        </span>
-
-                        <h3>
-                            Spatial Analysis
-                        </h3>
-
-                        <p>
-                            Spatial modelling, GIS-based
-                            analysis, and data-driven
-                            geospatial workflows.
-                        </p>
-
-                    </div>
-
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =====================================================
-             PROJECTS
-        ====================================================== -->
-
-        <section
-            id="projects"
-            class="content-section projects-section"
-        >
-
-            <div class="section-inner">
-
-                <div class="section-label">
-                    PROJECTS
-                </div>
-
-                <h2 class="section-title">
-                    Selected Projects
-                </h2>
-
-                <div class="section-line"></div>
-
-
-                <div class="project-grid">
-
-
-                    <article class="project-card">
-
-                        <div class="project-number">
-                            01
-                        </div>
-
-                        <h3>
-                            GIS-Based Ecological
-                            Suitability Mapping
-                        </h3>
-
-                        <p>
-                            Spatial analysis project using
-                            environmental factors and GIS-MCDA
-                            for ecological suitability assessment.
-                        </p>
-
-                        <span class="project-tag">
-                            GIS · Spatial Analysis
-                        </span>
-
-                    </article>
-
-
-                    <article class="project-card">
-
-                        <div class="project-number">
-                            02
-                        </div>
-
-                        <h3>
-                            Land Cover Mapping
-                        </h3>
-
-                        <p>
-                            Mapping and classification of
-                            land cover using geospatial and
-                            remote sensing data.
-                        </p>
-
-                        <span class="project-tag">
-                            Remote Sensing
-                        </span>
-
-                    </article>
-
-
-                    <article class="project-card">
-
-                        <div class="project-number">
-                            03
-                        </div>
-
-                        <h3>
-                            Survey & Mapping
-                        </h3>
-
-                        <p>
-                            Geospatial mapping workflow combining
-                            field data, spatial data processing,
-                            and visualization.
-                        </p>
-
-                        <span class="project-tag">
-                            GIS · Mapping
-                        </span>
-
-                    </article>
-
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =====================================================
-             CERTIFICATES
-        ====================================================== -->
-
-        <section
-            id="certificates"
-            class="content-section certificates-section"
-        >
-
-            <div class="section-inner">
-
-                <div class="section-label">
-                    CERTIFICATES
-                </div>
-
-                <h2 class="section-title">
-                    Certificates
-                </h2>
-
-                <div class="section-line"></div>
-
-
-                <div class="certificate-grid">
-
-
-                    <div class="certificate-card">
-
-                        <span class="certificate-number">
-                            01
-                        </span>
-
-                        <h3>
-                            GIS & Geospatial
-                        </h3>
-
-                        <p>
-                            Professional training and
-                            geospatial learning.
-                        </p>
-
-                    </div>
-
-
-                    <div class="certificate-card">
-
-                        <span class="certificate-number">
-                            02
-                        </span>
-
-                        <h3>
-                            Remote Sensing
-                        </h3>
-
-                        <p>
-                            Remote sensing and
-                            satellite data processing.
-                        </p>
-
-                    </div>
-
-
-                    <div class="certificate-card">
-
-                        <span class="certificate-number">
-                            03
-                        </span>
-
-                        <h3>
-                            Technical Training
-                        </h3>
-
-                        <p>
-                            Additional technical and
-                            professional development.
-                        </p>
-
-                    </div>
-
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =====================================================
-             CONTACT
-        ====================================================== -->
-
-        <section
-            id="contact"
-            class="content-section contact-section"
-        >
-
-            <div class="section-inner contact-inner">
-
-                <div class="section-label">
-                    CONTACT
-                </div>
-
-                <h2 class="section-title">
-                    Let's Connect
-                </h2>
-
-                <div class="section-line"></div>
-
-                <p class="section-description">
-
-                    Interested in GIS, mapping, spatial analysis,
-                    or geospatial opportunities?
-
-                    Feel free to connect with me.
-
-                </p>
-
-
-                <div class="contact-buttons">
-
-                    <a
-                        href="#"
+                        href="mailto:your-email@example.com"
                         class="contact-button"
                     >
-                        LinkedIn
-                    </a>
-
-                    <a
-                        href="mailto:"
-                        class="contact-button"
-                    >
-                        Email
+                        Contact Me →
                     </a>
 
                 </div>
 
-            </div>
 
-        </section>
+                <div class="page-number">
+                    05
+                </div>
+
+            </section>
 
 
-    </main>
+        </main>
+
+
+    </div>
 
 
 
     <!-- =====================================================
-         FOOTER
-    ====================================================== -->
-
-    <footer class="site-footer">
-
-        <p>
-            © 2026 Diarta. GIS Portfolio.
-        </p>
-
-    </footer>
-
-
-
-    <!-- =====================================================
-         JAVASCRIPT
-    ====================================================== -->
+         SCRIPT
+         ===================================================== -->
 
     <script>
 
-        /* ==========================================
-           Smooth Scroll
-        ========================================== */
-
-        document.querySelectorAll('a[href^="#"]').forEach(
-            function (link) {
-
-                link.addEventListener(
-                    "click",
-                    function (event) {
-
-                        const target =
-                            document.querySelector(
-                                this.getAttribute("href")
-                            );
-
-                        if (target) {
-
-                            event.preventDefault();
-
-                            target.scrollIntoView({
-                                behavior: "smooth"
-                            });
-
-                        }
-
-                    }
-                );
-
-            }
-        );
-
-
-        /* ==========================================
-           Navigation Active State
-        ========================================== */
-
-        const sections =
-            document.querySelectorAll("section[id]");
-
-        const navLinks =
-            document.querySelectorAll(".nav-link");
-
-
-        window.addEventListener(
-            "scroll",
+        document.addEventListener(
+            "DOMContentLoaded",
             function () {
 
-                let current = "";
+                const sections =
+                    document.querySelectorAll(
+                        ".page-section"
+                    );
 
-                sections.forEach(
-                    function (section) {
+                const navLinks =
+                    document.querySelectorAll(
+                        ".nav-link"
+                    );
 
-                        const sectionTop =
-                            section.offsetTop - 180;
+                let isScrolling = false;
 
-                        if (
-                            window.scrollY >= sectionTop
-                        ) {
 
-                            current =
-                                section.getAttribute("id");
-
-                        }
-
-                    }
-                );
-
+                /* =========================================
+                   NAVIGATION
+                   ========================================= */
 
                 navLinks.forEach(
                     function (link) {
 
-                        link.classList.remove("active");
+                        link.addEventListener(
+                            "click",
+                            function (event) {
+
+                                const targetId =
+                                    this.getAttribute(
+                                        "href"
+                                    );
+
+                                const target =
+                                    document.querySelector(
+                                        targetId
+                                    );
+
+                                if (!target) return;
+
+                                event.preventDefault();
+
+                                target.scrollIntoView({
+                                    behavior: "smooth",
+                                    block: "start"
+                                });
+
+                            }
+                        );
+
+                    }
+                );
+
+
+                /* =========================================
+                   UPDATE ACTIVE NAV
+                   ========================================= */
+
+                const observer =
+                    new IntersectionObserver(
+                        function (entries) {
+
+                            entries.forEach(
+                                function (entry) {
+
+                                    if (
+                                        entry.isIntersecting
+                                    ) {
+
+                                        navLinks.forEach(
+                                            function (link) {
+
+                                                link.classList.remove(
+                                                    "active"
+                                                );
+
+                                            }
+                                        );
+
+
+                                        const activeLink =
+                                            document.querySelector(
+                                                '.nav-link[href="#' +
+                                                entry.target.id +
+                                                '"]'
+                                            );
+
+
+                                        if (activeLink) {
+
+                                            activeLink.classList.add(
+                                                "active"
+                                            );
+
+                                        }
+
+                                    }
+
+                                }
+                            );
+
+                        },
+                        {
+                            threshold: 0.6
+                        }
+                    );
+
+
+                sections.forEach(
+                    function (section) {
+
+                        observer.observe(section);
+
+                    }
+                );
+
+
+                /* =========================================
+                   MOUSE WHEEL SLIDE
+                   ========================================= */
+
+                window.addEventListener(
+                    "wheel",
+                    function (event) {
 
                         if (
-                            link.getAttribute("href") ===
-                            "#" + current
+                            window.innerWidth <= 768
+                        ) {
+                            return;
+                        }
+
+
+                        if (isScrolling) {
+                            event.preventDefault();
+                            return;
+                        }
+
+
+                        if (
+                            Math.abs(event.deltaY) <
+                            Math.abs(event.deltaX)
+                        ) {
+                            return;
+                        }
+
+
+                        let currentIndex = 0;
+
+                        let smallestDistance =
+                            Infinity;
+
+
+                        sections.forEach(
+                            function (
+                                section,
+                                index
+                            ) {
+
+                                const distance =
+                                    Math.abs(
+                                        section.offsetTop -
+                                        window.scrollY
+                                    );
+
+
+                                if (
+                                    distance <
+                                    smallestDistance
+                                ) {
+
+                                    smallestDistance =
+                                        distance;
+
+                                    currentIndex =
+                                        index;
+
+                                }
+
+                            }
+                        );
+
+
+                        let nextIndex =
+                            currentIndex;
+
+
+                        if (
+                            event.deltaY > 0
                         ) {
 
-                            link.classList.add("active");
+                            nextIndex =
+                                Math.min(
+                                    currentIndex + 1,
+                                    sections.length - 1
+                                );
 
                         }
 
+
+                        else if (
+                            event.deltaY < 0
+                        ) {
+
+                            nextIndex =
+                                Math.max(
+                                    currentIndex - 1,
+                                    0
+                                );
+
+                        }
+
+
+                        if (
+                            nextIndex ===
+                            currentIndex
+                        ) {
+                            return;
+                        }
+
+
+                        event.preventDefault();
+
+                        isScrolling = true;
+
+
+                        sections[
+                            nextIndex
+                        ].scrollIntoView({
+                            behavior: "smooth",
+                            block: "start"
+                        });
+
+
+                        setTimeout(
+                            function () {
+
+                                isScrolling = false;
+
+                            },
+                            900
+                        );
+
+                    },
+                    {
+                        passive: false
                     }
                 );
 
             }
         );
-
 
     </script>
 
