@@ -1,6 +1,6 @@
 /* =========================================================
    DIARTA GIS PORTFOLIO
-   EDITORIAL DARK DESIGN
+   BLACK × PURPLE DESIGN SYSTEM
    ========================================================= */
 
 
@@ -10,17 +10,38 @@
 
 :root {
 
-    --background: #05080c;
-    --background-soft: #081017;
+    /* BACKGROUND */
 
-    --white: #f5f6f7;
-    --text: #a9afb7;
-    --muted: #626a74;
+    --black: #07070a;
+    --black-soft: #0b0b10;
+    --black-card: #101016;
 
-    --accent: #00ddd2;
-    --accent-soft: #57eee6;
 
-    --border: rgba(255,255,255,0.10);
+    /* TEXT */
+
+    --white: #f5f3f8;
+    --white-soft: #c7c3d0;
+    --gray: #85808f;
+    --gray-dark: #55515e;
+
+
+    /* PURPLE */
+
+    --purple: #8b5cf6;
+    --purple-light: #a78bfa;
+    --purple-bright: #b794ff;
+
+
+    /* EFFECTS */
+
+    --border:
+        rgba(167, 139, 250, 0.16);
+
+    --purple-glow:
+        rgba(139, 92, 246, 0.25);
+
+    --purple-glow-strong:
+        rgba(139, 92, 246, 0.40);
 
 }
 
@@ -50,17 +71,19 @@ body {
 
     background:
         radial-gradient(
-            circle at 50% 40%,
-            rgba(0, 221, 210, 0.035),
-            transparent 40%
+            circle at 50% 45%,
+            rgba(139, 92, 246, 0.045),
+            transparent 42%
         ),
-        var(--background);
+        var(--black);
 
     color: var(--white);
 
     font-family:
         "DM Sans",
         sans-serif;
+
+    font-weight: 400;
 
     line-height: 1.6;
 
@@ -84,7 +107,9 @@ a {
    03. BACKGROUND GRID
    ========================================================= */
 
-.background-grid {
+body::before {
+
+    content: "";
 
     position: fixed;
 
@@ -97,86 +122,59 @@ a {
     background-image:
 
         linear-gradient(
-            rgba(255,255,255,0.025) 1px,
+            rgba(139, 92, 246, 0.035) 1px,
             transparent 1px
         ),
 
         linear-gradient(
             90deg,
-            rgba(255,255,255,0.025) 1px,
+            rgba(139, 92, 246, 0.035) 1px,
             transparent 1px
         );
 
-    background-size: 64px 64px;
+    background-size:
+        64px 64px;
 
     mask-image:
         linear-gradient(
             to bottom,
-            black,
-            transparent 95%
+            black 0%,
+            rgba(0,0,0,0.7) 65%,
+            transparent 100%
         );
 
 }
 
 
 /* =========================================================
-   04. DECORATIVE ORBS
+   04. DECORATIVE PURPLE GLOW
    ========================================================= */
 
-.orb {
+body::after {
+
+    content: "";
 
     position: fixed;
 
-    border-radius: 50%;
+    width: 520px;
+    height: 520px;
 
-    pointer-events: none;
+    top: 10%;
+    right: -220px;
 
     z-index: -4;
 
-}
-
-
-.orb-one {
-
-    width: 430px;
-    height: 430px;
-
-    left: -210px;
-    bottom: 60px;
+    border-radius: 50%;
 
     border:
         1px solid
-        rgba(0, 221, 210, 0.10);
+        rgba(139, 92, 246, 0.10);
 
-}
+    box-shadow:
+        0 0 120px
+        rgba(139, 92, 246, 0.06);
 
-
-.orb-two {
-
-    width: 330px;
-    height: 330px;
-
-    right: 80px;
-    top: 160px;
-
-    border:
-        1px solid
-        rgba(0, 221, 210, 0.10);
-
-}
-
-
-.orb-three {
-
-    width: 150px;
-    height: 150px;
-
-    right: 170px;
-    top: 330px;
-
-    border:
-        1px solid
-        rgba(0, 221, 210, 0.07);
+    pointer-events: none;
 
 }
 
@@ -187,14 +185,11 @@ a {
 
 .navbar {
 
-    position: fixed;
-
-    top: 0;
-    left: 0;
+    position: relative;
 
     width: 100%;
 
-    height: 76px;
+    height: 94px;
 
     padding:
         0 7%;
@@ -205,42 +200,53 @@ a {
 
     justify-content: space-between;
 
-    z-index: 100;
-
-    background:
-        rgba(5,8,12,0.72);
-
-    backdrop-filter:
-        blur(14px);
-
     border-bottom:
         1px solid
-        rgba(255,255,255,0.05);
+        rgba(255,255,255,0.055);
+
+    background:
+        rgba(7,7,10,0.72);
+
+    backdrop-filter:
+        blur(12px);
+
+    z-index: 20;
 
 }
 
+
+/* LOGO */
 
 .logo {
 
     font-family:
-        "Cormorant Garamond",
-        serif;
+        "DM Sans",
+        sans-serif;
 
-    font-size: 27px;
+    font-size: 20px;
 
-    font-weight: 600;
+    font-weight: 700;
 
-    letter-spacing: 1px;
+    letter-spacing: 6px;
+
+    color:
+        var(--white);
+
+    transition:
+        color 0.3s ease;
 
 }
 
 
-.logo span {
+.logo:hover {
 
-    color: var(--accent);
+    color:
+        var(--purple-light);
 
 }
 
+
+/* NAVIGATION LINKS */
 
 .nav-links {
 
@@ -257,14 +263,12 @@ a {
 
     position: relative;
 
-    padding:
-        8px 0;
+    color:
+        var(--gray);
 
-    color: #9ca1a9;
+    font-size: 13px;
 
-    font-size: 14px;
-
-    font-weight: 500;
+    font-weight: 400;
 
     transition:
         color 0.3s ease;
@@ -274,59 +278,61 @@ a {
 
 .nav-links a:hover {
 
-    color: var(--white);
+    color:
+        var(--white);
 
 }
 
 
 .nav-links a.active {
 
-    color: var(--accent);
+    color:
+        var(--purple-light);
 
 }
 
 
-.nav-links a.active::before {
+.nav-links a.active::after {
 
     content: "";
 
     position: absolute;
 
-    left: 50%;
+    left: 0;
 
-    top: 0;
+    bottom: -14px;
 
-    width: 5px;
-    height: 5px;
+    width: 100%;
 
-    transform:
-        translateX(-50%);
+    height: 1px;
 
-    border-radius: 50%;
-
-    background: var(--accent);
+    background:
+        var(--purple);
 
     box-shadow:
-        0 0 12px
-        rgba(0,221,210,0.7);
+        0 0 8px
+        var(--purple-glow);
 
 }
 
 
 /* =========================================================
-   06. HERO
+   06. HOME / HERO
    ========================================================= */
 
 .hero {
 
     position: relative;
 
-    min-height: 100svh;
+    min-height:
+        calc(100vh - 94px);
 
     padding:
-        120px 7% 70px;
+        55px 7% 70px;
 
     display: flex;
+
+    flex-direction: column;
 
     align-items: center;
 
@@ -334,104 +340,131 @@ a {
 
     text-align: center;
 
+    overflow: hidden;
+
 }
 
+
+/* =========================================================
+   07. HERO CONTENT
+   ========================================================= */
 
 .hero-content {
 
     width: 100%;
 
-    max-width: 1050px;
+    max-width: 1100px;
 
     margin: 0 auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
 
 }
 
 
 /* =========================================================
-   07. EYEBROW
+   08. EYEBROW / STATUS
    ========================================================= */
 
 .eyebrow {
 
-    width: fit-content;
+    position: relative;
 
-    margin:
-        0 auto 38px;
-
-    padding:
-        9px 20px;
-
-    display: flex;
+    display: inline-flex;
 
     align-items: center;
 
     gap: 10px;
 
-    color: var(--accent);
+    margin-bottom: 32px;
 
-    font-size: 12px;
+    padding:
+        9px 20px;
 
-    font-weight: 500;
+    color:
+        var(--purple-light);
 
-    letter-spacing: 2.7px;
+    background:
+        rgba(139, 92, 246, 0.08);
 
     border:
         1px solid
-        rgba(0,221,210,0.28);
+        rgba(139, 92, 246, 0.28);
 
-    border-radius: 30px;
+    border-radius: 999px;
 
-    background:
-        rgba(0,221,210,0.07);
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
 
     animation:
-        fadeDown 0.8s ease both;
+        fadeUp 0.8s ease both;
 
 }
 
 
-.status-dot {
+/* PURPLE DOT */
+
+.eyebrow::before {
+
+    content: "";
 
     width: 6px;
+
     height: 6px;
 
     border-radius: 50%;
 
-    background: var(--accent);
+    background:
+        var(--purple);
 
     box-shadow:
-        0 0 12px
-        var(--accent);
+        0 0 10px
+        var(--purple);
 
     animation:
-        pulse 2s infinite;
+        pulse 2s ease-in-out infinite;
 
 }
 
 
 /* =========================================================
-   08. HERO TITLE
+   09. HERO HEADING
    ========================================================= */
 
-.hero-title {
+.hero-heading {
 
-    animation:
-        heroReveal 1s
-        cubic-bezier(.2,.7,.2,1)
-        0.1s both;
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    margin-bottom: 30px;
 
 }
 
 
+/* WELCOME */
+
 .welcome {
 
-    margin-bottom: 0;
+    margin-bottom: -2px;
 
-    color: #9ba0a8;
+    color:
+        var(--white-soft);
 
     font-family:
         "Cormorant Garamond",
+        Georgia,
         serif;
 
     font-size:
@@ -443,148 +476,162 @@ a {
 
     line-height: 1;
 
+    letter-spacing: -1px;
+
+    animation:
+        fadeUp 0.9s 0.1s ease both;
+
 }
 
+
+/* MAIN NAME */
 
 .hero h1 {
 
-    margin-top: -3px;
+    max-width: 1000px;
 
-    color: var(--white);
+    color:
+        var(--white);
 
     font-family:
         "Cormorant Garamond",
+        Georgia,
         serif;
 
     font-size:
-        clamp(72px, 9vw, 142px);
+        clamp(68px, 8.5vw, 128px);
 
-    font-weight: 500;
+    font-weight: 600;
 
-    line-height: 0.82;
+    line-height: 0.88;
 
-    letter-spacing:
-        -4px;
+    letter-spacing: -4px;
 
-}
-
-
-.hero h1 span {
-
-    display: inline-block;
+    animation:
+        fadeUp 0.9s 0.2s ease both;
 
 }
 
 
 /* =========================================================
-   09. PORTFOLIO TITLE
+   10. GIS PORTFOLIO LABEL
    ========================================================= */
 
-.portfolio-title {
+.portfolio-label {
 
-    margin-top: 18px;
+    margin-top: 25px;
+
+    color:
+        var(--purple-light);
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 5px;
+
+    text-transform: uppercase;
+
+    animation:
+        fadeUp 0.9s 0.3s ease both;
+
+}
+
+
+/* =========================================================
+   11. HERO INFO
+   ========================================================= */
+
+.hero-info {
+
+    width: 100%;
+
+    max-width: 700px;
 
     display: flex;
 
-    justify-content: center;
+    flex-direction: column;
 
-    gap: 18px;
-
-    font-family:
-        "Cormorant Garamond",
-        serif;
-
-    font-size:
-        clamp(70px, 8vw, 125px);
-
-    font-weight: 400;
-
-    line-height: 0.9;
+    align-items: center;
 
 }
 
 
-.portfolio-title > span:first-child {
-
-    color: var(--accent);
-
-}
-
-
-.portfolio-title .outline {
-
-    color: transparent;
-
-    -webkit-text-stroke:
-        1.5px
-        var(--accent);
-
-    text-shadow:
-        0 0 25px
-        rgba(0,221,210,0.06);
-
-}
-
-
-/* =========================================================
-   10. DESCRIPTION
-   ========================================================= */
+/* DESCRIPTION */
 
 .hero-description {
 
     max-width: 650px;
 
-    margin:
-        38px auto 0;
+    margin-bottom: 25px;
 
-    color: #9299a2;
+    color:
+        var(--gray);
 
-    font-size: 16px;
-
-    font-weight: 400;
+    font-size: 15px;
 
     line-height: 1.8;
 
     animation:
-        fadeUp 0.9s
-        ease
-        0.6s
-        both;
+        fadeUp 0.9s 0.4s ease both;
 
 }
 
 
 /* =========================================================
-   11. ACTION BUTTONS
+   12. PROFESSIONAL INFORMATION
    ========================================================= */
 
-.hero-actions {
-
-    margin-top: 30px;
+.professional-info {
 
     display: flex;
 
-    justify-content: center;
-
     align-items: center;
 
-    gap: 15px;
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-bottom: 28px;
+
+    color:
+        var(--gray);
+
+    font-size: 12px;
 
     animation:
-        fadeUp 0.9s
-        ease
-        0.8s
-        both;
+        fadeUp 0.9s 0.5s ease both;
 
 }
 
 
-.primary-button {
+.professional-info span:first-child {
 
-    min-width: 180px;
+    color:
+        var(--white-soft);
 
-    padding:
-        15px 25px;
+    font-weight: 500;
+
+}
+
+
+.separator {
+
+    color:
+        var(--purple);
+
+}
+
+
+/* =========================================================
+   13. HERO BUTTONS
+   ========================================================= */
+
+.hero-links {
 
     display: flex;
 
@@ -592,109 +639,204 @@ a {
 
     justify-content: center;
 
-    gap: 15px;
+    gap: 16px;
 
-    color: #031010;
+    animation:
+        fadeUp 0.9s 0.6s ease both;
+
+}
+
+
+/* PRIMARY BUTTON */
+
+.hero-button {
+
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 165px;
+
+    padding:
+        14px 26px;
 
     background:
-        var(--accent);
+        var(--purple);
 
     border:
         1px solid
-        var(--accent);
+        var(--purple);
 
-    border-radius: 30px;
+    border-radius: 999px;
 
-    font-size: 14px;
+    color:
+        #ffffff;
+
+    font-size: 12px;
 
     font-weight: 600;
 
-    box-shadow:
-        0 0 30px
-        rgba(0,221,210,0.16);
-
     transition:
         transform 0.3s ease,
+        background 0.3s ease,
         box-shadow 0.3s ease;
 
 }
 
 
-.primary-button:hover {
+.hero-button::after {
+
+    content: "↓";
+
+    margin-left: 12px;
+
+    font-size: 16px;
+
+}
+
+
+.hero-button:hover {
 
     transform:
         translateY(-3px);
 
+    background:
+        var(--purple-light);
+
     box-shadow:
-        0 0 40px
-        rgba(0,221,210,0.30);
+        0 12px 35px
+        var(--purple-glow-strong);
 
 }
 
 
-.primary-button span {
+/* LINKEDIN */
 
-    font-size: 18px;
+.text-link {
 
-}
-
-
-.secondary-button {
-
-    min-width: 145px;
-
-    padding:
-        15px 24px;
-
-    display: flex;
+    display: inline-flex;
 
     align-items: center;
 
     justify-content: center;
 
-    gap: 10px;
+    min-width: 140px;
 
-    color: var(--white);
+    padding:
+        14px 26px;
 
     border:
         1px solid
-        rgba(255,255,255,0.20);
+        rgba(255,255,255,0.16);
 
-    border-radius: 30px;
+    border-radius: 999px;
 
-    font-size: 14px;
+    color:
+        var(--white-soft);
+
+    font-size: 12px;
 
     font-weight: 500;
 
     transition:
         border-color 0.3s ease,
-        background 0.3s ease;
+        color 0.3s ease,
+        background 0.3s ease,
+        transform 0.3s ease;
 
 }
 
 
-.secondary-button:hover {
+.text-link:hover {
+
+    transform:
+        translateY(-3px);
+
+    color:
+        var(--white);
 
     border-color:
-        var(--accent);
+        rgba(139, 92, 246, 0.55);
 
     background:
-        rgba(0,221,210,0.05);
+        rgba(139, 92, 246, 0.07);
 
 }
 
 
 /* =========================================================
-   12. SCROLL INDICATOR
+   14. DECORATIVE CIRCLE
+   ========================================================= */
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 360px;
+
+    height: 360px;
+
+    left: -190px;
+
+    bottom: -100px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid
+        rgba(139, 92, 246, 0.10);
+
+    pointer-events: none;
+
+}
+
+
+.hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 230px;
+
+    height: 230px;
+
+    right: 7%;
+
+    top: 30%;
+
+    border-radius: 50%;
+
+    border:
+        1px solid
+        rgba(139, 92, 246, 0.09);
+
+    box-shadow:
+        0 0 80px
+        rgba(139, 92, 246, 0.04);
+
+    pointer-events: none;
+
+}
+
+
+/* =========================================================
+   15. SCROLL INDICATOR
    ========================================================= */
 
 .scroll-indicator {
 
     position: absolute;
 
-    left: 50%;
+    bottom: 27px;
 
-    bottom: 28px;
+    left: 50%;
 
     transform:
         translateX(-50%);
@@ -705,19 +847,27 @@ a {
 
     align-items: center;
 
-    gap: 8px;
+    gap: 7px;
 
-    color: #69727c;
+    color:
+        var(--gray-dark);
 
-    font-size: 9px;
+    font-size: 8px;
+
+    font-weight: 500;
 
     letter-spacing: 3px;
 
     animation:
-        fadeUp 1s
-        ease
-        1s
-        both;
+        fadeUp 1s 0.9s ease both;
+
+}
+
+
+.scroll-indicator span {
+
+    color:
+        var(--gray-dark);
 
 }
 
@@ -726,282 +876,34 @@ a {
 
     width: 1px;
 
-    height: 38px;
+    height: 35px;
 
     background:
         linear-gradient(
             to bottom,
-            var(--accent),
+            var(--purple),
             transparent
         );
 
-}
-
-
-.scroll-arrow {
-
-    color: var(--accent);
-
-    font-size: 15px;
-
     animation:
-        scrollBounce 2s
-        infinite;
+        scrollPulse 2s ease-in-out infinite;
 
 }
 
 
-/* =========================================================
-   13. PAGE NUMBER
-   ========================================================= */
-
-.page-number {
-
-    position: absolute;
-
-    right: 5%;
-
-    bottom: 35px;
+.scroll-number {
 
     color:
-        rgba(255,255,255,0.045);
+        var(--purple-light) !important;
 
-    font-family:
-        "Cormorant Garamond",
-        serif;
-
-    font-size: 72px;
-
-    line-height: 1;
+    font-size: 8px;
 
 }
 
 
 /* =========================================================
-   14. ABOUT
+   16. ANIMATIONS
    ========================================================= */
-
-.about-section {
-
-    position: relative;
-
-    min-height: 100svh;
-
-    padding:
-        120px 7%;
-
-    display: flex;
-
-    align-items: center;
-
-    border-top:
-        1px solid
-        rgba(255,255,255,0.05);
-
-}
-
-
-.about-inner {
-
-    width: 100%;
-
-    max-width: 1180px;
-
-    margin: auto;
-
-}
-
-
-.section-label {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 15px;
-
-    margin-bottom: 70px;
-
-    color: var(--accent);
-
-    font-size: 11px;
-
-    letter-spacing: 3px;
-
-}
-
-
-.section-label span {
-
-    color: #626a73;
-
-}
-
-
-.about-content {
-
-    display: grid;
-
-    grid-template-columns:
-        1.15fr
-        0.85fr;
-
-    gap: 100px;
-
-    align-items: end;
-
-}
-
-
-.about-heading p {
-
-    margin-bottom: 10px;
-
-    color: #858c95;
-
-    font-family:
-        "Cormorant Garamond",
-        serif;
-
-    font-size: 30px;
-
-    font-style: italic;
-
-}
-
-
-.about-heading h2 {
-
-    max-width: 720px;
-
-    color: var(--white);
-
-    font-family:
-        "Cormorant Garamond",
-        serif;
-
-    font-size:
-        clamp(55px, 6vw, 90px);
-
-    font-weight: 500;
-
-    line-height: 0.95;
-
-    letter-spacing: -2px;
-
-}
-
-
-.about-heading em {
-
-    color: var(--accent);
-
-    font-weight: 400;
-
-}
-
-
-.about-text {
-
-    padding-bottom: 10px;
-
-}
-
-
-.about-text p {
-
-    margin-bottom: 20px;
-
-    color: #9299a2;
-
-    font-size: 15px;
-
-    line-height: 1.9;
-
-}
-
-
-.about-link {
-
-    display: inline-flex;
-
-    align-items: center;
-
-    gap: 15px;
-
-    margin-top: 15px;
-
-    padding-bottom: 6px;
-
-    color: var(--accent);
-
-    border-bottom:
-        1px solid
-        rgba(0,221,210,0.4);
-
-    font-size: 13px;
-
-}
-
-
-.about-link span {
-
-    font-size: 18px;
-
-}
-
-
-/* =========================================================
-   15. ANIMATIONS
-   ========================================================= */
-
-@keyframes heroReveal {
-
-    from {
-
-        opacity: 0;
-
-        transform:
-            translateY(35px)
-            scale(0.98);
-
-    }
-
-    to {
-
-        opacity: 1;
-
-        transform:
-            translateY(0)
-            scale(1);
-
-    }
-
-}
-
-
-@keyframes fadeDown {
-
-    from {
-
-        opacity: 0;
-
-        transform:
-            translateY(-15px);
-
-    }
-
-    to {
-
-        opacity: 1;
-
-        transform:
-            translateY(0);
-
-    }
-
-}
-
 
 @keyframes fadeUp {
 
@@ -1010,7 +912,7 @@ a {
         opacity: 0;
 
         transform:
-            translateY(20px);
+            translateY(25px);
 
     }
 
@@ -1031,37 +933,41 @@ a {
     0%,
     100% {
 
-        opacity: 1;
+        opacity: 0.5;
 
-        transform: scale(1);
+        transform:
+            scale(0.8);
 
     }
 
     50% {
 
-        opacity: 0.45;
+        opacity: 1;
 
-        transform: scale(0.75);
+        transform:
+            scale(1);
 
     }
 
 }
 
 
-@keyframes scrollBounce {
+@keyframes scrollPulse {
 
     0%,
     100% {
 
-        transform:
-            translateY(0);
+        opacity: 0.3;
+
+        height: 25px;
 
     }
 
     50% {
 
-        transform:
-            translateY(5px);
+        opacity: 1;
+
+        height: 38px;
 
     }
 
@@ -1069,47 +975,30 @@ a {
 
 
 /* =========================================================
-   16. TABLET
+   17. TABLET
    ========================================================= */
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
 
-    .navbar {
+    .hero {
 
         padding:
-            0 5%;
+            55px 5% 70px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size:
+            clamp(62px, 10vw, 100px);
 
     }
 
 
     .nav-links {
 
-        gap: 22px;
-
-    }
-
-
-    .hero {
-
-        padding:
-            110px 5% 70px;
-
-    }
-
-
-    .about-section {
-
-        padding:
-            100px 5%;
-
-    }
-
-
-    .about-content {
-
-        grid-template-columns: 1fr;
-
-        gap: 50px;
+        gap: 27px;
 
     }
 
@@ -1117,24 +1006,32 @@ a {
 
 
 /* =========================================================
-   17. MOBILE
+   18. MOBILE
    ========================================================= */
 
 @media (max-width: 650px) {
 
     .navbar {
 
-        height: 72px;
+        height: auto;
+
+        min-height: 78px;
 
         padding:
-            0 20px;
+            20px;
+
+        align-items: center;
+
+        gap: 20px;
 
     }
 
 
     .logo {
 
-        font-size: 23px;
+        font-size: 16px;
+
+        letter-spacing: 4px;
 
     }
 
@@ -1142,6 +1039,10 @@ a {
     .nav-links {
 
         gap: 13px;
+
+        flex-wrap: wrap;
+
+        justify-content: flex-end;
 
     }
 
@@ -1153,148 +1054,183 @@ a {
     }
 
 
-    .nav-links a:nth-child(4),
-    .nav-links a:nth-child(5) {
+    .nav-links a.active::after {
 
-        display: none;
+        bottom: -8px;
 
     }
 
 
     .hero {
 
-        min-height: 100svh;
+        min-height:
+            calc(100vh - 78px);
 
         padding:
-            100px 20px 80px;
+            50px 20px 75px;
 
     }
 
 
     .eyebrow {
 
-        margin-bottom: 30px;
+        margin-bottom: 28px;
 
         padding:
             8px 15px;
 
-        font-size: 9px;
+        font-size: 8px;
 
-        letter-spacing: 2px;
+        letter-spacing: 2.5px;
 
     }
 
 
     .welcome {
 
-        font-size: 32px;
+        font-size: 36px;
 
     }
 
 
     .hero h1 {
 
+        max-width: 100%;
+
         font-size:
-            clamp(55px, 16vw, 80px);
+            clamp(54px, 15vw, 78px);
+
+        line-height: 0.9;
 
         letter-spacing: -2px;
 
-        line-height: 0.86;
-
     }
 
 
-    .portfolio-title {
+    .portfolio-label {
 
-        margin-top: 15px;
+        margin-top: 20px;
 
-        gap: 10px;
+        font-size: 9px;
 
-        font-size:
-            clamp(55px, 15vw, 75px);
-
-    }
-
-
-    .portfolio-title .outline {
-
-        -webkit-text-stroke:
-            1px
-            var(--accent);
+        letter-spacing: 3.5px;
 
     }
 
 
     .hero-description {
 
-        margin-top: 32px;
+        max-width: 90%;
 
-        font-size: 14px;
+        font-size: 13px;
 
-    }
-
-
-    .hero-actions {
-
-        flex-direction: column;
-
-        width: 100%;
+        line-height: 1.75;
 
     }
 
 
-    .primary-button,
-    .secondary-button {
+    .professional-info {
 
-        width: 210px;
+        flex-wrap: wrap;
+
+        font-size: 11px;
 
     }
 
 
-    .page-number {
+    .hero-links {
 
-        display: none;
+        flex-wrap: wrap;
+
+    }
+
+
+    .hero-button,
+    .text-link {
+
+        min-width: 145px;
+
+        padding:
+            13px 20px;
+
+    }
+
+
+    .hero::after {
+
+        width: 160px;
+
+        height: 160px;
+
+        right: -80px;
+
+    }
+
+
+    .hero::before {
+
+        width: 250px;
+
+        height: 250px;
+
+        left: -150px;
 
     }
 
 
     .scroll-indicator {
 
-        bottom: 18px;
+        display: none;
+
+    }
+
+}
+
+
+/* =========================================================
+   19. VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+    .navbar {
+
+        align-items: flex-start;
 
     }
 
 
-    .about-section {
+    .nav-links {
 
-        min-height: auto;
-
-        padding:
-            100px 20px;
+        max-width: 220px;
 
     }
 
 
-    .section-label {
+    .hero {
 
-        margin-bottom: 45px;
-
-    }
-
-
-    .about-heading p {
-
-        font-size: 25px;
+        padding-top: 40px;
 
     }
 
 
-    .about-heading h2 {
+    .welcome {
 
-        font-size:
-            clamp(50px, 14vw, 70px);
+        font-size: 31px;
 
-        letter-spacing: -1px;
+    }
+
+
+    .hero h1 {
+
+        font-size: 52px;
+
+    }
+
+
+    .hero-description {
+
+        font-size: 12px;
 
     }
 
