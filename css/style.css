@@ -1,122 +1,92 @@
-/* ==================================================
+/* =========================================================
    DIARTA GIS PORTFOLIO
-   Main Stylesheet
-   ================================================== */
+   DESIGN SYSTEM
+   ========================================================= */
 
 
-/* ==================================================
-   VARIABLES
-   ================================================== */
+/* =========================================================
+   01. ROOT
+   ========================================================= */
 
 :root {
 
-    --black:
-        #08080d;
+    --bg: #08080d;
+    --bg-soft: #0d0d13;
 
-    --black-soft:
-        #101016;
+    --text: #f4f2f7;
+    --text-soft: #aaa8b4;
+    --text-muted: #777582;
 
-    --white:
-        #f4f3f7;
+    --purple: #9b6cff;
+    --purple-soft: #b08cff;
 
-    --gray:
-        #858592;
-
-    --gray-light:
-        #b2b1bc;
-
-    --purple:
-        #8b5cf6;
-
-    --purple-light:
-        #a78bfa;
-
-    --border:
-        rgba(255, 255, 255, 0.08);
+    --border: rgba(255, 255, 255, 0.075);
 
 }
 
 
-/* ==================================================
-   RESET
-   ================================================== */
+/* =========================================================
+   02. RESET
+   ========================================================= */
 
 * {
-
     margin: 0;
-
     padding: 0;
-
     box-sizing: border-box;
-
 }
 
 
 html {
-
-    scroll-behavior:
-        smooth;
-
+    scroll-behavior: smooth;
 }
 
 
 body {
 
-    background:
-        var(--black);
+    background: var(--bg);
 
-    color:
-        var(--white);
+    color: var(--text);
 
     font-family:
         "DM Sans",
-        Arial,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
         sans-serif;
 
-    line-height:
-        1.6;
+    font-weight: 400;
 
-    -webkit-font-smoothing:
-        antialiased;
+    line-height: 1.6;
+
+    -webkit-font-smoothing: antialiased;
 
 }
 
 
 a {
-
-    color:
-        inherit;
-
-    text-decoration:
-        none;
-
+    color: inherit;
+    text-decoration: none;
 }
 
 
-/* ==================================================
-   NAVIGATION
-   ================================================== */
+/* =========================================================
+   03. NAVIGATION
+   ========================================================= */
 
 .navbar {
 
-    height:
-        92px;
+    height: 94px;
 
-    padding:
-        0 7%;
+    padding: 0 7%;
 
-    display:
-        flex;
+    display: flex;
 
-    align-items:
-        center;
+    align-items: center;
 
-    justify-content:
-        space-between;
+    justify-content: space-between;
 
     border-bottom:
-        1px solid
-        var(--border);
+        1px solid var(--border);
 
 }
 
@@ -127,721 +97,649 @@ a {
         "Manrope",
         sans-serif;
 
-    font-size:
-        21px;
+    font-size: 20px;
 
-    font-weight:
-        700;
+    font-weight: 700;
 
-    letter-spacing:
-        5px;
+    letter-spacing: 5px;
+
+    color: var(--text);
 
 }
 
 
 .nav-links {
 
-    display:
-        flex;
+    display: flex;
 
-    align-items:
-        center;
+    align-items: center;
 
-    gap:
-        40px;
+    gap: 42px;
 
 }
 
 
 .nav-links a {
 
-    position:
-        relative;
+    position: relative;
 
-    color:
-        var(--gray);
+    color: var(--text-muted);
 
-    font-size:
-        14px;
+    font-size: 13px;
+
+    font-weight: 400;
 
     transition:
-        color 0.3s ease;
+        color 0.25s ease;
 
 }
 
 
 .nav-links a:hover {
 
-    color:
-        var(--white);
+    color: var(--text);
 
 }
 
 
 .nav-links a.active {
 
-    color:
-        var(--purple-light);
+    color: var(--purple-soft);
 
 }
 
 
 .nav-links a.active::after {
 
-    content:
-        "";
+    content: "";
 
-    position:
-        absolute;
+    position: absolute;
 
-    left:
-        0;
+    left: 0;
 
-    bottom:
-        -12px;
+    bottom: -13px;
 
-    width:
-        100%;
+    width: 100%;
 
-    height:
-        1px;
+    height: 1px;
 
-    background:
-        var(--purple-light);
+    background: var(--purple);
 
 }
 
 
-/* ==================================================
-   HERO
-   ================================================== */
+/* =========================================================
+   04. HERO
+   ========================================================= */
 
 .hero {
 
     min-height:
-        calc(100vh - 92px);
+        calc(100vh - 94px);
 
     padding:
-        75px 7% 95px;
+        80px 7% 105px;
 
-    display:
-        grid;
+    display: grid;
 
     grid-template-columns:
-        1fr 0.82fr;
+        minmax(0, 1.05fr)
+        minmax(330px, 0.75fr);
 
-    align-items:
-        center;
+    align-items: center;
 
-    column-gap:
-        100px;
+    column-gap: 110px;
 
 }
 
 
-/* ==================================================
-   HERO CONTENT
-   ================================================== */
+/* =========================================================
+   05. HERO CONTENT
+   ========================================================= */
 
 .hero-content {
 
-    max-width:
-        700px;
+    max-width: 760px;
 
 }
 
+
+/* =========================================================
+   06. EYEBROW
+   ========================================================= */
 
 .eyebrow {
 
-    margin-bottom:
-        30px;
+    margin-bottom: 34px;
 
-    color:
-        var(--purple-light);
+    color: var(--purple-soft);
 
-    font-size:
-        11px;
+    font-size: 10px;
 
-    font-weight:
-        600;
+    font-weight: 600;
 
-    letter-spacing:
-        3.5px;
+    letter-spacing: 3.8px;
+
+    text-transform: uppercase;
 
 }
 
 
-/* ==================================================
-   HERO HEADING
-   ================================================== */
+/* =========================================================
+   07. MAIN HEADING
+   ========================================================= */
 
 .hero-heading {
 
-    margin-bottom:
-        35px;
+    margin-bottom: 38px;
 
 }
 
 
 .welcome {
 
-    margin-bottom:
-        5px;
+    margin-bottom: 10px;
 
-    color:
-        var(--gray-light);
+    color: var(--text-soft);
 
     font-family:
         "Manrope",
         sans-serif;
 
     font-size:
-        clamp(34px, 4vw, 58px);
+        clamp(28px, 3vw, 42px);
 
-    font-weight:
-        500;
+    font-weight: 400;
 
-    line-height:
-        1.1;
+    line-height: 1.15;
 
-    letter-spacing:
-        -2px;
+    letter-spacing: -1.5px;
 
 }
 
 
 .hero h1 {
 
-    max-width:
-        720px;
+    max-width: 750px;
 
-    color:
-        var(--white);
+    color: var(--text);
 
     font-family:
         "Manrope",
         sans-serif;
 
     font-size:
-        clamp(45px, 5.5vw, 76px);
+        clamp(50px, 5.8vw, 82px);
 
-    font-weight:
-        600;
+    font-weight: 600;
 
-    line-height:
-        1.02;
+    line-height: 0.98;
 
-    letter-spacing:
-        -3px;
+    letter-spacing: -4px;
 
 }
 
 
 .portfolio-label {
 
-    margin-top:
-        18px;
+    margin-top: 21px;
 
-    color:
-        var(--purple-light);
+    color: var(--purple-soft);
 
-    font-size:
-        14px;
+    font-family:
+        "DM Sans",
+        sans-serif;
 
-    font-weight:
-        500;
+    font-size: 11px;
 
-    letter-spacing:
-        4px;
+    font-weight: 500;
+
+    letter-spacing: 4px;
 
 }
 
 
-/* ==================================================
-   HERO INFORMATION
-   ================================================== */
+/* =========================================================
+   08. HERO DESCRIPTION
+   ========================================================= */
 
 .hero-info {
 
-    max-width:
-        600px;
+    max-width: 590px;
 
 }
 
 
 .hero-description {
 
-    margin-bottom:
-        24px;
+    margin-bottom: 23px;
 
-    color:
-        var(--gray-light);
+    color: var(--text-soft);
 
-    font-size:
-        16px;
+    font-size: 15px;
 
-    line-height:
-        1.8;
+    font-weight: 400;
+
+    line-height: 1.85;
 
 }
 
 
+/* =========================================================
+   09. PROFESSIONAL INFORMATION
+   ========================================================= */
+
 .professional-info {
 
-    display:
-        flex;
+    display: flex;
 
-    align-items:
-        center;
+    align-items: center;
 
-    gap:
-        12px;
+    gap: 11px;
 
-    margin-bottom:
-        34px;
+    margin-bottom: 34px;
 
-    color:
-        var(--gray);
+    color: var(--text-muted);
 
-    font-size:
-        13px;
+    font-size: 12px;
 
 }
 
 
 .professional-info span:first-child {
 
-    color:
-        var(--white);
+    color: var(--text-soft);
+
+    font-weight: 500;
 
 }
 
 
 .separator {
 
-    color:
-        var(--purple);
+    color: var(--purple);
 
 }
 
 
-/* ==================================================
-   LINKS
-   ================================================== */
+/* =========================================================
+   10. HERO LINKS
+   ========================================================= */
 
 .hero-links {
 
-    display:
-        flex;
+    display: flex;
 
-    align-items:
-        center;
+    align-items: center;
 
-    gap:
-        28px;
+    gap: 30px;
 
 }
 
 
 .hero-button {
 
-    padding:
-        12px 21px;
+    padding: 12px 21px;
 
-    background:
-        var(--purple);
+    background: var(--purple);
 
-    border:
-        1px solid
-        var(--purple);
+    border: 1px solid var(--purple);
 
-    color:
-        white;
+    color: #ffffff;
 
-    font-size:
-        13px;
+    font-size: 12px;
 
-    font-weight:
-        500;
+    font-weight: 500;
 
     transition:
-        all 0.3s ease;
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease;
 
 }
 
 
 .hero-button:hover {
 
-    background:
-        transparent;
+    background: transparent;
 
-    color:
-        var(--purple-light);
+    color: var(--purple-soft);
 
 }
 
 
 .text-link {
 
-    position:
-        relative;
+    position: relative;
 
-    color:
-        var(--gray-light);
+    color: var(--text-soft);
 
-    font-size:
-        13px;
+    font-size: 12px;
 
 }
 
 
 .text-link::after {
 
-    content:
-        "";
+    content: "";
 
-    position:
-        absolute;
+    position: absolute;
 
-    left:
-        0;
+    left: 0;
 
-    bottom:
-        -5px;
+    bottom: -5px;
 
-    width:
-        0;
+    width: 0;
 
-    height:
-        1px;
+    height: 1px;
 
-    background:
-        var(--purple-light);
+    background: var(--purple);
 
     transition:
-        width 0.3s ease;
+        width 0.25s ease;
 
 }
 
 
 .text-link:hover {
 
-    color:
-        var(--white);
+    color: var(--text);
 
 }
 
 
 .text-link:hover::after {
 
-    width:
-        100%;
+    width: 100%;
 
 }
 
 
-/* ==================================================
-   IMAGE
-   ================================================== */
+/* =========================================================
+   11. HERO IMAGE
+   ========================================================= */
 
 .hero-visual {
 
-    display:
-        flex;
+    display: flex;
 
-    justify-content:
-        flex-end;
+    justify-content: flex-end;
 
 }
 
 
 .image-frame {
 
-    position:
-        relative;
+    position: relative;
 
-    width:
-        min(390px, 100%);
+    width: min(390px, 100%);
 
 }
 
+
+/*
+   Main image container
+*/
 
 .photo-placeholder {
 
-    position:
-        relative;
+    position: relative;
 
-    width:
-        100%;
+    width: 100%;
 
-    aspect-ratio:
-        0.82;
+    aspect-ratio: 0.82;
 
-    display:
-        flex;
+    display: flex;
 
-    align-items:
-        center;
+    align-items: center;
 
-    justify-content:
-        center;
+    justify-content: center;
 
-    background:
-        var(--black-soft);
+    background: var(--bg-soft);
 
     border:
         1px solid
-        rgba(255, 255, 255, 0.09);
+        rgba(255, 255, 255, 0.08);
 
 }
 
 
+/*
+   Purple offset frame
+*/
+
 .photo-placeholder::after {
 
-    content:
-        "";
+    content: "";
 
-    position:
-        absolute;
+    position: absolute;
 
-    top:
-        14px;
+    top: 13px;
 
-    right:
-        -14px;
+    right: -13px;
 
-    width:
-        100%;
+    width: 100%;
 
-    height:
-        100%;
+    height: 100%;
 
     border:
         1px solid
-        rgba(139, 92, 246, 0.45);
+        rgba(155, 108, 255, 0.45);
 
-    pointer-events:
-        none;
+    pointer-events: none;
 
 }
 
 
 .photo-placeholder span {
 
-    color:
-        var(--purple-light);
+    color: var(--purple-soft);
 
-    font-size:
-        10px;
+    font-size: 9px;
 
-    letter-spacing:
-        4px;
+    font-weight: 500;
+
+    letter-spacing: 4px;
 
 }
 
 
-/* ==================================================
-   SCROLL
-   ================================================== */
+/* =========================================================
+   12. SCROLL INDICATOR
+   ========================================================= */
 
 .scroll-indicator {
 
-    position:
-        absolute;
+    position: absolute;
 
-    left:
-        7%;
+    left: 7%;
 
-    bottom:
-        30px;
+    bottom: 31px;
 
-    display:
-        flex;
+    display: flex;
 
-    align-items:
-        center;
+    align-items: center;
 
-    gap:
-        13px;
+    gap: 12px;
 
 }
 
 
 .scroll-indicator span {
 
-    color:
-        var(--gray);
+    color: var(--text-muted);
 
-    font-size:
-        9px;
+    font-size: 8px;
 
-    letter-spacing:
-        3px;
+    font-weight: 500;
+
+    letter-spacing: 3px;
 
 }
 
 
-.scroll-number {
+.scroll-indicator .scroll-number {
 
-    color:
-        var(--purple-light) !important;
+    color: var(--purple-soft);
 
 }
 
 
 .scroll-line {
 
-    width:
-        45px;
+    width: 48px;
 
-    height:
-        1px;
+    height: 1px;
 
-    background:
-        var(--purple);
+    background: var(--purple);
 
 }
 
 
-/* ==================================================
-   RESPONSIVE
-   ================================================== */
+/* =========================================================
+   13. TABLET
+   ========================================================= */
 
 @media (max-width: 1000px) {
 
     .hero {
 
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
 
-        row-gap:
-            65px;
+        row-gap: 75px;
 
     }
 
 
     .hero-visual {
 
-        justify-content:
-            flex-start;
+        justify-content: flex-start;
 
     }
 
 
     .image-frame {
 
-        width:
-            min(380px, 100%);
+        width: min(370px, 100%);
 
     }
 
 }
 
 
+/* =========================================================
+   14. MOBILE
+   ========================================================= */
+
 @media (max-width: 650px) {
 
     .navbar {
 
-        height:
-            auto;
+        height: auto;
 
-        min-height:
-            80px;
+        min-height: 80px;
 
-        padding:
-            20px;
+        padding: 20px;
 
-        align-items:
-            flex-start;
+        align-items: flex-start;
+
+        gap: 20px;
 
     }
 
 
     .logo {
 
-        font-size:
-            18px;
+        font-size: 17px;
+
+        letter-spacing: 4px;
 
     }
 
 
     .nav-links {
 
-        gap:
-            12px;
+        gap: 13px;
 
-        flex-wrap:
-            wrap;
+        flex-wrap: wrap;
 
-        justify-content:
-            flex-end;
+        justify-content: flex-end;
 
     }
 
 
     .nav-links a {
 
-        font-size:
-            10px;
+        font-size: 10px;
 
     }
 
 
     .hero {
 
+        min-height: auto;
+
         padding:
-            60px 20px 100px;
+            65px 20px 90px;
+
+    }
+
+
+    .eyebrow {
+
+        margin-bottom: 27px;
+
+        font-size: 9px;
+
+        letter-spacing: 3px;
 
     }
 
 
     .welcome {
 
-        font-size:
-            34px;
+        font-size: 30px;
+
+        letter-spacing: -1px;
 
     }
 
 
     .hero h1 {
 
-        font-size:
-            44px;
+        font-size: 46px;
 
-        letter-spacing:
-            -2px;
+        letter-spacing: -2.5px;
 
     }
 
 
     .portfolio-label {
 
-        font-size:
-            12px;
+        font-size: 10px;
+
+        letter-spacing: 3px;
 
     }
 
 
     .hero-description {
 
-        font-size:
-            15px;
+        font-size: 14px;
 
     }
 
 
     .professional-info {
 
-        flex-wrap:
-            wrap;
+        flex-wrap: wrap;
 
     }
 
 
     .scroll-indicator {
 
-        display:
-            none;
+        display: none;
 
     }
 
