@@ -5,26 +5,34 @@
 
 
 /* ==================================================
-   ROOT
+   VARIABLES
    ================================================== */
 
 :root {
 
-    --black: #08080d;
+    --black:
+        #08080d;
 
-    --black-soft: #0d0d13;
+    --black-soft:
+        #101016;
 
-    --white: #f5f5f7;
+    --white:
+        #f4f3f7;
 
-    --gray: #8f8f9c;
+    --gray:
+        #858592;
 
-    --gray-light: #b4b4c0;
+    --gray-light:
+        #b2b1bc;
 
-    --purple: #8b5cf6;
+    --purple:
+        #8b5cf6;
 
-    --purple-light: #a78bfa;
+    --purple-light:
+        #a78bfa;
 
-    --border: rgba(255, 255, 255, 0.08);
+    --border:
+        rgba(255, 255, 255, 0.08);
 
 }
 
@@ -46,35 +54,41 @@
 
 html {
 
-    scroll-behavior: smooth;
+    scroll-behavior:
+        smooth;
 
 }
 
 
 body {
 
-    background: var(--black);
+    background:
+        var(--black);
 
-    color: var(--white);
+    color:
+        var(--white);
 
     font-family:
-        Inter,
-        Helvetica,
+        "DM Sans",
         Arial,
         sans-serif;
 
-    line-height: 1.6;
+    line-height:
+        1.6;
 
-    -webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing:
+        antialiased;
 
 }
 
 
 a {
 
-    color: inherit;
+    color:
+        inherit;
 
-    text-decoration: none;
+    text-decoration:
+        none;
 
 }
 
@@ -85,56 +99,70 @@ a {
 
 .navbar {
 
-    height: 94px;
+    height:
+        92px;
 
     padding:
         0 7%;
 
-    display: flex;
+    display:
+        flex;
 
-    align-items: center;
+    align-items:
+        center;
 
-    justify-content: space-between;
+    justify-content:
+        space-between;
 
     border-bottom:
-        1px solid var(--border);
+        1px solid
+        var(--border);
 
 }
 
 
 .logo {
 
-    color: var(--white);
+    font-family:
+        "Manrope",
+        sans-serif;
 
-    font-size: 22px;
+    font-size:
+        21px;
 
-    font-weight: 700;
+    font-weight:
+        700;
 
-    letter-spacing: 5px;
+    letter-spacing:
+        5px;
 
 }
 
 
 .nav-links {
 
-    display: flex;
+    display:
+        flex;
 
-    align-items: center;
+    align-items:
+        center;
 
-    gap: 40px;
+    gap:
+        40px;
 
 }
 
 
 .nav-links a {
 
-    position: relative;
+    position:
+        relative;
 
-    color: var(--gray);
+    color:
+        var(--gray);
 
-    font-size: 14px;
-
-    font-weight: 400;
+    font-size:
+        14px;
 
     transition:
         color 0.3s ease;
@@ -144,7 +172,8 @@ a {
 
 .nav-links a:hover {
 
-    color: var(--white);
+    color:
+        var(--white);
 
 }
 
@@ -159,17 +188,23 @@ a {
 
 .nav-links a.active::after {
 
-    content: "";
+    content:
+        "";
 
-    position: absolute;
+    position:
+        absolute;
 
-    left: 0;
+    left:
+        0;
 
-    right: 0;
+    bottom:
+        -12px;
 
-    bottom: -11px;
+    width:
+        100%;
 
-    height: 1px;
+    height:
+        1px;
 
     background:
         var(--purple-light);
@@ -184,19 +219,22 @@ a {
 .hero {
 
     min-height:
-        calc(100vh - 94px);
+        calc(100vh - 92px);
 
     padding:
-        80px 7% 100px;
+        75px 7% 95px;
 
-    display: grid;
+    display:
+        grid;
 
     grid-template-columns:
-        1.15fr 0.85fr;
+        1fr 0.82fr;
 
-    align-items: center;
+    align-items:
+        center;
 
-    column-gap: 90px;
+    column-gap:
+        100px;
 
 }
 
@@ -208,7 +246,7 @@ a {
 .hero-content {
 
     max-width:
-        760px;
+        700px;
 
 }
 
@@ -216,13 +254,13 @@ a {
 .eyebrow {
 
     margin-bottom:
-        28px;
+        30px;
 
     color:
         var(--purple-light);
 
     font-size:
-        12px;
+        11px;
 
     font-weight:
         600;
@@ -233,22 +271,65 @@ a {
 }
 
 
-.hero h1 {
+/* ==================================================
+   HERO HEADING
+   ================================================== */
+
+.hero-heading {
 
     margin-bottom:
-        28px;
+        35px;
+
+}
+
+
+.welcome {
+
+    margin-bottom:
+        5px;
+
+    color:
+        var(--gray-light);
+
+    font-family:
+        "Manrope",
+        sans-serif;
+
+    font-size:
+        clamp(34px, 4vw, 58px);
+
+    font-weight:
+        500;
+
+    line-height:
+        1.1;
+
+    letter-spacing:
+        -2px;
+
+}
+
+
+.hero h1 {
+
+    max-width:
+        720px;
 
     color:
         var(--white);
 
+    font-family:
+        "Manrope",
+        sans-serif;
+
     font-size:
-        clamp(48px, 5.6vw, 82px);
+        clamp(45px, 5.5vw, 76px);
 
     font-weight:
         600;
 
     line-height:
-        1.05;
+        1.02;
 
     letter-spacing:
         -3px;
@@ -256,16 +337,16 @@ a {
 }
 
 
-.hero-role {
+.portfolio-label {
 
-    margin-bottom:
-        24px;
+    margin-top:
+        18px;
 
     color:
         var(--purple-light);
 
     font-size:
-        22px;
+        14px;
 
     font-weight:
         500;
@@ -276,42 +357,76 @@ a {
 }
 
 
-.hero-description {
+/* ==================================================
+   HERO INFORMATION
+   ================================================== */
+
+.hero-info {
 
     max-width:
-        610px;
+        600px;
+
+}
+
+
+.hero-description {
 
     margin-bottom:
-        20px;
+        24px;
 
     color:
         var(--gray-light);
 
     font-size:
-        17px;
+        16px;
 
     line-height:
-        1.85;
+        1.8;
 
 }
 
 
-.location {
+.professional-info {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        12px;
 
     margin-bottom:
-        38px;
+        34px;
 
     color:
         var(--gray);
 
     font-size:
-        14px;
+        13px;
+
+}
+
+
+.professional-info span:first-child {
+
+    color:
+        var(--white);
+
+}
+
+
+.separator {
+
+    color:
+        var(--purple);
 
 }
 
 
 /* ==================================================
-   HERO LINKS
+   LINKS
    ================================================== */
 
 .hero-links {
@@ -325,34 +440,29 @@ a {
     gap:
         28px;
 
-    flex-wrap:
-        wrap;
-
 }
 
 
 .hero-button {
 
     padding:
-        13px 24px;
-
-    border:
-        1px solid var(--purple);
+        12px 21px;
 
     background:
         var(--purple);
 
+    border:
+        1px solid
+        var(--purple);
+
     color:
-        #ffffff;
+        white;
 
     font-size:
         13px;
 
     font-weight:
         500;
-
-    letter-spacing:
-        0.2px;
 
     transition:
         all 0.3s ease;
@@ -380,10 +490,7 @@ a {
         var(--gray-light);
 
     font-size:
-        14px;
-
-    transition:
-        color 0.3s ease;
+        13px;
 
 }
 
@@ -434,7 +541,7 @@ a {
 
 
 /* ==================================================
-   HERO VISUAL
+   IMAGE
    ================================================== */
 
 .hero-visual {
@@ -448,16 +555,27 @@ a {
 }
 
 
+.image-frame {
+
+    position:
+        relative;
+
+    width:
+        min(390px, 100%);
+
+}
+
+
 .photo-placeholder {
 
     position:
         relative;
 
     width:
-        min(430px, 100%);
+        100%;
 
     aspect-ratio:
-        4 / 5;
+        0.82;
 
     display:
         flex;
@@ -472,12 +590,11 @@ a {
         var(--black-soft);
 
     border:
-        1px solid var(--border);
+        1px solid
+        rgba(255, 255, 255, 0.09);
 
 }
 
-
-/* Purple offset frame */
 
 .photo-placeholder::after {
 
@@ -488,10 +605,10 @@ a {
         absolute;
 
     top:
-        16px;
+        14px;
 
     right:
-        -16px;
+        -14px;
 
     width:
         100%;
@@ -515,7 +632,7 @@ a {
         var(--purple-light);
 
     font-size:
-        11px;
+        10px;
 
     letter-spacing:
         4px;
@@ -524,7 +641,7 @@ a {
 
 
 /* ==================================================
-   SCROLL INDICATOR
+   SCROLL
    ================================================== */
 
 .scroll-indicator {
@@ -536,7 +653,7 @@ a {
         7%;
 
     bottom:
-        32px;
+        30px;
 
     display:
         flex;
@@ -545,7 +662,7 @@ a {
         center;
 
     gap:
-        12px;
+        13px;
 
 }
 
@@ -560,6 +677,14 @@ a {
 
     letter-spacing:
         3px;
+
+}
+
+
+.scroll-number {
+
+    color:
+        var(--purple-light) !important;
 
 }
 
@@ -582,34 +707,15 @@ a {
    RESPONSIVE
    ================================================== */
 
-@media (max-width: 950px) {
-
-    .navbar {
-
-        padding:
-            0 5%;
-
-    }
-
-
-    .nav-links {
-
-        gap:
-            25px;
-
-    }
-
+@media (max-width: 1000px) {
 
     .hero {
-
-        padding:
-            70px 5% 100px;
 
         grid-template-columns:
             1fr;
 
         row-gap:
-            70px;
+            65px;
 
     }
 
@@ -622,18 +728,10 @@ a {
     }
 
 
-    .photo-placeholder {
+    .image-frame {
 
         width:
-            min(400px, 100%);
-
-    }
-
-
-    .scroll-indicator {
-
-        left:
-            5%;
+            min(380px, 100%);
 
     }
 
@@ -656,9 +754,6 @@ a {
         align-items:
             flex-start;
 
-        gap:
-            20px;
-
     }
 
 
@@ -666,9 +761,6 @@ a {
 
         font-size:
             18px;
-
-        letter-spacing:
-            4px;
 
     }
 
@@ -690,7 +782,7 @@ a {
     .nav-links a {
 
         font-size:
-            11px;
+            10px;
 
     }
 
@@ -698,7 +790,15 @@ a {
     .hero {
 
         padding:
-            65px 20px 100px;
+            60px 20px 100px;
+
+    }
+
+
+    .welcome {
+
+        font-size:
+            34px;
 
     }
 
@@ -706,7 +806,7 @@ a {
     .hero h1 {
 
         font-size:
-            48px;
+            44px;
 
         letter-spacing:
             -2px;
@@ -714,13 +814,10 @@ a {
     }
 
 
-    .hero-role {
+    .portfolio-label {
 
         font-size:
-            18px;
-
-        letter-spacing:
-            3px;
+            12px;
 
     }
 
@@ -729,6 +826,14 @@ a {
 
         font-size:
             15px;
+
+    }
+
+
+    .professional-info {
+
+        flex-wrap:
+            wrap;
 
     }
 
