@@ -11,25 +11,28 @@
     >
 
     <title>
-        Muhammad Syeh Diarta | GIS Analyst
+        Muhammad Syeh Diarta | GIS Portfolio
     </title>
 
     <!-- Google Fonts -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link
-             rel="preconnect"
+        rel="preconnect"
         href="https://fonts.gstatic.com"
         crossorigin
     >
 
     <link
-            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600;700&display=swap"
         rel="stylesheet"
     >
 
+    <!-- Main CSS -->
+
     <link
-             rel="stylesheet"
+        rel="stylesheet"
         href="css/style.css"
     >
 
@@ -39,27 +42,14 @@
 <body>
 
 
-    <!-- ================================
-         BACKGROUND
-         ================================ -->
-
-    <div class="background-grid"></div>
-
-    <div class="orb orb-one"></div>
-
-    <div class="orb orb-two"></div>
-
-    <div class="orb orb-three"></div>
-
-
-    <!-- ================================
+    <!-- =========================
          NAVIGATION
-         ================================ -->
+         ========================= -->
 
     <header class="navbar">
 
         <a
-            href="#home"
+            href="index.html"
             class="logo"
         >
             DIARTA<span>.</span>
@@ -69,13 +59,13 @@
         <nav class="nav-links">
 
             <a
-                href="#home"
+                href="index.html"
                 class="active"
             >
                 Home
             </a>
 
-            <a href="#about">
+            <a href="about.html">
                 About
             </a>
 
@@ -97,28 +87,35 @@
 
 
 
-    <!-- ================================
-         MAIN
-         ================================ -->
+    <!-- =========================
+         HOME / HERO
+         ========================= -->
 
     <main>
 
+        <section class="hero">
 
-        <!-- ================================
-             HOME
-             ================================ -->
 
-        <section
-            class="hero"
-            id="home"
-        >
+            <!-- Background Decoration -->
+
+            <div class="grid-background"></div>
+
+            <div class="circle circle-one"></div>
+
+            <div class="circle circle-two"></div>
+
+            <div class="circle circle-three"></div>
+
+
+
+            <!-- Hero Content -->
 
             <div class="hero-content">
 
 
                 <!-- Status -->
 
-                <div class="eyebrow">
+                <div class="status">
 
                     <span class="status-dot"></span>
 
@@ -127,9 +124,10 @@
                 </div>
 
 
+
                 <!-- Main Heading -->
 
-                <div class="hero-title">
+                <div class="hero-heading">
 
                     <p class="welcome">
                         Welcome to
@@ -137,35 +135,36 @@
 
 
                     <h1>
-                        Muhammad Syeh
-                        <span>Diarta</span>
+
+                        <span class="name">
+                            Muhammad Syeh
+                        </span>
+
+                        <span class="surname">
+                            Diarta
+                        </span>
+
                     </h1>
 
 
-                    <div class="portfolio-title">
-
-                        <span>
-                            GIS
-                        </span>
-
-                        <span class="outline">
-                            Portfolio
-                        </span>
-
-                    </div>
+                    <p class="portfolio-label">
+                        GIS PORTFOLIO
+                    </p>
 
                 </div>
+
 
 
                 <!-- Description -->
 
                 <p class="hero-description">
 
-                    Turning spatial data into meaningful insights
-                    through GIS, remote sensing, spatial analysis,
-                    and geospatial technologies.
+                    Turning spatial data into meaningful insights —
+                    through spatial analysis, mapping, and
+                    geospatial technologies.
 
                 </p>
+
 
 
                 <!-- Buttons -->
@@ -179,7 +178,9 @@
 
                         Explore Projects
 
-                        <span>↓</span>
+                        <span class="arrow">
+                            ↓
+                        </span>
 
                     </a>
 
@@ -191,8 +192,6 @@
 
                         LinkedIn
 
-                        <span>↗</span>
-
                     </a>
 
                 </div>
@@ -201,7 +200,8 @@
             </div>
 
 
-            <!-- Scroll -->
+
+            <!-- Scroll Indicator -->
 
             <div class="scroll-indicator">
 
@@ -224,87 +224,35 @@
                 01
             </div>
 
+
         </section>
 
 
 
-        <!-- ================================
+        <!-- =========================
              ABOUT
-             ================================ -->
+             ========================= -->
 
         <section
-            class="about-section"
             id="about"
+            class="about-preview"
         >
 
-            <div class="about-inner">
+            <p class="section-label">
+                02 / ABOUT
+            </p>
 
+            <h2>
+                Spatial thinking.
+                <br>
+                <span>Meaningful solutions.</span>
+            </h2>
 
-                <div class="section-label">
-
-                    <span>
-                        02
-                    </span>
-
-                    ABOUT
-
-                </div>
-
-
-                <div class="about-content">
-
-
-                    <div class="about-heading">
-
-                        <p>
-                            A GIS professional
-                        </p>
-
-                        <h2>
-                            Exploring the
-                            <em>world</em>
-                            through spatial data.
-                        </h2>
-
-                    </div>
-
-
-                    <div class="about-text">
-
-                        <p>
-
-                            I am a GIS Analyst with an interest in
-                            spatial analysis, mapping, remote sensing,
-                            and geospatial technologies.
-
-                        </p>
-
-
-                        <p>
-
-                            My work focuses on transforming spatial
-                            data into clear visual information that
-                            can support analysis, planning, and
-                            better decision-making.
-
-                        </p>
-
-
-                        <a
-                            href="about.html"
-                            class="about-link"
-                        >
-                            More About Me
-                            <span>→</span>
-                        </a>
-
-                    </div>
-
-
-                </div>
-
-
-            </div>
+            <p>
+                GIS Analyst focused on spatial analysis,
+                mapping, remote sensing, and geospatial
+                technologies.
+            </p>
 
         </section>
 
@@ -312,8 +260,8 @@
     </main>
 
 
-    <script src="js/script.js"></script>
 
+    <script src="js/script.js"></script>
 
 </body>
 
