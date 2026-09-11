@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
 
     <meta
@@ -10,136 +8,105 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>
-        Muhammad Syeh Diarta | GIS Analyst
-    </title>
-
+    <title>Diarta | GIS Portfolio</title>
 
     <!-- Google Fonts -->
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600&display=swap"
         rel="stylesheet"
     >
 
-
-    <!-- Main CSS -->
-
-    <link
-        rel="stylesheet"
-        href="css/style.css"
-    >
-
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 
 <body>
 
+    <!-- =========================
+         BACKGROUND
+    ========================== -->
 
-    <!-- =========================================
-         HOME
-         ========================================= -->
-
-    <main class="home-page">
-
-
-        <!-- Background decoration -->
-
+    <div class="background">
         <div class="circle circle-left"></div>
-
         <div class="circle circle-right"></div>
-
         <div class="circle circle-small"></div>
+    </div>
 
 
-        <!-- =====================================
-             NAVIGATION
-             ===================================== -->
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
 
-        <header class="navbar">
+    <header class="navbar">
 
-            <a
-                href="index.html"
-                class="logo"
-            >
-                DIARTA<span>.</span>
+        <a href="#home" class="logo">
+            DIARTA<span>.</span>
+        </a>
+
+        <nav class="nav-menu">
+
+            <a href="#home" class="nav-link active">
+                Home
             </a>
 
+            <a href="#about" class="nav-link">
+                About
+            </a>
 
-            <nav class="nav-links">
+            <a href="#projects" class="nav-link">
+                Projects
+            </a>
 
-                <a
-                    href="index.html"
-                    class="active"
-                >
-                    Home
-                </a>
+            <a href="#certificates" class="nav-link">
+                Certificates
+            </a>
 
-                <a href="about.html">
-                    About
-                </a>
+            <a href="#contact" class="nav-link">
+                Contact
+            </a>
 
-                <a href="projects.html">
-                    Projects
-                </a>
+        </nav>
 
-                <a href="certificates.html">
-                    Certificates
-                </a>
-
-                <a href="contact.html">
-                    Contact
-                </a>
-
-            </nav>
-
-        </header>
+    </header>
 
 
+    <!-- =========================
+         HOME
+    ========================== -->
 
-        <!-- =====================================
-             HERO
-             ===================================== -->
+    <main>
 
-        <section class="hero">
+        <section id="home" class="hero">
 
+            <div class="hero-content">
 
-            <!-- Status -->
+                <!-- Open to opportunities -->
 
-            <div class="status-badge">
-
-                <span class="status-dot"></span>
-
-                OPEN TO OPPORTUNITIES
-
-            </div>
-
+                <div class="availability">
+                    <span class="availability-dot"></span>
+                    OPEN TO OPPORTUNITIES
+                </div>
 
 
-            <!-- Main heading -->
-
-            <div class="hero-heading">
+                <!-- Welcome -->
 
                 <p class="welcome">
                     Welcome to
                 </p>
 
 
-                <h1>
+                <!-- Main Name -->
 
-                    <span class="name-main">
+                <h1 class="hero-title">
+
+                    <span class="name-solid">
                         Muhammad
                     </span>
 
-                    <span class="name-main">
+                    <span class="name-solid">
                         Syeh
                     </span>
 
@@ -150,111 +117,188 @@
                 </h1>
 
 
-                <p class="portfolio-label">
+                <!-- Category -->
+
+                <div class="hero-label">
                     GIS PORTFOLIO
+                </div>
+
+
+                <!-- Description -->
+
+                <p class="hero-description">
+                    Turning spatial data into meaningful insights —
+                    through spatial analysis, mapping, and
+                    geospatial technologies.
                 </p>
 
-            </div>
 
+                <!-- Buttons -->
 
+                <div class="hero-buttons">
 
-            <!-- Description -->
+                    <a href="#about" class="btn btn-primary">
+                        Explore Me
+                        <span class="arrow">↓</span>
+                    </a>
 
-            <p class="hero-description">
+                    <a
+                        href="https://www.linkedin.com/"
+                        target="_blank"
+                        class="btn btn-secondary"
+                    >
+                        <span class="linkedin-icon">in</span>
+                        LinkedIn
+                    </a>
 
-                Turning spatial data into meaningful insights —
-                through spatial analysis, mapping, and
-                geospatial technologies.
-
-            </p>
-
-
-
-            <!-- Buttons -->
-
-            <div class="hero-actions">
-
-                <a
-                    href="about.html"
-                    class="primary-button"
-                >
-                    Explore Me
-                    <span>↓</span>
-                </a>
-
-
-                <a
-                    href="#"
-                    class="secondary-button"
-                >
-                    LinkedIn
-                </a>
+                </div>
 
             </div>
 
+
+            <!-- Scroll indicator -->
+
+            <a href="#about" class="scroll-indicator">
+
+                <span class="scroll-text">
+                    SCROLL
+                </span>
+
+                <span class="scroll-line"></span>
+
+                <span class="scroll-arrow">
+                    ↓
+                </span>
+
+            </a>
+
+
+            <!-- Page number -->
+
+            <div class="page-number">
+                01
+            </div>
 
         </section>
 
 
+        <!-- =========================
+             ABOUT
+        ========================== -->
 
-        <!-- =====================================
-             SCROLL INDICATOR
-             ===================================== -->
+        <section id="about" class="content-section">
 
-        <div class="scroll-indicator">
+            <div class="section-inner">
 
-            <span>
-                SCROLL
-            </span>
+                <span class="section-number">
+                    02
+                </span>
 
-            <div class="scroll-line"></div>
+                <p class="section-label">
+                    ABOUT ME
+                </p>
 
-            <span class="scroll-arrow">
-                ↓
-            </span>
+                <h2>
+                    Building insights
+                    <br>
+                    through <span>spatial data.</span>
+                </h2>
 
-        </div>
+                <p class="section-description">
+                    I am a GIS enthusiast focused on spatial analysis,
+                    mapping, remote sensing, and geospatial technologies.
+                    I transform geographic data into clear and meaningful
+                    information to support better understanding and
+                    decision-making.
+                </p>
+
+            </div>
+
+        </section>
 
 
+        <!-- =========================
+             PROJECTS
+        ========================== -->
 
-        <!-- Page number -->
+        <section id="projects" class="content-section">
 
-        <div class="page-number">
-            01
-        </div>
+            <div class="section-inner">
 
+                <span class="section-number">
+                    03
+                </span>
+
+                <p class="section-label">
+                    PROJECTS
+                </p>
+
+                <h2>
+                    Selected GIS
+                    <br>
+                    <span>Projects.</span>
+                </h2>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CERTIFICATES
+        ========================== -->
+
+        <section id="certificates" class="content-section">
+
+            <div class="section-inner">
+
+                <span class="section-number">
+                    04
+                </span>
+
+                <p class="section-label">
+                    CERTIFICATES
+                </p>
+
+                <h2>
+                    Certifications &
+                    <br>
+                    <span>Achievements.</span>
+                </h2>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CONTACT
+        ========================== -->
+
+        <section id="contact" class="content-section">
+
+            <div class="section-inner">
+
+                <span class="section-number">
+                    05
+                </span>
+
+                <p class="section-label">
+                    CONTACT
+                </p>
+
+                <h2>
+                    Let's work
+                    <br>
+                    <span>together.</span>
+                </h2>
+
+            </div>
+
+        </section>
 
     </main>
 
 
-
-    <!-- =========================================
-         MINIMAL SCROLL TO ABOUT
-         ========================================= -->
-
-    <script>
-
-        let scrolling = false;
-
-        window.addEventListener(
-            "wheel",
-            function (event) {
-
-                if (event.deltaY > 0 && !scrolling) {
-
-                    scrolling = true;
-
-                    window.location.href = "about.html";
-
-                }
-
-            },
-            { passive: true }
-        );
-
-    </script>
-
-
 </body>
-
 </html>
