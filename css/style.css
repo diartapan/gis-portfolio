@@ -164,7 +164,8 @@ a {
     font-size:
         clamp(28px, 2.2vw, 36px);
 
-    font-weight: 600;
+    font-weight:
+        600;
 
     letter-spacing:
         -0.02em;
@@ -736,7 +737,7 @@ a {
         center;
 
     gap:
-        16px;
+        14px;
 
     margin-top:
         31px;
@@ -744,17 +745,19 @@ a {
 }
 
 
+/* Common */
+
 .btn-primary,
 .btn-secondary {
 
     min-width:
-        164px;
+        155px;
 
     height:
         54px;
 
     padding:
-        0 28px;
+        0 25px;
 
     display:
         inline-flex;
@@ -766,7 +769,7 @@ a {
         center;
 
     gap:
-        12px;
+        10px;
 
     border-radius:
         999px;
@@ -777,11 +780,16 @@ a {
     font-weight:
         600;
 
+    white-space:
+        nowrap;
+
     transition:
         all 0.3s ease;
 
 }
 
+
+/* Explore */
 
 .btn-primary {
 
@@ -810,6 +818,8 @@ a {
 }
 
 
+/* Arrow */
+
 .button-arrow {
 
     font-size:
@@ -820,6 +830,8 @@ a {
 
 }
 
+
+/* LinkedIn + Email */
 
 .btn-secondary {
 
@@ -844,6 +856,9 @@ a {
     background:
         rgba(155, 92, 255, 0.06);
 
+    transform:
+        translateY(-3px);
+
 }
 
 
@@ -854,6 +869,14 @@ a {
 
     font-weight:
         700;
+
+}
+
+
+.email-icon {
+
+    font-size:
+        17px;
 
 }
 
@@ -1727,7 +1750,7 @@ a {
             25px;
 
         gap:
-            10px;
+            8px;
 
     }
 
@@ -1736,16 +1759,16 @@ a {
     .btn-secondary {
 
         min-width:
-            140px;
+            125px;
 
         height:
             48px;
 
         padding:
-            0 20px;
+            0 15px;
 
         font-size:
-            14px;
+            13px;
 
     }
 
@@ -1949,8 +1972,8 @@ a {
 
     .hero-buttons {
 
-        flex-direction:
-            column;
+        flex-wrap:
+            wrap;
 
     }
 
@@ -1958,8 +1981,11 @@ a {
     .btn-primary,
     .btn-secondary {
 
-        width:
-            180px;
+        min-width:
+            145px;
+
+        height:
+            46px;
 
     }
 
