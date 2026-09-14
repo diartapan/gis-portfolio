@@ -1127,6 +1127,26 @@ a {
    ABOUT
    ========================================================= */
 
+.about-section {
+
+    align-items:
+        flex-start;
+
+}
+
+
+.about-section .section-inner {
+
+    padding-top:
+        145px;
+
+}
+
+
+/* =========================================================
+   ABOUT PROFILE
+   ========================================================= */
+
 .about-profile {
 
     display:
@@ -1135,14 +1155,17 @@ a {
     grid-template-columns:
         170px 1fr;
 
-    gap:
-        45px;
-
     align-items:
         center;
 
-    margin-bottom:
+    column-gap:
         45px;
+
+    margin-top:
+        5px;
+
+    margin-bottom:
+        38px;
 
 }
 
@@ -1170,7 +1193,7 @@ a {
         50%;
 
     background:
-        rgba(155, 92, 255, 0.05);
+        rgba(155, 92, 255, 0.04);
 
 }
 
@@ -1202,12 +1225,15 @@ a {
 .profile-content {
 
     max-width:
-        760px;
+        780px;
 
 }
 
 
 .profile-content h3 {
+
+    margin:
+        0;
 
     color:
         var(--white);
@@ -1217,7 +1243,7 @@ a {
         serif;
 
     font-size:
-        clamp(36px, 4vw, 54px);
+        clamp(38px, 4vw, 54px);
 
     font-weight:
         500;
@@ -1240,13 +1266,13 @@ a {
         var(--purple-light);
 
     font-size:
-        13px;
+        12px;
 
     font-weight:
         700;
 
     letter-spacing:
-        0.2em;
+        0.22em;
 
     text-transform:
         uppercase;
@@ -1257,19 +1283,19 @@ a {
 .profile-content p {
 
     max-width:
-        760px;
+        780px;
 
     margin-top:
-        16px;
+        14px;
 
     color:
         var(--text);
 
     font-size:
-        16px;
+        15px;
 
     line-height:
-        1.7;
+        1.65;
 
 }
 
@@ -1284,13 +1310,13 @@ a {
         grid;
 
     grid-template-columns:
-        0.8fr 1.2fr;
+        0.85fr 1.15fr;
 
-    gap:
+    column-gap:
         80px;
 
-    padding-top:
-        5px;
+    align-items:
+        start;
 
 }
 
@@ -1313,7 +1339,7 @@ a {
         block;
 
     margin-bottom:
-        18px;
+        17px;
 
     color:
         var(--purple-light);
@@ -1336,8 +1362,8 @@ a {
 
 .education-item {
 
-    padding:
-        0 0 20px;
+    padding-bottom:
+        20px;
 
     border-bottom:
         1px solid
@@ -1348,6 +1374,9 @@ a {
 
 .education-item h4 {
 
+    max-width:
+        300px;
+
     color:
         var(--white);
 
@@ -1356,10 +1385,13 @@ a {
         serif;
 
     font-size:
-        28px;
+        27px;
 
     font-weight:
         500;
+
+    line-height:
+        1.15;
 
 }
 
@@ -1367,7 +1399,7 @@ a {
 .education-place {
 
     margin-top:
-        8px;
+        9px;
 
     color:
         var(--text);
@@ -1405,17 +1437,26 @@ a {
         grid;
 
     grid-template-columns:
-        repeat(2, 1fr);
+        repeat(2, minmax(0, 1fr));
 
-    gap:
-        18px 30px;
+    column-gap:
+        30px;
+
+    row-gap:
+        0;
 
 }
 
 
 .skill-group {
 
-    padding-bottom:
+    min-width:
+        0;
+
+    padding:
+        0 0 16px;
+
+    margin-bottom:
         16px;
 
     border-bottom:
@@ -1437,7 +1478,7 @@ a {
         var(--white);
 
     font-size:
-        15px;
+        14px;
 
     font-weight:
         600;
@@ -1457,7 +1498,7 @@ a {
         13px;
 
     line-height:
-        1.6;
+        1.55;
 
 }
 
@@ -2087,25 +2128,6 @@ a {
     }
 
 
-    .about-layout {
-
-        grid-template-columns:
-            1fr;
-
-        gap:
-            30px;
-
-    }
-
-
-    .about-text p {
-
-        font-size:
-            15px;
-
-    }
-
-
     .projects-grid,
     .certificate-grid {
 
@@ -2149,6 +2171,100 @@ a {
 
     }
 
+.about-section {
+
+    align-items:
+        flex-start;
+
+}
+
+
+.about-section .section-inner {
+
+    padding:
+        105px 0 60px;
+
+}
+
+
+.about-profile {
+
+    grid-template-columns:
+        1fr;
+
+    row-gap:
+        22px;
+
+    text-align:
+        center;
+
+}
+
+
+.profile-photo {
+
+    width:
+        130px;
+
+    height:
+        130px;
+
+    margin:
+        0 auto;
+
+}
+
+
+.profile-content {
+
+    max-width:
+        100%;
+
+}
+
+
+.profile-content h3 {
+
+    font-size:
+        38px;
+
+}
+
+
+.profile-content p {
+
+    font-size:
+        14px;
+
+}
+
+
+.about-details {
+
+    grid-template-columns:
+        1fr;
+
+    row-gap:
+        35px;
+
+}
+
+
+.skills-list {
+
+    grid-template-columns:
+        1fr;
+
+}
+
+
+.education-item h4 {
+
+    max-width:
+        100%;
+
+}
+   
 }
 
 
