@@ -1,540 +1,1230 @@
 /* =========================================================
-DIARTA GIS PORTFOLIO
-HOME PAGE
-========================================================= */
+   DIARTA GIS PORTFOLIO
+   HOME PAGE
+   ========================================================= */
+
 
 /* =========================================================
-HOME SECTION
-========================================================= */
+   HOME SECTION
+   ========================================================= */
 
 .home-section {
 
-position:
-    relative;
+    position:
+        relative;
 
-display:
-    flex;
+    display:
+        flex;
 
-align-items:
-    center;
+    align-items:
+        center;
 
-justify-content:
-    center;
+    justify-content:
+        center;
 
-background:
-    var(--black);
+    background:
+        var(--black);
 
 }
 
+
 /* =========================================================
-GRID BACKGROUND
-========================================================= */
+   GRID BACKGROUND
+   ========================================================= */
 
 .home-grid {
 
-position:
-    absolute;
+    position:
+        absolute;
 
-inset:
-    0;
+    inset:
+        0;
 
-pointer-events:
-    none;
+    pointer-events:
+        none;
 
-background-image:
+    background-image:
 
-    linear-gradient(
-        rgba(155, 92, 255, 0.055) 1px,
-        transparent 1px
-    ),
+        linear-gradient(
+            rgba(155, 92, 255, 0.055) 1px,
+            transparent 1px
+        ),
 
-    linear-gradient(
-        90deg,
-        rgba(155, 92, 255, 0.055) 1px,
-        transparent 1px
-    );
+        linear-gradient(
+            90deg,
+            rgba(155, 92, 255, 0.055) 1px,
+            transparent 1px
+        );
 
-background-size:
-    80px 80px;
+    background-size:
+        80px 80px;
 
-opacity:
-    0.75;
+    opacity:
+        0.75;
 
 }
 
+
 /* =========================================================
-DECORATIVE ORBS
-========================================================= */
+   DECORATIVE ORBS
+   ========================================================= */
 
 .home-orb {
 
-position:
-    absolute;
+    position:
+        absolute;
 
-border:
-    1px solid
-    rgba(155, 92, 255, 0.22);
+    border:
+        1px solid
+        rgba(155, 92, 255, 0.22);
 
-border-radius:
-    50%;
+    border-radius:
+        50%;
 
-pointer-events:
-    none;
+    pointer-events:
+        none;
 
 }
+
 
 /* LEFT ORB */
 
 .home-orb-left {
 
-width:
-    520px;
+    width:
+        520px;
 
-height:
-    520px;
+    height:
+        520px;
 
-left:
-    -260px;
+    left:
+        -260px;
 
-bottom:
-    -150px;
+    bottom:
+        -150px;
 
 }
+
 
 /* RIGHT LARGE ORB */
 
 .home-orb-right {
 
-width:
-    760px;
+    width:
+        760px;
 
-height:
-    760px;
+    height:
+        760px;
 
-right:
-    -300px;
+    right:
+        -300px;
 
-top:
-    260px;
+    top:
+        260px;
 
 }
+
 
 /* RIGHT SMALL ORB */
 
 .home-orb-small {
 
-width:
-    300px;
+    width:
+        300px;
 
-height:
-    300px;
+    height:
+        300px;
 
-right:
-    100px;
+    right:
+        100px;
 
-bottom:
-    80px;
+    bottom:
+        80px;
 
 }
 
+
 /* =========================================================
-PURPLE GLOW
-========================================================= */
+   PURPLE GLOW
+   ========================================================= */
 
 .home-section::before {
 
-content:
-    "";
+    content:
+        "";
 
-position:
-    absolute;
+    position:
+        absolute;
 
-width:
-    500px;
+    width:
+        500px;
 
-height:
-    500px;
+    height:
+        500px;
 
-left:
-    50%;
+    left:
+        50%;
 
-top:
-    42%;
+    top:
+        42%;
 
-transform:
-    translate(-50%, -50%);
+    transform:
+        translate(-50%, -50%);
 
-background:
-    radial-gradient(
-        circle,
-        rgba(155, 92, 255, 0.10) 0%,
-        rgba(155, 92, 255, 0.04) 35%,
-        transparent 70%
-    );
+    background:
+        radial-gradient(
+            circle,
+            rgba(155, 92, 255, 0.10) 0%,
+            rgba(155, 92, 255, 0.04) 35%,
+            transparent 70%
+        );
 
-filter:
-    blur(20px);
+    filter:
+        blur(20px);
 
-pointer-events:
-    none;
+    pointer-events:
+        none;
 
 }
 
+
 /* =========================================================
-HOME CONTENT
-========================================================= */
+   HOME CONTENT
+   ========================================================= */
 
 .home-content {
 
-position:
-    relative;
+    position:
+        relative;
 
-z-index:
-    5;
+    z-index:
+        5;
 
-width:
-    min(1100px, 90%);
+    width:
+        min(1100px, 90%);
 
-margin:
-    0 auto;
+    margin:
+        0 auto;
 
-padding-top:
-    55px;
+    padding-top:
+        55px;
 
-text-align:
-    center;
+    text-align:
+        center;
 
 }
 
+
 /* =========================================================
-AVAILABILITY BADGE
-========================================================= */
+   AVAILABILITY BADGE
+   ========================================================= */
 
 .availability {
 
-display:
-    inline-flex;
+    display:
+        inline-flex;
 
-align-items:
-    center;
+    align-items:
+        center;
 
-justify-content:
-    center;
+    justify-content:
+        center;
 
-gap:
-    12px;
+    gap:
+        12px;
 
-padding:
-    13px 30px;
+    padding:
+        13px 30px;
 
-border:
-    1px solid
-    rgba(155, 92, 255, 0.65);
+    border:
+        1px solid
+        rgba(155, 92, 255, 0.65);
 
-border-radius:
-    999px;
+    border-radius:
+        999px;
 
-color:
-    var(--white);
+    color:
+        var(--white);
 
-font-size:
-    12px;
+    font-size:
+        12px;
 
-font-weight:
-    600;
+    font-weight:
+        600;
 
-letter-spacing:
-    0.24em;
+    letter-spacing:
+        0.24em;
 
-text-transform:
-    uppercase;
+    text-transform:
+        uppercase;
 
-box-shadow:
-    0 0 30px
-    rgba(155, 92, 255, 0.08);
+    box-shadow:
+        0 0 30px
+        rgba(155, 92, 255, 0.08);
 
 }
 
+
 /* =========================================================
-STATUS DOT
-========================================================= */
+   STATUS DOT
+   ========================================================= */
 
 .availability-dot {
 
-position:
-    relative;
+    position:
+        relative;
 
-width:
-    7px;
+    width:
+        7px;
 
-height:
-    7px;
+    height:
+        7px;
 
-border-radius:
-    50%;
+    border-radius:
+        50%;
 
-background:
-    var(--purple);
+    background:
+        var(--purple);
 
-box-shadow:
-    0 0 12px
-    var(--purple);
+    box-shadow:
+        0 0 12px
+        var(--purple);
 
-animation:
-    availability-pulse 1.8s ease-in-out infinite;
+    animation:
+        availability-pulse 1.8s ease-in-out infinite;
 
 }
+
 
 /* OUTER PULSE */
 
 .availability-dot::after {
 
-content:
-    "";
+    content:
+        "";
 
-position:
-    absolute;
+    position:
+        absolute;
 
-top:
-    50%;
+    top:
+        50%;
 
-left:
-    50%;
+    left:
+        50%;
 
-width:
-    100%;
+    width:
+        100%;
 
-height:
-    100%;
+    height:
+        100%;
 
-border:
-    1px solid
-    rgba(155, 92, 255, 0.55);
+    border:
+        1px solid
+        rgba(155, 92, 255, 0.55);
 
-border-radius:
-    50%;
+    border-radius:
+        50%;
 
-transform:
-    translate(-50%, -50%)
-    scale(1);
+    transform:
+        translate(-50%, -50%)
+        scale(1);
 
-opacity:
-    0;
+    opacity:
+        0;
 
-animation:
-    availability-ripple 1.8s ease-out infinite;
+    animation:
+        availability-ripple 1.8s ease-out infinite;
 
 }
+
 
 /* DOT BLINK */
 
 @keyframes availability-pulse {
 
-0%,
-100% {
+    0%,
+    100% {
 
-    opacity:
-        1;
+        opacity:
+            1;
 
-    transform:
-        scale(1);
+        transform:
+            scale(1);
 
-    box-shadow:
-        0 0 12px
-        rgba(155, 92, 255, 0.95);
+        box-shadow:
+            0 0 12px
+            rgba(155, 92, 255, 0.95);
+
+    }
+
+    50% {
+
+        opacity:
+            0.35;
+
+        transform:
+            scale(0.72);
+
+        box-shadow:
+            0 0 5px
+            rgba(155, 92, 255, 0.45);
+
+    }
 
 }
 
-50% {
-
-    opacity:
-        0.35;
-
-    transform:
-        scale(0.72);
-
-    box-shadow:
-        0 0 5px
-        rgba(155, 92, 255, 0.45);
-
-}
-
-}
 
 /* DOT RIPPLE */
 
 @keyframes availability-ripple {
 
-0% {
+    0% {
 
-    transform:
-        translate(-50%, -50%)
-        scale(1);
+        transform:
+            translate(-50%, -50%)
+            scale(1);
 
-    opacity:
-        0.6;
+        opacity:
+            0.6;
+
+    }
+
+    70% {
+
+        transform:
+            translate(-50%, -50%)
+            scale(2.4);
+
+        opacity:
+            0;
+
+    }
+
+    100% {
+
+        transform:
+            translate(-50%, -50%)
+            scale(2.4);
+
+        opacity:
+            0;
+
+    }
 
 }
 
-70% {
-
-    transform:
-        translate(-50%, -50%)
-        scale(2.4);
-
-    opacity:
-        0;
-
-}
-
-100% {
-
-    transform:
-        translate(-50%, -50%)
-        scale(2.4);
-
-    opacity:
-        0;
-
-}
-
-}
 
 /* =========================================================
-WELCOME TEXT
-========================================================= */
+   WELCOME TEXT
+   ========================================================= */
 
 .welcome-text {
 
-margin-top:
-    42px;
+    margin-top:
+        42px;
 
-margin-bottom:
-    2px;
+    margin-bottom:
+        2px;
 
-color:
-    rgba(245, 243, 248, 0.65);
+    color:
+        rgba(245, 243, 248, 0.65);
 
-font-family:
-    "Cormorant Garamond",
-    serif;
+    font-family:
+        "Cormorant Garamond",
+        serif;
 
-font-size:
-    clamp(32px, 4vw, 48px);
+    font-size:
+        clamp(32px, 4vw, 48px);
 
-font-style:
-    italic;
+    font-style:
+        italic;
 
-font-weight:
-    400;
+    font-weight:
+        400;
 
-line-height:
-    1;
+    line-height:
+        1;
 
 }
 
+
 /* =========================================================
-HERO NAME
-========================================================= */
+   HERO NAME
+   ========================================================= */
 
 .hero-name {
 
-display:
-    flex;
+    display:
+        flex;
 
-flex-direction:
-    column;
+    flex-direction:
+        column;
 
-align-items:
-    center;
+    align-items:
+        center;
 
-justify-content:
-    center;
+    justify-content:
+        center;
 
-margin:
-    0;
+    margin:
+        0;
 
-font-family:
-    "Cormorant Garamond",
-    serif;
+    font-family:
+        "Cormorant Garamond",
+        serif;
 
-font-size:
-    clamp(78px, 10vw, 150px);
+    font-size:
+        clamp(78px, 10vw, 150px);
 
-font-weight:
-    500;
+    font-weight:
+        500;
 
-line-height:
-    0.82;
+    line-height:
+        0.82;
 
-letter-spacing:
-    -0.045em;
+    letter-spacing:
+        -0.045em;
 
 }
+
 
 /* WHITE NAME */
 
 .name-white {
 
-display:
-    block;
+    display:
+        block;
 
-color:
-    var(--white);
+    color:
+        var(--white);
 
 }
 
+
 /* =========================================================
-PURPLE NAME — DIARTA
-========================================================= */
+   PURPLE NAME — DIARTA
+   ========================================================= */
 
 .name-purple {
 
-display:
-    block;
+    display:
+        block;
 
-margin-top:
-    8px;
+    color:
+        var(--purple);
 
-font-family:
-    "Cormorant Garamond",
-    serif;
+    margin-top:
+        8px;
 
-font-weight:
-    400;
+    /* Lebih tipis seperti "Portfolio" milik Meilys */
 
-font-style:
-    normal;
+    font-family:
+        "Cormorant Garamond",
+        serif;
 
-letter-spacing:
-    -0.035em;
+    font-weight:
+        400;
 
-color:
-    var(--purple);
-
-/* Membuat karakter huruf lebih ringan */
-
--webkit-text-stroke:
-    0.35px
-    var(--purple);
-
-text-shadow:
-    0 0 18px
-    rgba(155, 92, 255, 0.12);
-
-transform:
-    scaleX(0.96);
-
-transform-origin:
-    center;
+    letter-spacing:
+        -0.025em;
 
 }
 
+
 /* =========================================================
-GIS PORTFOLIO LABEL
-========================================================= */
+   GIS PORTFOLIO LABEL
+   ========================================================= */
 
 .portfolio-label {
 
-margin-top:
-    48px;
+    margin-top:
+        48px;
+
+    color:
+        var(--white);
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(20px, 2vw, 28px);
+
+    font-weight:
+        500;
+
+    line-height:
+        1;
+
+    letter-spacing:
+        0.28em;
+
+    text-transform:
+        uppercase;
+
+    text-shadow:
+        0 0 20px
+        rgba(155, 92, 255, 0.18);
+
+}
+
+
+/* =========================================================
+   HERO DESCRIPTION
+   ========================================================= */
+
+.hero-description {
+
+    width:
+        min(850px, 90%);
+
+    margin:
+        35px auto 0;
+
+    color:
+        var(--text);
+
+    font-size:
+        15px;
+
+    font-weight:
+        300;
+
+    line-height:
+        1.8;
+
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+   ========================================================= */
+
+.hero-buttons {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        14px;
+
+    margin-top:
+        40px;
+
+}
+
+
+/* =========================================================
+   GENERAL BUTTON
+   ========================================================= */
+
+.btn {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    min-height:
+        50px;
+
+    padding:
+        0 24px;
+
+    border-radius:
+        999px;
+
+    font-size:
+        13px;
+
+    font-weight:
+        500;
+
+    transition:
+        all 0.3s ease;
+
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+   ========================================================= */
+
+.btn-primary {
+
+    background:
+        var(--purple);
+
+    color:
+        var(--white);
+
+    box-shadow:
+        0 0 30px
+        rgba(155, 92, 255, 0.18);
+
+}
+
+
+.btn-primary:hover {
+
+    background:
+        var(--purple-light);
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 0 35px
+        rgba(155, 92, 255, 0.35);
+
+}
+
+
+/* =========================================================
+   BUTTON ARROW
+   ========================================================= */
+
+.btn-arrow {
+
+    margin-left:
+        8px;
+
+    font-size:
+        17px;
+
+    line-height:
+        1;
+
+}
+
+
+/* =========================================================
+   SECONDARY BUTTON
+   ========================================================= */
+
+.btn-secondary {
+
+    gap:
+        9px;
+
+    border:
+        1px solid
+        var(--border);
+
+    color:
+        var(--text);
+
+    background:
+        rgba(255, 255, 255, 0.02);
+
+}
+
+
+.btn-secondary:hover {
+
+    color:
+        var(--white);
+
+    border-color:
+        rgba(155, 92, 255, 0.55);
+
+    background:
+        rgba(155, 92, 255, 0.06);
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+/* =========================================================
+   LINKEDIN ICON
+   ========================================================= */
+
+.linkedin-icon {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    width:
+        17px;
+
+    height:
+        17px;
+
+    border-radius:
+        2px;
+
+    background:
+        var(--text);
+
+    color:
+        var(--black);
+
+    font-size:
+        11px;
+
+    font-weight:
+        700;
+
+}
+
+
+.btn-secondary:hover .linkedin-icon {
+
+    background:
+        var(--purple-light);
+
+}
+
+
+/* =========================================================
+   EMAIL ICON
+   ========================================================= */
+
+.email-icon {
+
+    font-size:
+        15px;
+
+    line-height:
+        1;
+
+}
+
+
+/* =========================================================
+   SCROLL INDICATOR
+   ========================================================= */
+
+.scroll-indicator {
+
+    position:
+        absolute;
+
+    left:
+        clamp(35px, 6vw, 100px);
+
+    bottom:
+        45px;
+
+    z-index:
+        5;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        flex-start;
+
+    gap:
+        5px;
+
+}
+
+
+/* SCROLL TEXT */
+
+.scroll-text {
+
+    color:
+        var(--text-soft);
+
+    font-size:
+        10px;
+
+    font-weight:
+        500;
+
+    letter-spacing:
+        0.28em;
+
+}
+
+
+/* SCROLL ARROW */
+
+.scroll-arrow {
+
+    color:
+        var(--purple-light);
+
+    font-size:
+        20px;
+
+    line-height:
+        1;
+
+}
+
+
+/* =========================================================
+   HOME PAGE NUMBER
+   ========================================================= */
+
+.home-section .page-number {
+
+    z-index:
+        5;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+
+/* ---------- TABLET ---------- */
+
+@media (max-width: 1000px) {
+
+    .home-content {
+
+        width:
+            90%;
+
+        padding-top:
+            45px;
+
+    }
+
+
+    .hero-name {
+
+        font-size:
+            clamp(70px, 10vw, 120px);
+
+    }
+
+
+    .home-orb-right {
+
+        width:
+            600px;
+
+        height:
+            600px;
+
+        right:
+            -260px;
+
+    }
+
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 768px) {
+
+    .home-content {
+
+        padding-top:
+            35px;
+
+    }
+
+
+    .availability {
+
+        padding:
+            11px 20px;
+
+        font-size:
+            10px;
+
+        letter-spacing:
+            0.18em;
+
+    }
+
+
+    .welcome-text {
+
+        margin-top:
+            35px;
+
+        font-size:
+            32px;
+
+    }
+
+
+    .hero-name {
+
+        font-size:
+            clamp(58px, 15vw, 90px);
+
+        line-height:
+            0.85;
+
+    }
+
+
+    .name-purple {
+
+        margin-top:
+            5px;
+
+    }
+
+
+    .portfolio-label {
+
+        margin-top:
+            38px;
+
+        font-size:
+            19px;
+
+        letter-spacing:
+            0.22em;
+
+    }
+
+
+    .hero-description {
+
+        width:
+            95%;
+
+        margin-top:
+            28px;
+
+        font-size:
+            13px;
+
+        line-height:
+            1.7;
+
+    }
+
+
+    .hero-buttons {
+
+        flex-wrap:
+            wrap;
+
+        margin-top:
+            30px;
+
+    }
+
+
+    .btn {
+
+        min-height:
+            46px;
+
+        padding:
+            0 20px;
+
+        font-size:
+            12px;
+
+    }
+
+
+    .scroll-indicator {
+
+        left:
+            25px;
+
+        bottom:
+            25px;
+
+    }
+
+
+    .home-orb-left {
+
+        width:
+            350px;
+
+        height:
+            350px;
+
+        left:
+            -220px;
+
+        bottom:
+            -100px;
+
+    }
+
+
+    .home-orb-right {
+
+        width:
+            450px;
+
+        height:
+            450px;
+
+        right:
+            -260px;
+
+        top:
+            300px;
+
+    }
+
+
+    .home-orb-small {
+
+        width:
+            220px;
+
+        height:
+            220px;
+
+        right:
+            -50px;
+
+        bottom:
+            100px;
+
+    }
+
+}
+
+
+/* ---------- SMALL MOBILE ---------- */
+
+@media (max-width: 480px) {
+
+    .home-content {
+
+        width:
+            92%;
+
+        padding-top:
+            25px;
+
+    }
+
+
+    .availability {
+
+        max-width:
+            90%;
+
+        padding:
+            10px 16px;
+
+        font-size:
+            9px;
+
+    }
+
+
+    .welcome-text {
+
+        margin-top:
+            30px;
+
+        font-size:
+            28px;
+
+    }
+
+
+    .hero-name {
+
+        font-size:
+            clamp(48px, 14vw, 70px);
+
+    }
+
+
+    .portfolio-label {
+
+        margin-top:
+            32px;
+
+        font-size:
+            17px;
+
+        letter-spacing:
+            0.18em;
+
+    }
+
+
+    .hero-description {
+
+        margin-top:
+            24px;
+
+        font-size:
+            12px;
+
+    }
+
+
+    .hero-buttons {
+
+        gap:
+            9px;
+
+        margin-top:
+            25px;
+
+    }
+
+
+    .btn {
+
+        min-height:
+            42px;
+
+        padding:
+            0 15px;
+
+        font-size:
+            11px;
+
+    }
+
+
+    .scroll-indicator {
+
+        display:
+            none;
+
+    }
+
+
+    .home-grid {
+
+        background-size:
+            55px 55px;
+
+    }
+
+}
+
+
+/* =========================================================
+   END OF HOME CSS
+   ========================================================= */
