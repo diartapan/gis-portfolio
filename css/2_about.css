@@ -84,6 +84,34 @@
 }
 
 
+/* ABOUT ME */
+
+.about-heading .section-kicker {
+
+    display:
+        inline-block;
+
+    margin-bottom:
+        12px;
+
+    color:
+        var(--purple-light);
+
+    font-size:
+        14px;
+
+    font-weight:
+        600;
+
+    letter-spacing:
+        0.22em;
+
+    text-transform:
+        uppercase;
+
+}
+
+
 /* =========================================================
    PROFILE
    ========================================================= */
@@ -106,7 +134,7 @@
 
 
 /* =========================================================
-   PROFILE PHOTO
+   PROFILE PHOTO WRAPPER
    ========================================================= */
 
 .profile-photo-wrapper {
@@ -114,11 +142,20 @@
     display:
         flex;
 
+    flex-direction:
+        column;
+
     align-items:
-        center;
+        flex-start;
 
     justify-content:
-        center;
+        flex-start;
+
+    align-self:
+        start;
+
+    transform:
+        translateY(-8px);
 
 }
 
@@ -231,7 +268,7 @@
         var(--purple-light);
 
     font-size:
-        11px;
+        13px;
 
     font-weight:
         600;
@@ -407,14 +444,14 @@
     display:
         flex;
 
-    align-items:
-        center;
+    flex-direction:
+        column;
 
-    flex-wrap:
-        wrap;
+    align-items:
+        flex-start;
 
     gap:
-        10px;
+        8px;
 
     margin-top:
         14px;
@@ -422,12 +459,33 @@
 }
 
 
+.profile-links-row {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        8px;
+
+}
+
+
+/* =========================================================
+   PROFILE LINK
+   ========================================================= */
+
 .profile-link {
 
     display:
         inline-flex;
 
     align-items:
+        center;
+
+    justify-content:
         center;
 
     gap:
@@ -458,6 +516,9 @@
     font-weight:
         500;
 
+    white-space:
+        nowrap;
+
     transition:
         all 0.3s ease;
 
@@ -485,7 +546,20 @@
 }
 
 
+/* =========================================================
+   PROFILE LINK ICON
+   ========================================================= */
+
 .profile-link-icon {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
 
     width:
         15px;
@@ -493,17 +567,35 @@
     height:
         15px;
 
-    fill:
-        currentColor;
-
     flex-shrink:
         0;
+
+    color:
+        currentColor;
+
+    font-size:
+        12px;
+
+    font-weight:
+        600;
 
 }
 
 
 /* =========================================================
-   DETAILS
+   LOCATION
+   ========================================================= */
+
+.profile-location {
+
+    width:
+        fit-content;
+
+}
+
+
+/* =========================================================
+   ABOUT DETAILS
    ========================================================= */
 
 .about-details {
@@ -558,13 +650,13 @@
         var(--purple-light);
 
     font-size:
-        10px;
+        12px;
 
     font-weight:
         600;
 
     letter-spacing:
-        0.22em;
+        0.20em;
 
     text-transform:
         uppercase;
@@ -877,11 +969,6 @@
 
 
 /* =========================================================
-   RESPONSIVE
-   ========================================================= */
-
-
-/* =========================================================
    TABLET
    ========================================================= */
 
@@ -972,6 +1059,14 @@
     }
 
 
+    .about-heading .section-kicker {
+
+        font-size:
+            13px;
+
+    }
+
+
     .about-profile {
 
         grid-template-columns:
@@ -985,8 +1080,8 @@
 
     .profile-photo-wrapper {
 
-        justify-content:
-            flex-start;
+        transform:
+            translateY(-5px);
 
     }
 
@@ -1029,7 +1124,7 @@
     .profile-links {
 
         margin-top:
-            14px;
+            12px;
 
     }
 
@@ -1086,6 +1181,30 @@
     }
 
 
+    .about-heading .section-kicker {
+
+        font-size:
+            13px;
+
+    }
+
+
+    .about-detail-label {
+
+        font-size:
+            11px;
+
+    }
+
+
+    .profile-role {
+
+        font-size:
+            11px;
+
+    }
+
+
     .profile-photo-frame {
 
         width:
@@ -1101,17 +1220,6 @@
 
         font-size:
             42px;
-
-    }
-
-
-    .profile-role {
-
-        font-size:
-            9px;
-
-        letter-spacing:
-            0.16em;
 
     }
 
