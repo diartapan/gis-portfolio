@@ -1,1401 +1,540 @@
 /* =========================================================
-   DIARTA GIS PORTFOLIO
-   HOME PAGE
-   ========================================================= */
-
+DIARTA GIS PORTFOLIO
+HOME PAGE
+========================================================= */
 
 /* =========================================================
-   HOME
-   ========================================================= */
+HOME SECTION
+========================================================= */
 
 .home-section {
 
-    display:
-        flex;
+position:
+    relative;
 
-    align-items:
-        center;
+display:
+    flex;
 
-    justify-content:
-        center;
+align-items:
+    center;
 
-    background:
-        var(--black);
+justify-content:
+    center;
+
+background:
+    var(--black);
 
 }
-
 
 /* =========================================================
-   BACKGROUND GRID
-   ========================================================= */
+GRID BACKGROUND
+========================================================= */
 
-.background-grid {
+.home-grid {
 
-    position:
-        absolute;
+position:
+    absolute;
 
-    inset:
-        0;
+inset:
+    0;
 
-    z-index:
-        0;
+pointer-events:
+    none;
 
-    background-image:
+background-image:
 
-        linear-gradient(
-            rgba(155, 92, 255, 0.035)
-            1px,
-            transparent 1px
-        ),
+    linear-gradient(
+        rgba(155, 92, 255, 0.055) 1px,
+        transparent 1px
+    ),
 
-        linear-gradient(
-            90deg,
-            rgba(155, 92, 255, 0.035)
-            1px,
-            transparent 1px
-        );
+    linear-gradient(
+        90deg,
+        rgba(155, 92, 255, 0.055) 1px,
+        transparent 1px
+    );
 
-    background-size:
-        64px 64px;
+background-size:
+    80px 80px;
 
-    mask-image:
-        linear-gradient(
-            to bottom,
-            black 0%,
-            black 70%,
-            transparent 100%
-        );
+opacity:
+    0.75;
 
 }
-
 
 /* =========================================================
-   DECORATIVE ORBS
-   ========================================================= */
+DECORATIVE ORBS
+========================================================= */
 
-.orb {
+.home-orb {
 
-    position:
-        absolute;
+position:
+    absolute;
 
-    border:
-        1px solid
-        rgba(155, 92, 255, 0.17);
+border:
+    1px solid
+    rgba(155, 92, 255, 0.22);
 
-    border-radius:
-        50%;
+border-radius:
+    50%;
 
-    pointer-events:
-        none;
-
-}
-
-
-.orb-left {
-
-    width:
-        360px;
-
-    height:
-        360px;
-
-    left:
-        -150px;
-
-    bottom:
-        60px;
+pointer-events:
+    none;
 
 }
 
+/* LEFT ORB */
 
-.orb-right {
+.home-orb-left {
 
-    width:
-        620px;
+width:
+    520px;
 
-    height:
-        620px;
+height:
+    520px;
 
-    right:
-        -250px;
+left:
+    -260px;
 
-    top:
-        120px;
-
-}
-
-
-.orb-small {
-
-    width:
-        240px;
-
-    height:
-        240px;
-
-    right:
-        9%;
-
-    bottom:
-        105px;
+bottom:
+    -150px;
 
 }
 
+/* RIGHT LARGE ORB */
+
+.home-orb-right {
+
+width:
+    760px;
+
+height:
+    760px;
+
+right:
+    -300px;
+
+top:
+    260px;
+
+}
+
+/* RIGHT SMALL ORB */
+
+.home-orb-small {
+
+width:
+    300px;
+
+height:
+    300px;
+
+right:
+    100px;
+
+bottom:
+    80px;
+
+}
 
 /* =========================================================
-   HERO CONTENT
-   ========================================================= */
+PURPLE GLOW
+========================================================= */
 
-.hero-content {
+.home-section::before {
 
-    position:
-        relative;
+content:
+    "";
 
-    z-index:
-        5;
+position:
+    absolute;
 
-    width:
-        min(1100px, 90%);
+width:
+    500px;
 
-    margin:
-        0 auto;
+height:
+    500px;
 
-    display:
-        flex;
+left:
+    50%;
 
-    flex-direction:
-        column;
+top:
+    42%;
 
-    align-items:
-        center;
+transform:
+    translate(-50%, -50%);
 
-    justify-content:
-        center;
+background:
+    radial-gradient(
+        circle,
+        rgba(155, 92, 255, 0.10) 0%,
+        rgba(155, 92, 255, 0.04) 35%,
+        transparent 70%
+    );
 
-    text-align:
-        center;
+filter:
+    blur(20px);
 
-    transform:
-        translateY(-1vh);
+pointer-events:
+    none;
 
 }
 
+/* =========================================================
+HOME CONTENT
+========================================================= */
+
+.home-content {
+
+position:
+    relative;
+
+z-index:
+    5;
+
+width:
+    min(1100px, 90%);
+
+margin:
+    0 auto;
+
+padding-top:
+    55px;
+
+text-align:
+    center;
+
+}
 
 /* =========================================================
-   AVAILABILITY
-   ========================================================= */
+AVAILABILITY BADGE
+========================================================= */
 
 .availability {
 
-    display:
-        inline-flex;
+display:
+    inline-flex;
 
-    align-items:
-        center;
+align-items:
+    center;
 
-    gap:
-        12px;
+justify-content:
+    center;
 
-    padding:
-        10px 22px;
+gap:
+    12px;
 
-    border:
-        1px solid
-        rgba(155, 92, 255, 0.55);
+padding:
+    13px 30px;
 
-    border-radius:
-        999px;
+border:
+    1px solid
+    rgba(155, 92, 255, 0.65);
 
-    color:
-        var(--purple-light);
+border-radius:
+    999px;
 
-    background:
-        rgba(155, 92, 255, 0.035);
+color:
+    var(--white);
 
-    font-size:
-        13px;
+font-size:
+    12px;
 
-    font-weight:
-        600;
+font-weight:
+    600;
 
-    letter-spacing:
-        0.18em;
+letter-spacing:
+    0.24em;
 
-    text-transform:
-        uppercase;
+text-transform:
+    uppercase;
 
-    box-shadow:
-        0 0 25px
-        rgba(155, 92, 255, 0.05);
+box-shadow:
+    0 0 30px
+    rgba(155, 92, 255, 0.08);
 
 }
 
-
 /* =========================================================
-   AVAILABILITY DOT
-   ========================================================= */
+STATUS DOT
+========================================================= */
 
 .availability-dot {
 
-    position:
-        relative;
+position:
+    relative;
 
-    width:
-        8px;
+width:
+    7px;
 
-    height:
-        8px;
+height:
+    7px;
 
-    flex-shrink:
-        0;
+border-radius:
+    50%;
 
-    border-radius:
-        50%;
+background:
+    var(--purple);
 
-    background:
-        var(--purple);
+box-shadow:
+    0 0 12px
+    var(--purple);
 
-    box-shadow:
-        0 0 12px
-        var(--purple);
-
-    animation:
-        availabilityPulse 1.8s ease-in-out infinite;
+animation:
+    availability-pulse 1.8s ease-in-out infinite;
 
 }
 
-
-/* Expanding glow */
+/* OUTER PULSE */
 
 .availability-dot::after {
 
-    content:
-        "";
+content:
+    "";
 
-    position:
-        absolute;
+position:
+    absolute;
 
-    top:
-        50%;
+top:
+    50%;
 
-    left:
-        50%;
+left:
+    50%;
 
-    width:
-        100%;
+width:
+    100%;
 
-    height:
-        100%;
+height:
+    100%;
 
-    border:
-        1px solid
-        rgba(155, 92, 255, 0.50);
+border:
+    1px solid
+    rgba(155, 92, 255, 0.55);
 
-    border-radius:
-        50%;
+border-radius:
+    50%;
+
+transform:
+    translate(-50%, -50%)
+    scale(1);
+
+opacity:
+    0;
+
+animation:
+    availability-ripple 1.8s ease-out infinite;
+
+}
+
+/* DOT BLINK */
+
+@keyframes availability-pulse {
+
+0%,
+100% {
+
+    opacity:
+        1;
+
+    transform:
+        scale(1);
+
+    box-shadow:
+        0 0 12px
+        rgba(155, 92, 255, 0.95);
+
+}
+
+50% {
+
+    opacity:
+        0.35;
+
+    transform:
+        scale(0.72);
+
+    box-shadow:
+        0 0 5px
+        rgba(155, 92, 255, 0.45);
+
+}
+
+}
+
+/* DOT RIPPLE */
+
+@keyframes availability-ripple {
+
+0% {
 
     transform:
         translate(-50%, -50%)
         scale(1);
 
     opacity:
+        0.6;
+
+}
+
+70% {
+
+    transform:
+        translate(-50%, -50%)
+        scale(2.4);
+
+    opacity:
         0;
 
-    animation:
-        availabilityRipple 1.8s ease-out infinite;
-
 }
 
+100% {
 
-/* Dot pulse */
+    transform:
+        translate(-50%, -50%)
+        scale(2.4);
 
-@keyframes availabilityPulse {
-
-    0%,
-    100% {
-
-        opacity:
-            0.55;
-
-        transform:
-            scale(0.85);
-
-        box-shadow:
-            0 0 7px
-            rgba(155, 92, 255, 0.60);
-
-    }
-
-    50% {
-
-        opacity:
-            1;
-
-        transform:
-            scale(1.12);
-
-        box-shadow:
-            0 0 12px
-            rgba(155, 92, 255, 0.95),
-            0 0 22px
-            rgba(155, 92, 255, 0.35);
-
-    }
-
-}
-
-
-/* Dot ripple */
-
-@keyframes availabilityRipple {
-
-    0% {
-
-        opacity:
-            0.65;
-
-        transform:
-            translate(-50%, -50%)
-            scale(0.8);
-
-    }
-
-    70% {
-
-        opacity:
-            0;
-
-        transform:
-            translate(-50%, -50%)
-            scale(2.5);
-
-    }
-
-    100% {
-
-        opacity:
-            0;
-
-        transform:
-            translate(-50%, -50%)
-            scale(2.5);
-
-    }
-
-}
-
-
-/* =========================================================
-   WELCOME
-   ========================================================= */
-
-.welcome {
-
-    margin-top:
-        28px;
-
-    margin-bottom:
-        4px;
-
-    color:
-        rgba(231, 227, 238, 0.68);
-
-    font-family:
-        "Cormorant Garamond",
-        serif;
-
-    font-size:
-        clamp(30px, 3vw, 48px);
-
-    font-style:
-        italic;
-
-    font-weight:
-        400;
-
-    line-height:
-        1.05;
-
-}
-
-
-/* =========================================================
-   HERO TITLE
-   ========================================================= */
-
-.hero-title {
-
-    margin:
+    opacity:
         0;
 
-    display:
-        flex;
-
-    flex-direction:
-        column;
-
-    align-items:
-        center;
-
-    justify-content:
-        center;
-
-    font-family:
-        "Cormorant Garamond",
-        serif;
-
-    font-weight:
-        500;
-
-    line-height:
-        0.82;
-
-    letter-spacing:
-        -0.035em;
+}
 
 }
 
+/* =========================================================
+WELCOME TEXT
+========================================================= */
+
+.welcome-text {
+
+margin-top:
+    42px;
+
+margin-bottom:
+    2px;
+
+color:
+    rgba(245, 243, 248, 0.65);
+
+font-family:
+    "Cormorant Garamond",
+    serif;
+
+font-size:
+    clamp(32px, 4vw, 48px);
+
+font-style:
+    italic;
+
+font-weight:
+    400;
+
+line-height:
+    1;
+
+}
 
 /* =========================================================
-   MUHAMMAD SYEH
-   ========================================================= */
+HERO NAME
+========================================================= */
+
+.hero-name {
+
+display:
+    flex;
+
+flex-direction:
+    column;
+
+align-items:
+    center;
+
+justify-content:
+    center;
+
+margin:
+    0;
+
+font-family:
+    "Cormorant Garamond",
+    serif;
+
+font-size:
+    clamp(78px, 10vw, 150px);
+
+font-weight:
+    500;
+
+line-height:
+    0.82;
+
+letter-spacing:
+    -0.045em;
+
+}
+
+/* WHITE NAME */
 
 .name-white {
 
-    display:
-        block;
+display:
+    block;
 
-    color:
-        var(--white);
-
-    font-size:
-        clamp(72px, 8vw, 138px);
-
-    white-space:
-        nowrap;
+color:
+    var(--white);
 
 }
 
-
 /* =========================================================
-   DIARTA
-   ========================================================= */
+PURPLE NAME — DIARTA
+========================================================= */
 
 .name-purple {
 
-    display:
-        block;
+display:
+    block;
 
-    margin-top:
-        13px;
+margin-top:
+    8px;
 
-    color:
-        transparent;
+font-family:
+    "Cormorant Garamond",
+    serif;
 
-    font-family:
-        "Cormorant Garamond",
-        serif;
+font-weight:
+    400;
 
-    font-size:
-        clamp(72px, 8vw, 138px);
+font-style:
+    normal;
 
-    font-weight:
-        400;
+letter-spacing:
+    -0.035em;
 
-    font-style:
-        normal;
+color:
+    var(--purple);
 
-    line-height:
-        0.82;
+/* Membuat karakter huruf lebih ringan */
 
-    letter-spacing:
-        -0.045em;
+-webkit-text-stroke:
+    0.35px
+    var(--purple);
 
-    /*
-       Tipis seperti karakter "Portfolio"
-       pada referensi Meilys.
-    */
+text-shadow:
+    0 0 18px
+    rgba(155, 92, 255, 0.12);
 
-    -webkit-text-stroke:
-        1.15px var(--purple);
+transform:
+    scaleX(0.96);
 
-    text-shadow:
-        0 0 14px
-        rgba(155, 92, 255, 0.10);
-
-    white-space:
-        nowrap;
-
-    transform:
-        scaleX(0.96);
-
-    transform-origin:
-        center;
+transform-origin:
+    center;
 
 }
 
-
 /* =========================================================
-   GIS PORTFOLIO
-   ========================================================= */
+GIS PORTFOLIO LABEL
+========================================================= */
 
 .portfolio-label {
 
-    margin-top:
-        28px;
-
-    color:
-        var(--purple-light);
-
-    font-family:
-        "Cormorant Garamond",
-        serif;
-
-    font-size:
-        clamp(20px, 1.7vw, 28px);
-
-    font-weight:
-        500;
-
-    letter-spacing:
-        0.28em;
-
-    line-height:
-        1;
-
-    text-transform:
-        uppercase;
-
-    text-shadow:
-        0 0 18px
-        rgba(155, 92, 255, 0.16);
-
-}
-
-
-/* =========================================================
-   HERO DESCRIPTION
-   ========================================================= */
-
-.hero-description {
-
-    width:
-        min(760px, 90%);
-
-    margin:
-        25px auto 0;
-
-    color:
-        rgba(220, 216, 228, 0.68);
-
-    font-size:
-        clamp(16px, 1.15vw, 20px);
-
-    font-weight:
-        400;
-
-    line-height:
-        1.6;
-
-}
-
-
-/* =========================================================
-   HERO BUTTONS
-   ========================================================= */
-
-.hero-buttons {
-
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    justify-content:
-        center;
-
-    gap:
-        14px;
-
-    margin-top:
-        31px;
-
-}
-
-
-/* =========================================================
-   COMMON BUTTON
-   ========================================================= */
-
-.btn-primary,
-.btn-secondary {
-
-    min-width:
-        155px;
-
-    height:
-        54px;
-
-    padding:
-        0 25px;
-
-    display:
-        inline-flex;
-
-    align-items:
-        center;
-
-    justify-content:
-        center;
-
-    gap:
-        10px;
-
-    border-radius:
-        999px;
-
-    font-size:
-        16px;
-
-    font-weight:
-        600;
-
-    white-space:
-        nowrap;
-
-    transition:
-        all 0.3s ease;
-
-}
-
-
-/* =========================================================
-   EXPLORE BUTTON
-   ========================================================= */
-
-.btn-primary {
-
-    background:
-        var(--purple);
-
-    color:
-        #ffffff;
-
-    box-shadow:
-        0 0 28px
-        rgba(155, 92, 255, 0.28);
-
-}
-
-
-.btn-primary:hover {
-
-    transform:
-        translateY(-3px);
-
-    box-shadow:
-        0 0 40px
-        rgba(155, 92, 255, 0.45);
-
-}
-
-
-/* =========================================================
-   BUTTON ARROW
-   ========================================================= */
-
-.button-arrow {
-
-    font-size:
-        23px;
-
-    line-height:
-        1;
-
-}
-
-
-/* =========================================================
-   LINKEDIN + EMAIL
-   ========================================================= */
-
-.btn-secondary {
-
-    border:
-        1px solid
-        rgba(255, 255, 255, 0.18);
-
-    color:
-        var(--white);
-
-    background:
-        rgba(255, 255, 255, 0.015);
-
-}
-
-
-.btn-secondary:hover {
-
-    border-color:
-        rgba(155, 92, 255, 0.65);
-
-    background:
-        rgba(155, 92, 255, 0.06);
-
-    transform:
-        translateY(-3px);
-
-}
-
-
-/* =========================================================
-   LINKEDIN ICON
-   ========================================================= */
-
-.linkedin-icon {
-
-    font-size:
-        16px;
-
-    font-weight:
-        700;
-
-}
-
-
-/* =========================================================
-   EMAIL ICON
-   ========================================================= */
-
-.email-icon {
-
-    font-size:
-        17px;
-
-}
-
-
-/* =========================================================
-   SCROLL INDICATOR
-   ========================================================= */
-
-.scroll-indicator {
-
-    position:
-        absolute;
-
-    left:
-        50%;
-
-    bottom:
-        16px;
-
-    transform:
-        translateX(-50%);
-
-    z-index:
-        10;
-
-    display:
-        flex;
-
-    flex-direction:
-        column;
-
-    align-items:
-        center;
-
-    gap:
-        3px;
-
-}
-
-
-/* =========================================================
-   SCROLL TEXT
-   ========================================================= */
-
-.scroll-indicator span {
-
-    color:
-        rgba(255, 255, 255, 0.42);
-
-    font-size:
-        9px;
-
-    font-weight:
-        600;
-
-    letter-spacing:
-        0.35em;
-
-    line-height:
-        1;
-
-    text-transform:
-        uppercase;
-
-    text-shadow:
-        0 0 12px
-        rgba(155, 92, 255, 0.20);
-
-    animation:
-        scrollTextPulse 2.2s ease-in-out infinite;
-
-}
-
-
-/* =========================================================
-   SCROLL LINE
-   ========================================================= */
-
-.scroll-line {
-
-    position:
-        relative;
-
-    width:
-        1px;
-
-    height:
-        28px;
-
-    margin-top:
-        4px;
-
-    overflow:
-        hidden;
-
-    background:
-        linear-gradient(
-            to bottom,
-            rgba(155, 92, 255, 0.18),
-            rgba(155, 92, 255, 0.04)
-        );
-
-}
-
-
-/* Moving light */
-
-.scroll-line::after {
-
-    content:
-        "";
-
-    position:
-        absolute;
-
-    top:
-        -10px;
-
-    left:
-        0;
-
-    width:
-        1px;
-
-    height:
-        10px;
-
-    background:
-        var(--purple-light);
-
-    box-shadow:
-        0 0 8px
-        rgba(155, 92, 255, 0.85);
-
-    animation:
-        scrollLineMove 1.8s ease-in-out infinite;
-
-}
-
-
-/* =========================================================
-   SCROLL ARROW
-   ========================================================= */
-
-.scroll-arrow {
-
-    margin-top:
-        2px;
-
-    color:
-        var(--purple-light);
-
-    font-size:
-        21px;
-
-    font-weight:
-        300;
-
-    line-height:
-        1;
-
-    text-shadow:
-        0 0 12px
-        rgba(155, 92, 255, 0.65);
-
-    animation:
-        scrollArrowMove 1.8s ease-in-out infinite;
-
-}
-
-
-/* =========================================================
-   SCROLL TEXT ANIMATION
-   ========================================================= */
-
-@keyframes scrollTextPulse {
-
-    0%,
-    100% {
-
-        opacity:
-            0.42;
-
-        transform:
-            translateY(0);
-
-    }
-
-    50% {
-
-        opacity:
-            0.90;
-
-        transform:
-            translateY(-2px);
-
-    }
-
-}
-
-
-/* =========================================================
-   SCROLL LINE ANIMATION
-   ========================================================= */
-
-@keyframes scrollLineMove {
-
-    0% {
-
-        top:
-            -10px;
-
-        opacity:
-            0;
-
-    }
-
-    20% {
-
-        opacity:
-            1;
-
-    }
-
-    70% {
-
-        top:
-            18px;
-
-        opacity:
-            0.85;
-
-    }
-
-    100% {
-
-        top:
-            28px;
-
-        opacity:
-            0;
-
-    }
-
-}
-
-
-/* =========================================================
-   SCROLL ARROW ANIMATION
-   ========================================================= */
-
-@keyframes scrollArrowMove {
-
-    0%,
-    100% {
-
-        transform:
-            translateY(0);
-
-        opacity:
-            0.55;
-
-    }
-
-    50% {
-
-        transform:
-            translateY(6px);
-
-        opacity:
-            1;
-
-    }
-
-}
-
-
-/* =========================================================
-   HOME PAGE NUMBER
-   ========================================================= */
-
-.home-section .page-number {
-
-    z-index:
-        5;
-
-}
-
-
-/* =========================================================
-   HOME RESPONSIVE
-   ========================================================= */
-
-
-/* =========================================================
-   TABLET
-   ========================================================= */
-
-@media (max-width: 1000px) {
-
-    .name-white,
-    .name-purple {
-
-        font-size:
-            clamp(65px, 9vw, 105px);
-
-    }
-
-}
-
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media (max-width: 768px) {
-
-    .hero-content {
-
-        width:
-            92%;
-
-        transform:
-            translateY(-1vh);
-
-    }
-
-
-    .availability {
-
-        padding:
-            8px 16px;
-
-        font-size:
-            10px;
-
-    }
-
-
-    .welcome {
-
-        margin-top:
-            22px;
-
-        font-size:
-            28px;
-
-    }
-
-
-    .name-white,
-    .name-purple {
-
-        font-size:
-            clamp(55px, 14vw, 85px);
-
-        white-space:
-            normal;
-
-    }
-
-
-    .name-purple {
-
-        margin-top:
-            5px;
-
-    }
-
-
-    .portfolio-label {
-
-        margin-top:
-            24px;
-
-        font-size:
-            16px;
-
-        letter-spacing:
-            0.30em;
-
-    }
-
-
-    .hero-description {
-
-        width:
-            92%;
-
-        margin-top:
-            20px;
-
-        font-size:
-            14px;
-
-        line-height:
-            1.6;
-
-    }
-
-
-    .hero-buttons {
-
-        flex-wrap:
-            wrap;
-
-        margin-top:
-            25px;
-
-        gap:
-            8px;
-
-    }
-
-
-    .btn-primary,
-    .btn-secondary {
-
-        min-width:
-            125px;
-
-        height:
-            48px;
-
-        padding:
-            0 15px;
-
-        font-size:
-            13px;
-
-    }
-
-
-    .scroll-indicator {
-
-        left:
-            25px;
-
-        bottom:
-            25px;
-
-    }
-
-
-    .orb-left {
-
-        width:
-            220px;
-
-        height:
-            220px;
-
-        left:
-            -130px;
-
-    }
-
-
-    .orb-right {
-
-        width:
-            400px;
-
-        height:
-            400px;
-
-        right:
-            -250px;
-
-    }
-
-
-    .orb-small {
-
-        display:
-            none;
-
-    }
-
-}
-
-
-/* =========================================================
-   SMALL MOBILE
-   ========================================================= */
-
-@media (max-width: 480px) {
-
-    .name-white,
-    .name-purple {
-
-        font-size:
-            50px;
-
-    }
-
-
-    .welcome {
-
-        font-size:
-            25px;
-
-    }
-
-
-    .portfolio-label {
-
-        margin-top:
-            22px;
-
-        font-size:
-            13px;
-
-        letter-spacing:
-            0.24em;
-
-    }
-
-
-    .hero-description {
-
-        font-size:
-            12px;
-
-    }
-
-
-    .hero-buttons {
-
-        gap:
-            7px;
-
-    }
-
-
-    .btn-primary,
-    .btn-secondary {
-
-        min-width:
-            115px;
-
-        height:
-            44px;
-
-        padding:
-            0 13px;
-
-        font-size:
-            11px;
-
-    }
-
-
-    .scroll-indicator {
-
-        left:
-            18px;
-
-        bottom:
-            22px;
-
-        transform:
-            translateX(0);
-
-    }
-
-
-    .scroll-indicator span {
-
-        font-size:
-            8px;
-
-        letter-spacing:
-            0.28em;
-
-    }
-
-
-    .scroll-line {
-
-        height:
-            24px;
-
-    }
-
-
-    .scroll-arrow {
-
-        font-size:
-            19px;
-
-    }
-
-
-    .orb-left {
-
-        width:
-            180px;
-
-        height:
-            180px;
-
-        left:
-            -110px;
-
-    }
-
-
-    .orb-right {
-
-        width:
-            330px;
-
-        height:
-            330px;
-
-        right:
-            -220px;
-
-    }
-
-}
-
-
-/* =========================================================
-   END OF HOME CSS
-   ========================================================= */
+margin-top:
+    48px;
