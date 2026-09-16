@@ -15,6 +15,7 @@
 .about-background {
     position: absolute;
     inset: 0;
+
     pointer-events: none;
 
     background:
@@ -33,11 +34,11 @@
 
 /* =========================================================
    MAIN INNER
-   Hanya dinaikkan dan dipadatkan
 ========================================================= */
 
 .about-inner {
     position: relative;
+
     z-index: 2;
 
     padding-top: 88px;
@@ -63,6 +64,7 @@
     font-weight: 600;
 
     letter-spacing: 0.23em;
+
     text-transform: uppercase;
 }
 
@@ -167,6 +169,7 @@
     font-weight: 600;
 
     letter-spacing: 0.20em;
+
     text-transform: uppercase;
 }
 
@@ -290,7 +293,24 @@
 
 
 .location-icon {
-    font-size: 10px;
+    color: currentColor;
+
+    font-size: 0;
+}
+
+
+.location-icon svg {
+    width: 16px;
+    height: 16px;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.8;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
 
 
@@ -306,7 +326,7 @@
 
 .profile-location {
     color:
-        rgba(245, 243, 248, 0.52);
+        rgba(245, 243, 248, 0.72);
 }
 
 
@@ -344,11 +364,13 @@
 .education-item {
     display: flex;
 
-    align-items: center;
+    align-items: baseline;
 
     flex-wrap: wrap;
 
-    gap: 8px;
+    column-gap: 10px;
+
+    row-gap: 4px;
 }
 
 
@@ -373,6 +395,8 @@
     font-size: 14px;
 
     font-weight: 500;
+
+    line-height: 1.2;
 }
 
 
@@ -382,14 +406,16 @@
     font-size: 13px;
 
     font-weight: 300;
+
+    line-height: 1.2;
 }
 
 
 .education-separator {
     color:
-        rgba(255, 255, 255, 0.22);
+        rgba(155, 92, 255, 0.65);
 
-    font-size: 13px;
+    font-size: 14px;
 }
 
 
@@ -408,7 +434,7 @@
 
 
 /* =========================================================
-   SKILLS GRID
+   SKILL GRID
 ========================================================= */
 
 .skills-cards {
@@ -651,6 +677,8 @@
 
 
 .skill-card h3 {
+    min-height: 37px;
+
     margin-bottom: 7px;
 
     color: var(--white);
@@ -698,7 +726,7 @@
 
 
 /* =========================================================
-   SCROLL INDICATOR
+   SCROLL
 ========================================================= */
 
 .about-scroll-indicator {
@@ -921,6 +949,11 @@
     }
 
 
+    .education-item {
+        column-gap: 7px;
+    }
+
+
     .education-place {
         font-size: 25px;
     }
@@ -1015,6 +1048,11 @@
 
     .profile-link-separator {
         margin: 0 6px;
+    }
+
+
+    .education-item {
+        column-gap: 6px;
     }
 
 
