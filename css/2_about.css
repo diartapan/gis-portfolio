@@ -158,22 +158,6 @@
 }
 
 
-.profile-role {
-    display: inline-block;
-
-    margin-bottom: 5px;
-
-    color: var(--purple-light);
-
-    font-size: 14px;
-    font-weight: 600;
-
-    letter-spacing: 0.20em;
-
-    text-transform: uppercase;
-}
-
-
 /* =========================================================
    NAME
 ========================================================= */
@@ -183,7 +167,7 @@
 
     flex-direction: column;
 
-    margin: 0 0 13px;
+    margin: 0 0 4px;
 
     font-family:
         "Cormorant Garamond",
@@ -207,6 +191,27 @@
 
 .name-purple {
     color: var(--purple);
+}
+
+
+/* =========================================================
+   ROLE
+   Diposisikan di bawah "Diarta"
+========================================================= */
+
+.profile-role {
+    display: inline-block;
+
+    margin-bottom: 14px;
+
+    color: var(--purple-light);
+
+    font-size: 14px;
+    font-weight: 600;
+
+    letter-spacing: 0.20em;
+
+    text-transform: uppercase;
 }
 
 
@@ -429,7 +434,7 @@
 
 
 .skills-section .about-detail-label {
-    margin-bottom: 9px;
+    margin-bottom: 10px;
 }
 
 
@@ -443,35 +448,43 @@
     grid-template-columns:
         repeat(3, minmax(0, 1fr));
 
-    gap: 18px;
+    gap: 26px;
 }
 
 
 /* =========================================================
    SKILL CARD
+   Referensi:
+   - card tinggi
+   - border purple tipis
+   - icon box
+   - number kanan atas
+   - title
+   - divider
+   - detail skill
 ========================================================= */
 
 .skill-card {
     position: relative;
 
-    height: 142px;
-    min-height: 142px;
+    height: 185px;
+    min-height: 185px;
 
-    padding: 16px 20px;
+    padding: 20px 24px;
 
     overflow: hidden;
 
     border:
         1px solid
-        rgba(155, 92, 255, 0.48);
+        rgba(155, 92, 255, 0.55);
 
-    border-radius: 12px;
+    border-radius: 13px;
 
     background:
         linear-gradient(
-            135deg,
-            rgba(155, 92, 255, 0.075),
-            rgba(12, 10, 20, 0.78)
+            145deg,
+            rgba(19, 15, 30, 0.96),
+            rgba(8, 8, 14, 0.92)
         );
 
     transition:
@@ -485,13 +498,13 @@
     transform: translateY(-4px);
 
     border-color:
-        rgba(155, 92, 255, 0.80);
+        rgba(155, 92, 255, 0.85);
 
     box-shadow:
-        0 12px 32px
+        0 14px 35px
         rgba(0, 0, 0, 0.35),
 
-        0 0 24px
+        0 0 28px
         rgba(155, 92, 255, 0.08);
 }
 
@@ -503,87 +516,122 @@
 .skill-decoration {
     position: absolute;
 
-    right: -30px;
-    bottom: -50px;
-
-    width: 180px;
-    height: 180px;
-
-    border-radius: 50%;
-
-    opacity: 0.65;
-
     pointer-events: none;
 
-    background:
-        radial-gradient(
-            circle,
-            rgba(155, 92, 255, 0.13),
-            transparent 66%
-        );
+    z-index: 0;
 }
 
 
+/* =========================================================
+   GIS — CONTOUR LINES
+========================================================= */
+
 .skill-card-gis .skill-decoration {
+    right: -35px;
+    bottom: -45px;
+
     width: 250px;
-    height: 160px;
+    height: 180px;
 
-    right: -65px;
-    bottom: -55px;
+    opacity: 0.55;
 
-    border-radius: 0;
+    background:
+        repeating-radial-gradient(
+            ellipse at 60% 70%,
+            transparent 0 11px,
+            rgba(155, 92, 255, 0.13) 12px 13px,
+            transparent 14px 23px
+        );
+
+    transform:
+        rotate(-12deg)
+        scale(1.1);
+}
+
+
+/* =========================================================
+   REMOTE SENSING — SPATIAL IMAGE EFFECT
+========================================================= */
+
+.skill-card-remote .skill-decoration {
+    right: -15px;
+    bottom: -45px;
+
+    width: 250px;
+    height: 210px;
 
     opacity: 0.40;
 
     background:
-        repeating-radial-gradient(
-            ellipse at center,
-            transparent 0 10px,
-            rgba(155, 92, 255, 0.16) 11px 12px,
-            transparent 13px 22px
-        );
-
-    transform: rotate(-15deg);
-}
-
-
-.skill-card-remote .skill-decoration {
-    width: 185px;
-    height: 185px;
-
-    right: -30px;
-    bottom: -60px;
-
-    background:
         radial-gradient(
-            circle,
+            ellipse at 55% 55%,
+            rgba(91, 64, 141, 0.40),
+            transparent 52%
+        ),
+
+        radial-gradient(
+            circle at 40% 35%,
             rgba(155, 92, 255, 0.18),
-            rgba(92, 53, 156, 0.08) 35%,
-            transparent 70%
+            transparent 25%
         );
+
+    filter: blur(1px);
 }
 
+
+/* =========================================================
+   PHOTOGRAMMETRY — TERRAIN / GRID
+========================================================= */
 
 .skill-card-photo .skill-decoration {
-    width: 225px;
-    height: 140px;
+    right: -25px;
+    bottom: -45px;
 
-    right: -30px;
-    bottom: -40px;
+    width: 280px;
+    height: 180px;
 
-    border-radius: 0;
-
-    opacity: 0.35;
+    opacity: 0.42;
 
     background:
         linear-gradient(
             135deg,
-            transparent 45%,
-            rgba(155, 92, 255, 0.16) 46%,
-            transparent 47%
+            transparent 47%,
+            rgba(155, 92, 255, 0.14) 48%,
+            transparent 49%
         );
 
-    background-size: 20px 20px;
+    background-size: 22px 22px;
+
+    transform:
+        perspective(400px)
+        rotateX(48deg)
+        rotateZ(-10deg);
+}
+
+
+.skill-card-photo .skill-decoration::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 25px;
+
+    border:
+        1px solid
+        rgba(155, 92, 255, 0.12);
+
+    clip-path:
+        polygon(
+            0 80%,
+            20% 58%,
+            37% 68%,
+            52% 35%,
+            68% 48%,
+            82% 20%,
+            100% 0,
+            100% 100%,
+            0 100%
+        );
 }
 
 
@@ -594,20 +642,18 @@
 .skill-card-top {
     position: relative;
 
-    z-index: 2;
+    z-index: 3;
 
     display: flex;
 
     align-items: flex-start;
 
     justify-content: space-between;
-
-    margin-bottom: 10px;
 }
 
 
 /* =========================================================
-   SKILL ICON
+   ICON BOX
 ========================================================= */
 
 .skill-icon {
@@ -616,31 +662,31 @@
     align-items: center;
     justify-content: center;
 
-    width: 43px;
-    height: 43px;
+    width: 58px;
+    height: 58px;
 
     border:
         1px solid
-        rgba(155, 92, 255, 0.38);
+        rgba(155, 92, 255, 0.40);
 
-    border-radius: 10px;
+    border-radius: 12px;
 
     background:
-        rgba(155, 92, 255, 0.055);
+        rgba(12, 9, 20, 0.72);
 
     color: var(--purple-light);
 }
 
 
 .skill-icon svg {
-    width: 25px;
-    height: 25px;
+    width: 31px;
+    height: 31px;
 
     fill: none;
 
     stroke: currentColor;
 
-    stroke-width: 2;
+    stroke-width: 1.8;
 
     stroke-linecap: round;
     stroke-linejoin: round;
@@ -653,7 +699,7 @@
 
 .skill-number {
     color:
-        rgba(245, 243, 248, 0.32);
+        rgba(245, 243, 248, 0.35);
 
     font-family:
         "Cormorant Garamond",
@@ -673,21 +719,25 @@
     position: relative;
 
     z-index: 3;
+
+    margin-top: 14px;
 }
 
 
 .skill-card h3 {
-    min-height: 37px;
+    min-height: 38px;
 
-    margin-bottom: 7px;
+    margin: 0 0 10px;
 
     color: var(--white);
 
-    font-size: 16px;
+    font-size: 19px;
 
     font-weight: 500;
 
     line-height: 1.15;
+
+    letter-spacing: -0.01em;
 }
 
 
@@ -696,32 +746,34 @@
 
     height: 1px;
 
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 
     background:
-        rgba(255, 255, 255, 0.13);
+        rgba(255, 255, 255, 0.16);
 }
 
 
 .skill-card p {
-    max-width: 300px;
+    max-width: 330px;
+
+    margin: 0;
 
     color:
-        rgba(245, 243, 248, 0.65);
+        rgba(245, 243, 248, 0.66);
 
-    font-size: 10.5px;
+    font-size: 12px;
 
     font-weight: 300;
 
-    line-height: 1.45;
+    line-height: 1.55;
 }
 
 
 .skill-card p span {
     color:
-        rgba(155, 92, 255, 0.65);
+        rgba(155, 92, 255, 0.72);
 
-    margin: 0 2px;
+    margin: 0 3px;
 }
 
 
@@ -863,12 +915,26 @@
 
 
     .skills-cards {
-        gap: 14px;
+        gap: 16px;
     }
 
 
     .skill-card {
-        padding: 15px;
+        height: 175px;
+        min-height: 175px;
+
+        padding: 18px;
+    }
+
+
+    .skill-icon {
+        width: 52px;
+        height: 52px;
+    }
+
+
+    .skill-card h3 {
+        font-size: 17px;
     }
 
 }
@@ -917,6 +983,8 @@
 
     .profile-role {
         font-size: 11px;
+
+        margin-bottom: 12px;
     }
 
 
@@ -982,8 +1050,8 @@
 
 
     .skill-card {
-        height: 140px;
-        min-height: 140px;
+        height: 175px;
+        min-height: 175px;
     }
 
 
@@ -1077,10 +1145,22 @@
 
 
     .skill-card {
-        height: 135px;
-        min-height: 135px;
+        height: 165px;
+        min-height: 165px;
 
-        padding: 15px;
+        padding: 16px;
+    }
+
+
+    .skill-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+
+    .skill-icon svg {
+        width: 26px;
+        height: 26px;
     }
 
 
