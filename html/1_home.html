@@ -2,86 +2,158 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Muhammad Syeh Diarta - GIS Portfolio">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Muhammad Syeh Diarta - GIS Portfolio"
+    >
+
     <title>Diarta. | GIS Portfolio</title>
 
+
+    <!-- =====================================================
+         GOOGLE FONTS
+         ===================================================== -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="../css/0_style.css">
-    <link rel="stylesheet" href="../css/1_home.css">
-    <link rel="stylesheet" href="../css/2_about.css">
-    <link rel="stylesheet" href="../css/3_projects.css">
-    <link rel="stylesheet" href="../css/4_certificates.css">
-    <link rel="stylesheet" href="../css/5_contact.css">
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
 
-    <script src="../js/script.js" defer></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         GLOBAL CSS
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../style.css"
+    >
+
+
+    <!-- =====================================================
+         HOME CSS
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../css/1_home.css"
+    >
+
 </head>
+
 
 <body>
 
-    <div class="page-wrapper">
 
-        <header class="navbar">
+    <!-- =====================================================
+         NAVBAR
+         ===================================================== -->
 
-            <a href="1_home.html" class="logo">
-                DIARTA<span>.</span>
+    <header class="navbar">
+
+        <a
+            href="1_home.html"
+            class="logo"
+        >
+            DIARTA<span>.</span>
+        </a>
+
+
+        <nav class="nav-menu">
+
+            <a
+                href="1_home.html"
+                class="nav-link active"
+            >
+                Home
             </a>
 
-            <nav class="nav-menu">
+            <a
+                href="2_about.html"
+                class="nav-link"
+            >
+                About
+            </a>
 
-                <a href="1_home.html" class="nav-link active">
-                    Home
-                </a>
+            <a
+                href="3_projects.html"
+                class="nav-link"
+            >
+                Projects
+            </a>
 
-                <a href="2_about.html" class="nav-link ">
-                    About
-                </a>
+            <a
+                href="4_certificates.html"
+                class="nav-link"
+            >
+                Certificates
+            </a>
 
-                <a href="3_projects.html" class="nav-link ">
-                    Projects
-                </a>
+            <a
+                href="5_contact.html"
+                class="nav-link"
+            >
+                Contact
+            </a>
 
-                <a href="4_certificates.html" class="nav-link ">
-                    Certificates
-                </a>
+        </nav>
 
-                <a href="5_contact.html" class="nav-link ">
-                    Contact
-                </a>
+    </header>
 
-            </nav>
 
-        </header>
+
+    <!-- =====================================================
+         HOME
+         ===================================================== -->
+
+    <main>
 
         <section
+            class="home-section page-section"
             id="home"
-            class="page-section home-section"
         >
 
 
-            <!-- Background -->
+            <!-- =================================================
+                 BACKGROUND GRID
+                 ================================================= -->
 
-            <div class="background-grid"></div>
-
-
-            <!-- Decorative circles -->
-
-            <div class="orb orb-left"></div>
-
-            <div class="orb orb-right"></div>
-
-            <div class="orb orb-small"></div>
+            <div class="home-grid"></div>
 
 
             <!-- =================================================
-                 HERO CONTENT
+                 DECORATIVE ORBS
                  ================================================= -->
 
-            <div class="hero-content">
+            <div class="home-orb home-orb-left"></div>
+
+            <div class="home-orb home-orb-right"></div>
+
+            <div class="home-orb home-orb-small"></div>
+
+
+
+            <!-- =================================================
+                 HOME CONTENT
+                 ================================================= -->
+
+            <div class="home-content">
 
 
                 <!-- Availability -->
@@ -91,7 +163,7 @@
                     <span class="availability-dot"></span>
 
                     <span>
-                        Open to Opportunities
+                        OPEN TO OPPORTUNITIES
                     </span>
 
                 </div>
@@ -100,15 +172,15 @@
 
                 <!-- Welcome -->
 
-                <div class="welcome">
+                <p class="welcome-text">
                     Welcome to
-                </div>
+                </p>
 
 
 
                 <!-- Name -->
 
-                <h1 class="hero-title">
+                <h1 class="hero-name">
 
                     <span class="name-white">
                         Muhammad Syeh
@@ -124,9 +196,9 @@
 
                 <!-- Portfolio -->
 
-                <div class="portfolio-label">
-                    GIS Portfolio
-                </div>
+                <p class="portfolio-label">
+                    GIS PORTFOLIO
+                </p>
 
 
 
@@ -135,80 +207,55 @@
                 <p class="hero-description">
 
                     Turning spatial data into meaningful insights
-                    —
-                    through spatial analysis, mapping,
-                    and geospatial technologies.
+                    — through spatial analysis, mapping, and
+                    geospatial technologies.
 
                 </p>
 
 
 
-                <!-- =================================================
-                     BUTTONS
-                     ================================================= -->
+                <!-- Buttons -->
 
                 <div class="hero-buttons">
 
 
-                    <!-- Explore Me -->
-
                     <a
-                        href="#about"
-                        class="btn-primary"
+                        href="2_about.html"
+                        class="btn btn-primary"
                     >
-
-                        <span>
-                            Explore Me
-                        </span>
-
-                        <span class="button-arrow">
-                            ↓
-                        </span>
-
+                        Explore Me
+                        <span class="btn-arrow">↓</span>
                     </a>
 
 
-
-                    <!-- LinkedIn -->
-
                     <a
                         href="https://www.linkedin.com/in/muhammad-s-6697b5216/"
-                        class="btn-secondary"
+                        class="btn btn-secondary"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-
                         <span class="linkedin-icon">
                             in
                         </span>
 
-                        <span>
-                            LinkedIn
-                        </span>
-
+                        LinkedIn
                     </a>
 
 
-
-                    <!-- Email -->
-
                     <a
                         href="mailto:muhammad.arta311@gmail.com"
-                        class="btn-secondary"
+                        class="btn btn-secondary"
                     >
-
                         <span class="email-icon">
                             ✉
                         </span>
 
-                        <span>
-                            Email
-                        </span>
-
+                        Email
                     </a>
 
 
                 </div>
+
 
 
             </div>
@@ -221,21 +268,21 @@
 
             <div class="scroll-indicator">
 
-                <span>
+                <span class="scroll-text">
                     SCROLL
                 </span>
 
-                <div class="scroll-line"></div>
-
-                <div class="scroll-arrow">
+                <span class="scroll-arrow">
                     ↓
-                </div>
+                </span>
 
             </div>
 
 
 
-            <!-- Page Number -->
+            <!-- =================================================
+                 PAGE NUMBER
+                 ================================================= -->
 
             <div class="page-number">
                 01
@@ -244,7 +291,19 @@
 
         </section>
 
-    </div>
+    </main>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script
+        src="../js/script.js"
+    ></script>
+
 
 </body>
+
 </html>
