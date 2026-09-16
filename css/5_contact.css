@@ -1,0 +1,752 @@
+/* =========================================================
+   DIARTA GIS PORTFOLIO
+   CONTACT PAGE
+   ========================================================= */
+
+
+/* =========================
+   CONTACT SECTION
+   ========================= */
+
+.contact-section {
+    background: var(--black);
+}
+
+
+/* =========================
+   BACKGROUND
+   ========================= */
+
+.contact-background {
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 82% 50%,
+            rgba(155, 92, 255, 0.07),
+            transparent 32%
+        ),
+        linear-gradient(
+            rgba(255, 255, 255, 0.015) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.015) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        auto,
+        90px 90px,
+        90px 90px;
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   PURPLE GLOW
+   ========================= */
+
+.contact-section::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 550px;
+    height: 550px;
+
+    right: -180px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    background: var(--purple);
+
+    opacity: 0.045;
+
+    filter: blur(130px);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   INNER
+   ========================= */
+
+.contact-inner {
+    position: relative;
+
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 60px;
+}
+
+
+/* =========================
+   CONTACT CONTENT
+   ========================= */
+
+.contact-content {
+
+    position: relative;
+
+    z-index: 5;
+
+    width: 58%;
+}
+
+
+/* =========================
+   HEADING
+   ========================= */
+
+.contact-content h1 {
+
+    margin-bottom: 22px;
+
+    color: var(--white);
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(64px, 7vw, 100px);
+
+    font-weight: 500;
+
+    line-height: 0.88;
+
+    letter-spacing: -0.04em;
+}
+
+
+.contact-content h1 span {
+
+    display: block;
+
+    color: var(--purple);
+}
+
+
+/* =========================
+   DESCRIPTION
+   ========================= */
+
+.contact-description {
+
+    max-width: 520px;
+
+    margin-bottom: 32px;
+
+    color: var(--text);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   CONTACT LINKS
+   ========================= */
+
+.contact-links {
+
+    display: flex;
+
+    flex-direction: column;
+
+    width: 100%;
+
+    max-width: 570px;
+
+    border-top: 1px solid var(--border);
+}
+
+
+/* =========================
+   CONTACT LINK
+   ========================= */
+
+.contact-link {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    min-height: 78px;
+
+    padding: 12px 5px;
+
+    border-bottom: 1px solid var(--border);
+
+    transition:
+        padding-left 0.3s ease,
+        background 0.3s ease;
+}
+
+
+.contact-link:hover {
+
+    padding-left: 14px;
+
+    background:
+        rgba(155, 92, 255, 0.035);
+}
+
+
+/* =========================
+   CONTACT ICON
+   ========================= */
+
+.contact-icon {
+
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid
+        rgba(155, 92, 255, 0.30);
+
+    color: var(--purple-light);
+
+    background:
+        rgba(155, 92, 255, 0.045);
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.contact-link:hover .contact-icon {
+
+    background:
+        rgba(155, 92, 255, 0.12);
+
+    border-color:
+        rgba(155, 92, 255, 0.60);
+}
+
+
+/* =========================
+   LINK CONTENT
+   ========================= */
+
+.contact-link-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+
+    min-width: 0;
+}
+
+
+/* =========================
+   LABEL
+   ========================= */
+
+.contact-label {
+
+    color: var(--purple-light);
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================
+   VALUE
+   ========================= */
+
+.contact-value {
+
+    color: var(--white);
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* =========================
+   ARROW
+   ========================= */
+
+.contact-arrow {
+
+    margin-left: auto;
+
+    color: var(--text-soft);
+
+    font-size: 20px;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.contact-link:hover .contact-arrow {
+
+    color: var(--purple-light);
+
+    transform: translateX(5px);
+}
+
+
+/* =========================
+   CLOSING
+   ========================= */
+
+.contact-closing {
+
+    margin-top: 25px;
+
+    color: var(--text-soft);
+
+    font-size: 10px;
+
+    font-weight: 500;
+
+    letter-spacing: 0.16em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================
+   DECORATION
+   ========================= */
+
+.contact-decoration {
+
+    position: relative;
+
+    width: 38%;
+
+    height: 430px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   MAIN ORB
+   ========================= */
+
+.contact-orb {
+
+    position: absolute;
+
+    width: 230px;
+    height: 230px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            rgba(181, 124, 255, 0.30),
+            rgba(155, 92, 255, 0.10) 45%,
+            rgba(155, 92, 255, 0.025) 70%,
+            transparent 72%
+        );
+
+    filter: blur(1px);
+
+    box-shadow:
+        0 0 80px rgba(155, 92, 255, 0.12);
+}
+
+
+/* =========================
+   DECORATIVE CIRCLES
+   ========================= */
+
+.contact-circle {
+
+    position: absolute;
+
+    border: 1px solid
+        rgba(155, 92, 255, 0.18);
+
+    border-radius: 50%;
+}
+
+
+.circle-one {
+
+    width: 300px;
+    height: 300px;
+}
+
+
+.circle-two {
+
+    width: 390px;
+    height: 390px;
+
+    border-color:
+        rgba(255, 255, 255, 0.055);
+}
+
+
+/* =========================
+   DECORATIVE TEXT
+   ========================= */
+
+.contact-decoration-text {
+
+    position: relative;
+
+    z-index: 2;
+
+    color:
+        rgba(255, 255, 255, 0.07);
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 110px;
+
+    font-weight: 600;
+
+    letter-spacing: -0.05em;
+}
+
+
+/* =========================
+   PAGE NUMBER
+   ========================= */
+
+.contact-section .page-number {
+
+    z-index: 10;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+
+/* =========================
+   1000px
+   ========================= */
+
+@media (max-width: 1000px) {
+
+    .contact-inner {
+
+        gap: 35px;
+    }
+
+
+    .contact-content {
+
+        width: 62%;
+    }
+
+
+    .contact-decoration {
+
+        width: 34%;
+
+        height: 360px;
+    }
+
+
+    .contact-orb {
+
+        width: 190px;
+        height: 190px;
+    }
+
+
+    .circle-one {
+
+        width: 250px;
+        height: 250px;
+    }
+
+
+    .circle-two {
+
+        width: 320px;
+        height: 320px;
+    }
+
+
+    .contact-decoration-text {
+
+        font-size: 90px;
+    }
+
+}
+
+
+/* =========================
+   768px
+   ========================= */
+
+@media (max-width: 768px) {
+
+    .contact-inner {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        justify-content: center;
+
+        gap: 25px;
+    }
+
+
+    .contact-content {
+
+        width: 100%;
+    }
+
+
+    .contact-content h1 {
+
+        font-size: 68px;
+
+        margin-bottom: 18px;
+    }
+
+
+    .contact-description {
+
+        max-width: 600px;
+
+        margin-bottom: 25px;
+
+        font-size: 12px;
+    }
+
+
+    .contact-links {
+
+        max-width: 100%;
+    }
+
+
+    .contact-link {
+
+        min-height: 70px;
+    }
+
+
+    .contact-decoration {
+
+        position: absolute;
+
+        width: 320px;
+        height: 320px;
+
+        right: -100px;
+        bottom: -80px;
+
+        opacity: 0.55;
+    }
+
+
+    .contact-orb {
+
+        width: 160px;
+        height: 160px;
+    }
+
+
+    .circle-one {
+
+        width: 220px;
+        height: 220px;
+    }
+
+
+    .circle-two {
+
+        width: 280px;
+        height: 280px;
+    }
+
+
+    .contact-decoration-text {
+
+        font-size: 75px;
+    }
+
+}
+
+
+/* =========================
+   480px
+   ========================= */
+
+@media (max-width: 480px) {
+
+    .contact-inner {
+
+        width: 90%;
+
+        gap: 20px;
+    }
+
+
+    .contact-content h1 {
+
+        font-size: 54px;
+
+        line-height: 0.9;
+    }
+
+
+    .contact-description {
+
+        font-size: 11px;
+
+        line-height: 1.6;
+
+        margin-bottom: 20px;
+    }
+
+
+    .contact-link {
+
+        min-height: 64px;
+
+        gap: 12px;
+    }
+
+
+    .contact-icon {
+
+        width: 36px;
+        height: 36px;
+
+        font-size: 11px;
+    }
+
+
+    .contact-label {
+
+        font-size: 8px;
+    }
+
+
+    .contact-value {
+
+        max-width: 210px;
+
+        font-size: 11px;
+    }
+
+
+    .contact-arrow {
+
+        font-size: 17px;
+    }
+
+
+    .contact-closing {
+
+        margin-top: 18px;
+
+        font-size: 8px;
+
+        letter-spacing: 0.12em;
+    }
+
+
+    .contact-decoration {
+
+        width: 230px;
+        height: 230px;
+
+        right: -80px;
+        bottom: -55px;
+
+        opacity: 0.40;
+    }
+
+
+    .contact-orb {
+
+        width: 120px;
+        height: 120px;
+    }
+
+
+    .circle-one {
+
+        width: 170px;
+        height: 170px;
+    }
+
+
+    .circle-two {
+
+        width: 220px;
+        height: 220px;
+    }
+
+
+    .contact-decoration-text {
+
+        font-size: 55px;
+    }
+
+}
