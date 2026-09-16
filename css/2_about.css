@@ -45,7 +45,7 @@
 
 
 /* =========================================================
-   ABOUT ME
+   SECTION HEADING
 ========================================================= */
 
 .about-heading {
@@ -108,12 +108,7 @@
     position: relative;
 
     width: 215px;
-
-    /*
-       PHOTO DIPERPANJANG AGAR BAGIAN BAWAHNYA
-       LEBIH SEJAJAR DENGAN BARIS KONTAK
-    */
-    height: 315px;
+    height: 245px;
 
     padding: 6px;
 
@@ -170,45 +165,42 @@
 
 /* =========================================================
    NAME
-   MUHAMMAD SYEH DIARTA = 1 BARIS
 ========================================================= */
 
-.profile-content h2 {
-    display: block;
+.profile-name {
+    display: flex;
 
-    width: max-content;
-    max-width: 100%;
+    flex-direction: column;
 
     margin: 0 0 6px;
-
-    color: var(--white);
 
     font-family:
         "Cormorant Garamond",
         serif;
 
     font-size:
-        clamp(50px, 5vw, 72px);
+        clamp(56px, 5.5vw, 74px);
 
     font-weight: 500;
 
-    line-height: 0.88;
+    line-height: 0.82;
 
     letter-spacing: -0.045em;
-
-    white-space: nowrap;
 }
 
 
-.profile-content h2 span {
-    color: var(--purple);
+.name-white {
+    color: var(--white);
+}
 
-    white-space: nowrap;
+
+.name-purple {
+    color: var(--purple);
 }
 
 
 /* =========================================================
-   GIS & GEOSPATIAL ENTHUSIAST
+   ROLE
 ========================================================= */
 
 .profile-role {
@@ -218,20 +210,16 @@
 
     color: var(--purple-light);
 
-    /*
-       FONT LEBIH ELEGAN
-    */
     font-family:
-        "Cormorant Garamond",
-        serif;
+        "DM Sans",
+        sans-serif;
 
-    font-size: 21px;
-
+    font-size: 16px;
     font-weight: 600;
 
-    letter-spacing: 0.16em;
+    letter-spacing: 0.19em;
 
-    line-height: 1.1;
+    line-height: 1.2;
 
     text-transform: uppercase;
 }
@@ -249,7 +237,6 @@
     color: var(--text);
 
     font-size: 14px;
-
     font-weight: 300;
 
     line-height: 1.58;
@@ -282,7 +269,6 @@
         rgba(245, 243, 248, 0.72);
 
     font-size: 12px;
-
     font-weight: 500;
 
     white-space: nowrap;
@@ -312,7 +298,6 @@
     color: currentColor;
 
     font-size: 12px;
-
     font-weight: 600;
 }
 
@@ -391,7 +376,6 @@
         serif;
 
     font-size: 19px;
-
     font-weight: 600;
 
     letter-spacing: 0.19em;
@@ -765,6 +749,7 @@
 
 /* =========================================================
    CARD TITLE
+   SEMUA TITLE WAJIB 1 BARIS
 ========================================================= */
 
 .skill-card h3 {
@@ -808,6 +793,7 @@
 
 /* =========================================================
    CARD DETAILS
+   1 BARIS + TIDAK TERPOTONG
 ========================================================= */
 
 .skill-card p {
@@ -962,17 +948,17 @@
 
     .profile-photo-frame {
         width: 175px;
-        height: 275px;
+        height: 215px;
     }
 
 
-    .profile-content h2 {
-        font-size: 54px;
+    .profile-name {
+        font-size: 58px;
     }
 
 
     .profile-role {
-        font-size: 18px;
+        font-size: 14px;
     }
 
 
@@ -1064,32 +1050,21 @@
 
     .profile-photo-frame {
         width: 155px;
-        height: 220px;
+        height: 190px;
     }
 
 
     .profile-role {
-        font-size: 16px;
+        font-size: 12px;
 
         margin-bottom: 12px;
     }
 
 
-    /*
-       DI MOBILE, NAMA BOLEH TURUN BARIS
-       AGAR TIDAK KELUAR DARI LAYAR
-    */
-    .profile-content h2 {
-        width: auto;
-
+    .profile-name {
         font-size: 50px;
 
-        white-space: normal;
-    }
-
-
-    .profile-content h2 span {
-        white-space: normal;
+        line-height: 0.88;
     }
 
 
@@ -1194,16 +1169,16 @@
 
     .profile-photo-frame {
         width: 140px;
-        height: 200px;
+        height: 170px;
     }
 
 
     .profile-role {
-        font-size: 14px;
+        font-size: 10px;
     }
 
 
-    .profile-content h2 {
+    .profile-name {
         font-size: 43px;
     }
 
