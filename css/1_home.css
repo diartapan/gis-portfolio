@@ -510,27 +510,50 @@
     display:
         block;
 
-    color:
-        var(--purple);
-
     margin-top:
         8px;
 
-    /* Lebih tipis seperti "Portfolio" milik Meilys */
+    /*
+       Menggunakan karakter serif tipis
+       seperti tulisan "Portfolio" pada
+       referensi Meilys.
+    */
 
     font-family:
         "Cormorant Garamond",
         serif;
 
+    font-size:
+        inherit;
+
     font-weight:
         400;
 
+    font-style:
+        normal;
+
+    line-height:
+        0.82;
+
     letter-spacing:
-        -0.025em;
+        -0.035em;
+
+    color:
+        transparent;
+
+    /*
+       Outline tipis seperti "Portfolio"
+       pada referensi Meilys.
+    */
+
+    -webkit-text-stroke:
+        1.15px var(--purple);
+
+    text-shadow:
+        0 0 14px
+        rgba(155, 92, 255, 0.10);
 
 }
-
-
 /* =========================================================
    GIS PORTFOLIO LABEL
    ========================================================= */
@@ -837,12 +860,14 @@
         flex-start;
 
     gap:
-        5px;
+        6px;
 
 }
 
 
-/* SCROLL TEXT */
+/* =========================================================
+   SCROLL TEXT
+   ========================================================= */
 
 .scroll-text {
 
@@ -858,10 +883,22 @@
     letter-spacing:
         0.28em;
 
+    text-shadow:
+        0 0 10px
+        rgba(155, 92, 255, 0.15);
+
+    animation:
+        scrollTextAnimation
+        2s
+        ease-in-out
+        infinite;
+
 }
 
 
-/* SCROLL ARROW */
+/* =========================================================
+   SCROLL ARROW
+   ========================================================= */
 
 .scroll-arrow {
 
@@ -874,8 +911,77 @@
     line-height:
         1;
 
+    text-shadow:
+        0 0 8px
+        rgba(155, 92, 255, 0.55);
+
+    animation:
+        scrollArrowAnimation
+        1.6s
+        ease-in-out
+        infinite;
+
 }
 
+
+/* =========================================================
+   SCROLL TEXT ANIMATION
+   ========================================================= */
+
+@keyframes scrollTextAnimation {
+
+    0%,
+    100% {
+
+        opacity:
+            0.45;
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(-3px);
+
+    }
+
+}
+
+
+/* =========================================================
+   SCROLL ARROW ANIMATION
+   ========================================================= */
+
+@keyframes scrollArrowAnimation {
+
+    0%,
+    100% {
+
+        opacity:
+            0.45;
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(7px);
+
+    }
+
+}
 
 /* =========================================================
    HOME PAGE NUMBER
