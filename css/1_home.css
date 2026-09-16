@@ -5,13 +5,10 @@
 
 
 /* =========================================================
-   HOME SECTION
+   HOME
    ========================================================= */
 
 .home-section {
-
-    position:
-        relative;
 
     display:
         flex;
@@ -29,10 +26,10 @@
 
 
 /* =========================================================
-   GRID BACKGROUND
+   BACKGROUND GRID
    ========================================================= */
 
-.home-grid {
+.background-grid {
 
     position:
         absolute;
@@ -40,27 +37,34 @@
     inset:
         0;
 
-    pointer-events:
-        none;
+    z-index:
+        0;
 
     background-image:
 
         linear-gradient(
-            rgba(155, 92, 255, 0.055) 1px,
+            rgba(155, 92, 255, 0.035)
+            1px,
             transparent 1px
         ),
 
         linear-gradient(
             90deg,
-            rgba(155, 92, 255, 0.055) 1px,
+            rgba(155, 92, 255, 0.035)
+            1px,
             transparent 1px
         );
 
     background-size:
-        80px 80px;
+        64px 64px;
 
-    opacity:
-        0.75;
+    mask-image:
+        linear-gradient(
+            to bottom,
+            black 0%,
+            black 70%,
+            transparent 100%
+        );
 
 }
 
@@ -69,14 +73,14 @@
    DECORATIVE ORBS
    ========================================================= */
 
-.home-orb {
+.orb {
 
     position:
         absolute;
 
     border:
         1px solid
-        rgba(155, 92, 255, 0.22);
+        rgba(155, 92, 255, 0.17);
 
     border-radius:
         50%;
@@ -87,112 +91,62 @@
 }
 
 
-/* LEFT ORB */
-
-.home-orb-left {
+.orb-left {
 
     width:
-        520px;
+        360px;
 
     height:
-        520px;
+        360px;
 
     left:
-        -260px;
-
-    bottom:
         -150px;
 
+    bottom:
+        60px;
+
 }
 
 
-/* RIGHT LARGE ORB */
-
-.home-orb-right {
+.orb-right {
 
     width:
-        760px;
+        620px;
 
     height:
-        760px;
+        620px;
 
     right:
-        -300px;
+        -250px;
 
     top:
-        260px;
+        120px;
 
 }
 
 
-/* RIGHT SMALL ORB */
-
-.home-orb-small {
+.orb-small {
 
     width:
-        300px;
+        240px;
 
     height:
-        300px;
+        240px;
 
     right:
-        100px;
+        9%;
 
     bottom:
-        80px;
+        105px;
 
 }
 
 
 /* =========================================================
-   PURPLE GLOW
+   HERO CONTENT
    ========================================================= */
 
-.home-section::before {
-
-    content:
-        "";
-
-    position:
-        absolute;
-
-    width:
-        500px;
-
-    height:
-        500px;
-
-    left:
-        50%;
-
-    top:
-        42%;
-
-    transform:
-        translate(-50%, -50%);
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(155, 92, 255, 0.10) 0%,
-            rgba(155, 92, 255, 0.04) 35%,
-            transparent 70%
-        );
-
-    filter:
-        blur(20px);
-
-    pointer-events:
-        none;
-
-}
-
-
-/* =========================================================
-   HOME CONTENT
-   ========================================================= */
-
-.home-content {
+.hero-content {
 
     position:
         relative;
@@ -206,17 +160,29 @@
     margin:
         0 auto;
 
-    padding-top:
-        55px;
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
 
     text-align:
         center;
+
+    transform:
+        translateY(-1vh);
 
 }
 
 
 /* =========================================================
-   AVAILABILITY BADGE
+   AVAILABILITY
    ========================================================= */
 
 .availability {
@@ -227,46 +193,46 @@
     align-items:
         center;
 
-    justify-content:
-        center;
-
     gap:
         12px;
 
     padding:
-        13px 30px;
+        10px 22px;
 
     border:
         1px solid
-        rgba(155, 92, 255, 0.65);
+        rgba(155, 92, 255, 0.55);
 
     border-radius:
         999px;
 
     color:
-        var(--white);
+        var(--purple-light);
+
+    background:
+        rgba(155, 92, 255, 0.035);
 
     font-size:
-        12px;
+        13px;
 
     font-weight:
         600;
 
     letter-spacing:
-        0.24em;
+        0.18em;
 
     text-transform:
         uppercase;
 
     box-shadow:
-        0 0 30px
-        rgba(155, 92, 255, 0.08);
+        0 0 25px
+        rgba(155, 92, 255, 0.05);
 
 }
 
 
 /* =========================================================
-   STATUS DOT
+   AVAILABILITY DOT
    ========================================================= */
 
 .availability-dot {
@@ -275,10 +241,13 @@
         relative;
 
     width:
-        7px;
+        8px;
 
     height:
-        7px;
+        8px;
+
+    flex-shrink:
+        0;
 
     border-radius:
         50%;
@@ -291,12 +260,12 @@
         var(--purple);
 
     animation:
-        availability-pulse 1.8s ease-in-out infinite;
+        availabilityPulse 1.8s ease-in-out infinite;
 
 }
 
 
-/* OUTER PULSE */
+/* Expanding glow */
 
 .availability-dot::after {
 
@@ -320,7 +289,7 @@
 
     border:
         1px solid
-        rgba(155, 92, 255, 0.55);
+        rgba(155, 92, 255, 0.50);
 
     border-radius:
         50%;
@@ -333,81 +302,83 @@
         0;
 
     animation:
-        availability-ripple 1.8s ease-out infinite;
+        availabilityRipple 1.8s ease-out infinite;
 
 }
 
 
-/* DOT BLINK */
+/* Dot pulse */
 
-@keyframes availability-pulse {
+@keyframes availabilityPulse {
 
     0%,
     100% {
 
         opacity:
-            1;
+            0.55;
 
         transform:
-            scale(1);
+            scale(0.85);
 
         box-shadow:
-            0 0 12px
-            rgba(155, 92, 255, 0.95);
+            0 0 7px
+            rgba(155, 92, 255, 0.60);
 
     }
 
     50% {
 
         opacity:
-            0.35;
+            1;
 
         transform:
-            scale(0.72);
+            scale(1.12);
 
         box-shadow:
-            0 0 5px
-            rgba(155, 92, 255, 0.45);
+            0 0 12px
+            rgba(155, 92, 255, 0.95),
+            0 0 22px
+            rgba(155, 92, 255, 0.35);
 
     }
 
 }
 
 
-/* DOT RIPPLE */
+/* Dot ripple */
 
-@keyframes availability-ripple {
+@keyframes availabilityRipple {
 
     0% {
 
+        opacity:
+            0.65;
+
         transform:
             translate(-50%, -50%)
-            scale(1);
-
-        opacity:
-            0.6;
+            scale(0.8);
 
     }
 
     70% {
 
-        transform:
-            translate(-50%, -50%)
-            scale(2.4);
-
         opacity:
             0;
+
+        transform:
+            translate(-50%, -50%)
+            scale(2.5);
 
     }
 
     100% {
 
-        transform:
-            translate(-50%, -50%)
-            scale(2.4);
-
         opacity:
             0;
+
+        transform:
+            translate(-50%, -50%)
+            scale(2.5);
 
     }
 
@@ -415,26 +386,26 @@
 
 
 /* =========================================================
-   WELCOME TEXT
+   WELCOME
    ========================================================= */
 
-.welcome-text {
+.welcome {
 
     margin-top:
-        42px;
+        28px;
 
     margin-bottom:
-        2px;
+        4px;
 
     color:
-        rgba(245, 243, 248, 0.65);
+        rgba(231, 227, 238, 0.68);
 
     font-family:
         "Cormorant Garamond",
         serif;
 
     font-size:
-        clamp(32px, 4vw, 48px);
+        clamp(30px, 3vw, 48px);
 
     font-style:
         italic;
@@ -443,16 +414,19 @@
         400;
 
     line-height:
-        1;
+        1.05;
 
 }
 
 
 /* =========================================================
-   HERO NAME
+   HERO TITLE
    ========================================================= */
 
-.hero-name {
+.hero-title {
+
+    margin:
+        0;
 
     display:
         flex;
@@ -466,15 +440,9 @@
     justify-content:
         center;
 
-    margin:
-        0;
-
     font-family:
         "Cormorant Garamond",
         serif;
-
-    font-size:
-        clamp(78px, 10vw, 150px);
 
     font-weight:
         500;
@@ -483,12 +451,14 @@
         0.82;
 
     letter-spacing:
-        -0.045em;
+        -0.035em;
 
 }
 
 
-/* WHITE NAME */
+/* =========================================================
+   MUHAMMAD SYEH
+   ========================================================= */
 
 .name-white {
 
@@ -498,11 +468,17 @@
     color:
         var(--white);
 
+    font-size:
+        clamp(72px, 8vw, 138px);
+
+    white-space:
+        nowrap;
+
 }
 
 
 /* =========================================================
-   PURPLE NAME — DIARTA
+   DIARTA
    ========================================================= */
 
 .name-purple {
@@ -510,61 +486,89 @@
     display:
         block;
 
-    color:
-        var(--purple);
-
     margin-top:
-        8px;
-
-    /* Lebih tipis seperti "Portfolio" milik Meilys */
-
-    font-family:
-        "Cormorant Garamond",
-        serif;
-
-    font-weight:
-        400;
-
-    letter-spacing:
-        -0.025em;
-
-}
-
-
-/* =========================================================
-   GIS PORTFOLIO LABEL
-   ========================================================= */
-
-.portfolio-label {
-
-    margin-top:
-        48px;
+        13px;
 
     color:
-        var(--white);
+        transparent;
 
     font-family:
         "Cormorant Garamond",
         serif;
 
     font-size:
-        clamp(20px, 2vw, 28px);
+        clamp(72px, 8vw, 138px);
+
+    font-weight:
+        400;
+
+    font-style:
+        normal;
+
+    line-height:
+        0.82;
+
+    letter-spacing:
+        -0.045em;
+
+    /*
+       Tipis seperti karakter "Portfolio"
+       pada referensi Meilys.
+    */
+
+    -webkit-text-stroke:
+        1.15px var(--purple);
+
+    text-shadow:
+        0 0 14px
+        rgba(155, 92, 255, 0.10);
+
+    white-space:
+        nowrap;
+
+    transform:
+        scaleX(0.96);
+
+    transform-origin:
+        center;
+
+}
+
+
+/* =========================================================
+   GIS PORTFOLIO
+   ========================================================= */
+
+.portfolio-label {
+
+    margin-top:
+        28px;
+
+    color:
+        var(--purple-light);
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(20px, 1.7vw, 28px);
 
     font-weight:
         500;
 
-    line-height:
-        1;
-
     letter-spacing:
         0.28em;
+
+    line-height:
+        1;
 
     text-transform:
         uppercase;
 
     text-shadow:
-        0 0 20px
-        rgba(155, 92, 255, 0.18);
+        0 0 18px
+        rgba(155, 92, 255, 0.16);
 
 }
 
@@ -576,22 +580,22 @@
 .hero-description {
 
     width:
-        min(850px, 90%);
+        min(760px, 90%);
 
     margin:
-        35px auto 0;
+        25px auto 0;
 
     color:
-        var(--text);
+        rgba(220, 216, 228, 0.68);
 
     font-size:
-        15px;
+        clamp(16px, 1.15vw, 20px);
 
     font-weight:
-        300;
+        400;
 
     line-height:
-        1.8;
+        1.6;
 
 }
 
@@ -615,16 +619,26 @@
         14px;
 
     margin-top:
-        40px;
+        31px;
 
 }
 
 
 /* =========================================================
-   GENERAL BUTTON
+   COMMON BUTTON
    ========================================================= */
 
-.btn {
+.btn-primary,
+.btn-secondary {
+
+    min-width:
+        155px;
+
+    height:
+        54px;
+
+    padding:
+        0 25px;
 
     display:
         inline-flex;
@@ -635,20 +649,20 @@
     justify-content:
         center;
 
-    min-height:
-        50px;
-
-    padding:
-        0 24px;
+    gap:
+        10px;
 
     border-radius:
         999px;
 
     font-size:
-        13px;
+        16px;
 
     font-weight:
-        500;
+        600;
+
+    white-space:
+        nowrap;
 
     transition:
         all 0.3s ease;
@@ -657,7 +671,7 @@
 
 
 /* =========================================================
-   PRIMARY BUTTON
+   EXPLORE BUTTON
    ========================================================= */
 
 .btn-primary {
@@ -666,26 +680,23 @@
         var(--purple);
 
     color:
-        var(--white);
+        #ffffff;
 
     box-shadow:
-        0 0 30px
-        rgba(155, 92, 255, 0.18);
+        0 0 28px
+        rgba(155, 92, 255, 0.28);
 
 }
 
 
 .btn-primary:hover {
 
-    background:
-        var(--purple-light);
-
     transform:
-        translateY(-2px);
+        translateY(-3px);
 
     box-shadow:
-        0 0 35px
-        rgba(155, 92, 255, 0.35);
+        0 0 40px
+        rgba(155, 92, 255, 0.45);
 
 }
 
@@ -694,13 +705,10 @@
    BUTTON ARROW
    ========================================================= */
 
-.btn-arrow {
-
-    margin-left:
-        8px;
+.button-arrow {
 
     font-size:
-        17px;
+        23px;
 
     line-height:
         1;
@@ -709,40 +717,34 @@
 
 
 /* =========================================================
-   SECONDARY BUTTON
+   LINKEDIN + EMAIL
    ========================================================= */
 
 .btn-secondary {
 
-    gap:
-        9px;
-
     border:
         1px solid
-        var(--border);
+        rgba(255, 255, 255, 0.18);
 
     color:
-        var(--text);
+        var(--white);
 
     background:
-        rgba(255, 255, 255, 0.02);
+        rgba(255, 255, 255, 0.015);
 
 }
 
 
 .btn-secondary:hover {
 
-    color:
-        var(--white);
-
     border-color:
-        rgba(155, 92, 255, 0.55);
+        rgba(155, 92, 255, 0.65);
 
     background:
         rgba(155, 92, 255, 0.06);
 
     transform:
-        translateY(-2px);
+        translateY(-3px);
 
 }
 
@@ -753,43 +755,11 @@
 
 .linkedin-icon {
 
-    display:
-        inline-flex;
-
-    align-items:
-        center;
-
-    justify-content:
-        center;
-
-    width:
-        17px;
-
-    height:
-        17px;
-
-    border-radius:
-        2px;
-
-    background:
-        var(--text);
-
-    color:
-        var(--black);
-
     font-size:
-        11px;
+        16px;
 
     font-weight:
         700;
-
-}
-
-
-.btn-secondary:hover .linkedin-icon {
-
-    background:
-        var(--purple-light);
 
 }
 
@@ -801,10 +771,7 @@
 .email-icon {
 
     font-size:
-        15px;
-
-    line-height:
-        1;
+        17px;
 
 }
 
@@ -819,13 +786,16 @@
         absolute;
 
     left:
-        clamp(35px, 6vw, 100px);
+        50%;
 
     bottom:
-        45px;
+        16px;
+
+    transform:
+        translateX(-50%);
 
     z-index:
-        5;
+        10;
 
     display:
         flex;
@@ -834,45 +804,247 @@
         column;
 
     align-items:
-        flex-start;
+        center;
 
     gap:
-        5px;
+        3px;
 
 }
 
 
-/* SCROLL TEXT */
+/* =========================================================
+   SCROLL TEXT
+   ========================================================= */
 
-.scroll-text {
+.scroll-indicator span {
 
     color:
-        var(--text-soft);
+        rgba(255, 255, 255, 0.42);
 
     font-size:
-        10px;
+        9px;
 
     font-weight:
-        500;
+        600;
 
     letter-spacing:
-        0.28em;
+        0.35em;
+
+    line-height:
+        1;
+
+    text-transform:
+        uppercase;
+
+    text-shadow:
+        0 0 12px
+        rgba(155, 92, 255, 0.20);
+
+    animation:
+        scrollTextPulse 2.2s ease-in-out infinite;
 
 }
 
 
-/* SCROLL ARROW */
+/* =========================================================
+   SCROLL LINE
+   ========================================================= */
+
+.scroll-line {
+
+    position:
+        relative;
+
+    width:
+        1px;
+
+    height:
+        28px;
+
+    margin-top:
+        4px;
+
+    overflow:
+        hidden;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(155, 92, 255, 0.18),
+            rgba(155, 92, 255, 0.04)
+        );
+
+}
+
+
+/* Moving light */
+
+.scroll-line::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        -10px;
+
+    left:
+        0;
+
+    width:
+        1px;
+
+    height:
+        10px;
+
+    background:
+        var(--purple-light);
+
+    box-shadow:
+        0 0 8px
+        rgba(155, 92, 255, 0.85);
+
+    animation:
+        scrollLineMove 1.8s ease-in-out infinite;
+
+}
+
+
+/* =========================================================
+   SCROLL ARROW
+   ========================================================= */
 
 .scroll-arrow {
+
+    margin-top:
+        2px;
 
     color:
         var(--purple-light);
 
     font-size:
-        20px;
+        21px;
+
+    font-weight:
+        300;
 
     line-height:
         1;
+
+    text-shadow:
+        0 0 12px
+        rgba(155, 92, 255, 0.65);
+
+    animation:
+        scrollArrowMove 1.8s ease-in-out infinite;
+
+}
+
+
+/* =========================================================
+   SCROLL TEXT ANIMATION
+   ========================================================= */
+
+@keyframes scrollTextPulse {
+
+    0%,
+    100% {
+
+        opacity:
+            0.42;
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        opacity:
+            0.90;
+
+        transform:
+            translateY(-2px);
+
+    }
+
+}
+
+
+/* =========================================================
+   SCROLL LINE ANIMATION
+   ========================================================= */
+
+@keyframes scrollLineMove {
+
+    0% {
+
+        top:
+            -10px;
+
+        opacity:
+            0;
+
+    }
+
+    20% {
+
+        opacity:
+            1;
+
+    }
+
+    70% {
+
+        top:
+            18px;
+
+        opacity:
+            0.85;
+
+    }
+
+    100% {
+
+        top:
+            28px;
+
+        opacity:
+            0;
+
+    }
+
+}
+
+
+/* =========================================================
+   SCROLL ARROW ANIMATION
+   ========================================================= */
+
+@keyframes scrollArrowMove {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+        opacity:
+            0.55;
+
+    }
+
+    50% {
+
+        transform:
+            translateY(6px);
+
+        opacity:
+            1;
+
+    }
 
 }
 
@@ -890,57 +1062,40 @@
 
 
 /* =========================================================
-   RESPONSIVE
+   HOME RESPONSIVE
    ========================================================= */
 
 
-/* ---------- TABLET ---------- */
+/* =========================================================
+   TABLET
+   ========================================================= */
 
 @media (max-width: 1000px) {
 
-    .home-content {
-
-        width:
-            90%;
-
-        padding-top:
-            45px;
-
-    }
-
-
-    .hero-name {
+    .name-white,
+    .name-purple {
 
         font-size:
-            clamp(70px, 10vw, 120px);
-
-    }
-
-
-    .home-orb-right {
-
-        width:
-            600px;
-
-        height:
-            600px;
-
-        right:
-            -260px;
+            clamp(65px, 9vw, 105px);
 
     }
 
 }
 
 
-/* ---------- MOBILE ---------- */
+/* =========================================================
+   MOBILE
+   ========================================================= */
 
 @media (max-width: 768px) {
 
-    .home-content {
+    .hero-content {
 
-        padding-top:
-            35px;
+        width:
+            92%;
+
+        transform:
+            translateY(-1vh);
 
     }
 
@@ -948,35 +1103,33 @@
     .availability {
 
         padding:
-            11px 20px;
+            8px 16px;
 
         font-size:
             10px;
 
-        letter-spacing:
-            0.18em;
-
     }
 
 
-    .welcome-text {
+    .welcome {
 
         margin-top:
-            35px;
+            22px;
 
         font-size:
-            32px;
+            28px;
 
     }
 
 
-    .hero-name {
+    .name-white,
+    .name-purple {
 
         font-size:
-            clamp(58px, 15vw, 90px);
+            clamp(55px, 14vw, 85px);
 
-        line-height:
-            0.85;
+        white-space:
+            normal;
 
     }
 
@@ -992,13 +1145,13 @@
     .portfolio-label {
 
         margin-top:
-            38px;
+            24px;
 
         font-size:
-            19px;
+            16px;
 
         letter-spacing:
-            0.22em;
+            0.30em;
 
     }
 
@@ -1006,16 +1159,16 @@
     .hero-description {
 
         width:
-            95%;
+            92%;
 
         margin-top:
-            28px;
+            20px;
 
         font-size:
-            13px;
+            14px;
 
         line-height:
-            1.7;
+            1.6;
 
     }
 
@@ -1026,21 +1179,28 @@
             wrap;
 
         margin-top:
-            30px;
+            25px;
+
+        gap:
+            8px;
 
     }
 
 
-    .btn {
+    .btn-primary,
+    .btn-secondary {
 
-        min-height:
-            46px;
+        min-width:
+            125px;
+
+        height:
+            48px;
 
         padding:
-            0 20px;
+            0 15px;
 
         font-size:
-            12px;
+            13px;
 
     }
 
@@ -1056,103 +1216,63 @@
     }
 
 
-    .home-orb-left {
+    .orb-left {
 
         width:
-            350px;
+            220px;
 
         height:
-            350px;
+            220px;
 
         left:
-            -220px;
-
-        bottom:
-            -100px;
+            -130px;
 
     }
 
 
-    .home-orb-right {
+    .orb-right {
 
         width:
-            450px;
+            400px;
 
         height:
-            450px;
+            400px;
 
         right:
-            -260px;
-
-        top:
-            300px;
+            -250px;
 
     }
 
 
-    .home-orb-small {
+    .orb-small {
 
-        width:
-            220px;
-
-        height:
-            220px;
-
-        right:
-            -50px;
-
-        bottom:
-            100px;
+        display:
+            none;
 
     }
 
 }
 
 
-/* ---------- SMALL MOBILE ---------- */
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
 
 @media (max-width: 480px) {
 
-    .home-content {
+    .name-white,
+    .name-purple {
 
-        width:
-            92%;
+        font-size:
+            50px;
 
-        padding-top:
+    }
+
+
+    .welcome {
+
+        font-size:
             25px;
-
-    }
-
-
-    .availability {
-
-        max-width:
-            90%;
-
-        padding:
-            10px 16px;
-
-        font-size:
-            9px;
-
-    }
-
-
-    .welcome-text {
-
-        margin-top:
-            30px;
-
-        font-size:
-            28px;
-
-    }
-
-
-    .hero-name {
-
-        font-size:
-            clamp(48px, 14vw, 70px);
 
     }
 
@@ -1160,21 +1280,18 @@
     .portfolio-label {
 
         margin-top:
-            32px;
+            22px;
 
         font-size:
-            17px;
+            13px;
 
         letter-spacing:
-            0.18em;
+            0.24em;
 
     }
 
 
     .hero-description {
-
-        margin-top:
-            24px;
 
         font-size:
             12px;
@@ -1185,21 +1302,22 @@
     .hero-buttons {
 
         gap:
-            9px;
-
-        margin-top:
-            25px;
+            7px;
 
     }
 
 
-    .btn {
+    .btn-primary,
+    .btn-secondary {
 
-        min-height:
-            42px;
+        min-width:
+            115px;
+
+        height:
+            44px;
 
         padding:
-            0 15px;
+            0 13px;
 
         font-size:
             11px;
@@ -1209,16 +1327,69 @@
 
     .scroll-indicator {
 
-        display:
-            none;
+        left:
+            18px;
+
+        bottom:
+            22px;
+
+        transform:
+            translateX(0);
 
     }
 
 
-    .home-grid {
+    .scroll-indicator span {
 
-        background-size:
-            55px 55px;
+        font-size:
+            8px;
+
+        letter-spacing:
+            0.28em;
+
+    }
+
+
+    .scroll-line {
+
+        height:
+            24px;
+
+    }
+
+
+    .scroll-arrow {
+
+        font-size:
+            19px;
+
+    }
+
+
+    .orb-left {
+
+        width:
+            180px;
+
+        height:
+            180px;
+
+        left:
+            -110px;
+
+    }
+
+
+    .orb-right {
+
+        width:
+            330px;
+
+        height:
+            330px;
+
+        right:
+            -220px;
 
     }
 
