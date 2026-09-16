@@ -7,6 +7,11 @@
     background: var(--black);
 }
 
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
 .about-background {
     position: absolute;
     inset: 0;
@@ -14,20 +19,20 @@
 
     background:
         radial-gradient(
-            circle at 15% 45%,
-            rgba(155, 92, 255, 0.07),
+            circle at 12% 38%,
+            rgba(155, 92, 255, 0.075),
             transparent 28%
         ),
         radial-gradient(
-            circle at 85% 70%,
-            rgba(155, 92, 255, 0.05),
-            transparent 30%
+            circle at 88% 65%,
+            rgba(155, 92, 255, 0.055),
+            transparent 32%
         );
 }
 
 
 /* =========================================================
-   MAIN CONTAINER
+   MAIN INNER
 ========================================================= */
 
 .about-inner {
@@ -40,7 +45,7 @@
 
 
 /* =========================================================
-   ABOUT HEADING
+   SECTION HEADING
 ========================================================= */
 
 .about-heading {
@@ -54,11 +59,15 @@
 
     color: var(--purple-light);
 
-    font-family: "Cormorant Garamond", serif;
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
     font-size: 21px;
     font-weight: 600;
 
     letter-spacing: 0.20em;
+
     line-height: 1;
 
     text-transform: uppercase;
@@ -66,7 +75,7 @@
 
 
 /* =========================================================
-   PROFILE LAYOUT
+   PROFILE
 ========================================================= */
 
 .about-profile {
@@ -83,7 +92,7 @@
 
 
 /* =========================================================
-   PROFILE PHOTO
+   PHOTO
 ========================================================= */
 
 .profile-photo-wrapper {
@@ -93,6 +102,7 @@
 
     padding-top: 2px;
 }
+
 
 .profile-photo-frame {
     position: relative;
@@ -109,6 +119,7 @@
     background:
         rgba(255, 255, 255, 0.018);
 }
+
 
 .profile-photo-frame::before {
     content: "";
@@ -129,6 +140,7 @@
         1px solid
         var(--purple);
 }
+
 
 .profile-photo {
     display: block;
@@ -153,45 +165,42 @@
 
 /* =========================================================
    NAME
-   MUHAMMAD SYEH = WHITE
-   DIARTA = PURPLE
-   SATU BARIS
 ========================================================= */
 
-.profile-content h2 {
-    display: block;
+.profile-name {
+    display: flex;
 
-    width: 100%;
+    flex-direction: column;
 
-    margin: 0 0 8px;
-
-    color: var(--white);
+    margin: 0 0 6px;
 
     font-family:
         "Cormorant Garamond",
         serif;
 
     font-size:
-        clamp(50px, 5vw, 70px);
+        clamp(56px, 5.5vw, 74px);
 
     font-weight: 500;
 
-    line-height: 0.92;
+    line-height: 0.82;
 
-    letter-spacing: -0.04em;
-
-    white-space: nowrap;
+    letter-spacing: -0.045em;
 }
 
-.profile-content h2 span {
-    color: var(--purple);
 
-    white-space: nowrap;
+.name-white {
+    color: var(--white);
+}
+
+
+.name-purple {
+    color: var(--purple);
 }
 
 
 /* =========================================================
-   GIS & GEOSPATIAL ENTHUSIAST
+   ROLE
 ========================================================= */
 
 .profile-role {
@@ -201,21 +210,16 @@
 
     color: var(--purple-light);
 
-    /*
-       Font dibuat lebih elegan agar selaras
-       dengan typography nama dan ABOUT ME.
-    */
     font-family:
-        "Cormorant Garamond",
-        serif;
+        "DM Sans",
+        sans-serif;
 
-    font-size: 20px;
-
+    font-size: 16px;
     font-weight: 600;
 
-    letter-spacing: 0.20em;
+    letter-spacing: 0.19em;
 
-    line-height: 1.1;
+    line-height: 1.2;
 
     text-transform: uppercase;
 }
@@ -233,7 +237,6 @@
     color: var(--text);
 
     font-size: 14px;
-
     font-weight: 300;
 
     line-height: 1.58;
@@ -254,31 +257,18 @@
     margin-top: 10px;
 }
 
-.profile-links-row {
-    display: flex;
-
-    align-items: center;
-
-    gap: 0;
-}
 
 .profile-link {
     display: inline-flex;
 
     align-items: center;
-    justify-content: center;
 
     gap: 7px;
-
-    min-height: 28px;
-
-    padding: 4px 7px;
 
     color:
         rgba(245, 243, 248, 0.72);
 
     font-size: 12px;
-
     font-weight: 500;
 
     white-space: nowrap;
@@ -288,11 +278,13 @@
         transform 0.3s ease;
 }
 
+
 .profile-link:hover {
     color: var(--purple-light);
 
     transform: translateY(-1px);
 }
+
 
 .profile-link-icon {
     display: inline-flex;
@@ -303,17 +295,53 @@
     width: 17px;
     height: 17px;
 
-    flex-shrink: 0;
-
     color: currentColor;
 
     font-size: 12px;
-
     font-weight: 600;
 }
 
+
+.linkedin-icon {
+    font-size: 13px;
+}
+
+
+.location-icon {
+    color: currentColor;
+
+    font-size: 0;
+}
+
+
+.location-icon svg {
+    width: 16px;
+    height: 16px;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.8;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+.profile-link-separator {
+    margin: 0 11px;
+
+    color:
+        rgba(255, 255, 255, 0.24);
+
+    font-size: 13px;
+}
+
+
 .profile-location {
-    width: fit-content;
+    color:
+        rgba(245, 243, 248, 0.72);
 }
 
 
@@ -321,14 +349,7 @@
    EDUCATION
 ========================================================= */
 
-.about-details {
-    display: grid;
-
-    grid-template-columns:
-        1fr;
-
-    gap: 0;
-
+.education-section {
     margin-top: 20px;
 
     padding-top: 15px;
@@ -338,9 +359,10 @@
         var(--border);
 }
 
-.about-detail-column {
-    min-width: 0;
-}
+
+/* =========================================================
+   SECTION LABELS
+========================================================= */
 
 .about-detail-label {
     display: block;
@@ -354,7 +376,6 @@
         serif;
 
     font-size: 19px;
-
     font-weight: 600;
 
     letter-spacing: 0.19em;
@@ -381,6 +402,7 @@
     row-gap: 4px;
 }
 
+
 .education-place {
     color: var(--white);
 
@@ -395,6 +417,7 @@
     line-height: 1;
 }
 
+
 .education-degree {
     color: var(--text);
 
@@ -404,6 +427,7 @@
 
     line-height: 1.2;
 }
+
 
 .education-year {
     color: var(--text-soft);
@@ -416,11 +440,33 @@
 }
 
 
+.education-separator {
+    color:
+        rgba(155, 92, 255, 0.65);
+
+    font-size: 14px;
+}
+
+
 /* =========================================================
    TECHNICAL SKILLS
 ========================================================= */
 
-.skills-list {
+.skills-section {
+    margin-top: 17px;
+}
+
+
+.skills-section .about-detail-label {
+    margin-bottom: 10px;
+}
+
+
+/* =========================================================
+   SKILLS GRID
+========================================================= */
+
+.skills-cards {
     display: grid;
 
     grid-template-columns:
@@ -431,24 +477,16 @@
     width: 100%;
 }
 
-.skill-group {
-    position: relative;
-
-    width: 100%;
-}
-
 
 /* =========================================================
-   TECHNICAL SKILL CARD
+   SKILL CARD
 ========================================================= */
 
 .skill-card {
     position: relative;
 
     width: 100%;
-
     height: 165px;
-
     min-height: 165px;
 
     padding: 17px 22px;
@@ -474,6 +512,7 @@
         box-shadow 0.3s ease;
 }
 
+
 .skill-card:hover {
     transform: translateY(-3px);
 
@@ -486,6 +525,132 @@
 
         0 0 28px
         rgba(155, 92, 255, 0.08);
+}
+
+
+/* =========================================================
+   CARD DECORATIONS
+========================================================= */
+
+.skill-decoration {
+    position: absolute;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+/* =========================================================
+   GIS DECORATION
+========================================================= */
+
+.skill-card-gis .skill-decoration {
+    right: -35px;
+    bottom: -45px;
+
+    width: 250px;
+    height: 180px;
+
+    opacity: 0.55;
+
+    background:
+        repeating-radial-gradient(
+            ellipse at 60% 70%,
+            transparent 0 11px,
+            rgba(155, 92, 255, 0.13) 12px 13px,
+            transparent 14px 23px
+        );
+
+    transform:
+        rotate(-12deg)
+        scale(1.1);
+}
+
+
+/* =========================================================
+   REMOTE SENSING DECORATION
+========================================================= */
+
+.skill-card-remote .skill-decoration {
+    right: -15px;
+    bottom: -45px;
+
+    width: 250px;
+    height: 210px;
+
+    opacity: 0.40;
+
+    background:
+        radial-gradient(
+            ellipse at 55% 55%,
+            rgba(91, 64, 141, 0.40),
+            transparent 52%
+        ),
+
+        radial-gradient(
+            circle at 40% 35%,
+            rgba(155, 92, 255, 0.18),
+            transparent 25%
+        );
+
+    filter: blur(1px);
+}
+
+
+/* =========================================================
+   PHOTOGRAMMETRY DECORATION
+========================================================= */
+
+.skill-card-photo .skill-decoration {
+    right: -25px;
+    bottom: -45px;
+
+    width: 280px;
+    height: 180px;
+
+    opacity: 0.42;
+
+    background:
+        linear-gradient(
+            135deg,
+            transparent 47%,
+            rgba(155, 92, 255, 0.14) 48%,
+            transparent 49%
+        );
+
+    background-size: 22px 22px;
+
+    transform:
+        perspective(400px)
+        rotateX(48deg)
+        rotateZ(-10deg);
+}
+
+
+.skill-card-photo .skill-decoration::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 25px;
+
+    border:
+        1px solid
+        rgba(155, 92, 255, 0.12);
+
+    clip-path:
+        polygon(
+            0 80%,
+            20% 58%,
+            37% 68%,
+            52% 35%,
+            68% 48%,
+            82% 20%,
+            100% 0,
+            100% 100%,
+            0 100%
+        );
 }
 
 
@@ -532,6 +697,7 @@
 
     color: var(--purple-light);
 }
+
 
 .skill-icon svg {
     width: 29px;
@@ -583,12 +749,15 @@
 
 /* =========================================================
    CARD TITLE
+   SEMUA TITLE WAJIB 1 BARIS
 ========================================================= */
 
 .skill-card h3 {
     display: block;
 
     width: 100%;
+
+    min-height: auto;
 
     margin: 0 0 9px;
 
@@ -601,6 +770,8 @@
     line-height: 1.15;
 
     letter-spacing: -0.01em;
+
+    white-space: nowrap;
 }
 
 
@@ -622,12 +793,14 @@
 
 /* =========================================================
    CARD DETAILS
+   1 BARIS + TIDAK TERPOTONG
 ========================================================= */
 
 .skill-card p {
     display: block;
 
     width: 100%;
+    max-width: none;
 
     margin: 0;
 
@@ -643,6 +816,7 @@
     white-space: nowrap;
 }
 
+
 .skill-card p span {
     color:
         rgba(155, 92, 255, 0.72);
@@ -652,101 +826,7 @@
 
 
 /* =========================================================
-   CARD DECORATIONS
-========================================================= */
-
-.skill-decoration {
-    position: absolute;
-
-    pointer-events: none;
-
-    z-index: 0;
-}
-
-
-/* GIS */
-
-.skill-card-gis .skill-decoration {
-    right: -35px;
-    bottom: -45px;
-
-    width: 250px;
-    height: 180px;
-
-    opacity: 0.55;
-
-    background:
-        repeating-radial-gradient(
-            ellipse at 60% 70%,
-            transparent 0 11px,
-            rgba(155, 92, 255, 0.13) 12px 13px,
-            transparent 14px 23px
-        );
-
-    transform:
-        rotate(-12deg)
-        scale(1.1);
-}
-
-
-/* REMOTE SENSING */
-
-.skill-card-remote .skill-decoration {
-    right: -15px;
-    bottom: -45px;
-
-    width: 250px;
-    height: 210px;
-
-    opacity: 0.40;
-
-    background:
-        radial-gradient(
-            ellipse at 55% 55%,
-            rgba(91, 64, 141, 0.40),
-            transparent 52%
-        ),
-
-        radial-gradient(
-            circle at 40% 35%,
-            rgba(155, 92, 255, 0.18),
-            transparent 25%
-        );
-
-    filter: blur(1px);
-}
-
-
-/* PHOTOGRAMMETRY */
-
-.skill-card-photo .skill-decoration {
-    right: -25px;
-    bottom: -45px;
-
-    width: 280px;
-    height: 180px;
-
-    opacity: 0.42;
-
-    background:
-        linear-gradient(
-            135deg,
-            transparent 47%,
-            rgba(155, 92, 255, 0.14) 48%,
-            transparent 49%
-        );
-
-    background-size: 22px 22px;
-
-    transform:
-        perspective(400px)
-        rotateX(48deg)
-        rotateZ(-10deg);
-}
-
-
-/* =========================================================
-   SCROLL
+   SCROLL INDICATOR
 ========================================================= */
 
 .about-scroll-indicator {
@@ -767,6 +847,7 @@
     gap: 4px;
 }
 
+
 .about-scroll-text {
     color: var(--text-soft);
 
@@ -785,6 +866,7 @@
         2s ease-in-out infinite;
 }
 
+
 .about-scroll-arrow {
     color: var(--purple-light);
 
@@ -801,6 +883,7 @@
         1.6s ease-in-out infinite;
 }
 
+
 @keyframes aboutScrollText {
 
     0%,
@@ -814,6 +897,7 @@
         transform: translateY(-2px);
     }
 }
+
 
 @keyframes aboutScrollArrow {
 
@@ -852,6 +936,7 @@
         padding-bottom: 78px;
     }
 
+
     .about-profile {
         grid-template-columns:
             190px
@@ -860,34 +945,42 @@
         gap: 32px;
     }
 
+
     .profile-photo-frame {
         width: 175px;
         height: 215px;
     }
 
-    .profile-content h2 {
-        font-size: 55px;
+
+    .profile-name {
+        font-size: 58px;
     }
 
+
     .profile-role {
-        font-size: 18px;
+        font-size: 14px;
     }
+
 
     .profile-description {
         font-size: 13px;
     }
 
+
     .about-heading .section-kicker {
         font-size: 19px;
     }
+
 
     .about-detail-label {
         font-size: 17px;
     }
 
-    .skills-list {
+
+    .skills-cards {
         gap: 13px;
     }
+
 
     .skill-card {
         height: 160px;
@@ -896,18 +989,22 @@
         padding: 16px;
     }
 
+
     .skill-icon {
         width: 50px;
         height: 50px;
     }
 
+
     .skill-card h3 {
         font-size: 15px;
     }
 
+
     .skill-card p {
         font-size: 9.5px;
     }
+
 }
 
 
@@ -925,6 +1022,7 @@
         overflow: visible;
     }
 
+
     .about-inner {
         width: 88%;
 
@@ -932,13 +1030,16 @@
         padding-bottom: 90px;
     }
 
+
     .about-heading {
         margin-bottom: 22px;
     }
 
+
     .about-heading .section-kicker {
         font-size: 18px;
     }
+
 
     .about-profile {
         grid-template-columns: 1fr;
@@ -946,22 +1047,26 @@
         gap: 25px;
     }
 
+
     .profile-photo-frame {
         width: 155px;
         height: 190px;
     }
 
-    .profile-content h2 {
-        font-size: 48px;
-
-        white-space: nowrap;
-    }
 
     .profile-role {
-        font-size: 17px;
+        font-size: 12px;
 
         margin-bottom: 12px;
     }
+
+
+    .profile-name {
+        font-size: 50px;
+
+        line-height: 0.88;
+    }
+
 
     .profile-description {
         font-size: 13px;
@@ -969,53 +1074,80 @@
         line-height: 1.7;
     }
 
+
     .profile-links {
         margin-top: 12px;
     }
+
 
     .profile-link {
         font-size: 10.5px;
     }
 
+
+    .education-section {
+        margin-top: 28px;
+    }
+
+
+    .about-detail-label {
+        font-size: 17px;
+    }
+
+
     .education-item {
         column-gap: 7px;
     }
+
 
     .education-place {
         font-size: 25px;
     }
 
+
     .education-degree {
         font-size: 12px;
     }
+
 
     .education-year {
         font-size: 11px;
     }
 
-    .skills-list {
+
+    .skills-section {
+        margin-top: 25px;
+    }
+
+
+    .skills-cards {
         grid-template-columns: 1fr;
 
         gap: 14px;
     }
+
 
     .skill-card {
         height: 165px;
         min-height: 165px;
     }
 
+
     .skill-card h3 {
         font-size: 17px;
     }
+
 
     .skill-card p {
         font-size: 10.5px;
     }
 
+
     .about-scroll-indicator {
         left: 25px;
         bottom: 22px;
     }
+
 }
 
 
@@ -1029,26 +1161,27 @@
         width: 90%;
     }
 
+
     .about-heading .section-kicker {
         font-size: 16px;
     }
+
 
     .profile-photo-frame {
         width: 140px;
         height: 170px;
     }
 
-    .profile-content h2 {
-        font-size: 40px;
-
-        white-space: nowrap;
-    }
 
     .profile-role {
-        font-size: 15px;
-
-        letter-spacing: 0.16em;
+        font-size: 10px;
     }
+
+
+    .profile-name {
+        font-size: 43px;
+    }
+
 
     .profile-description {
         font-size: 12px;
@@ -1056,35 +1189,48 @@
         line-height: 1.7;
     }
 
+
     .profile-links {
         flex-wrap: wrap;
 
         row-gap: 5px;
     }
 
+
     .profile-link {
         font-size: 10px;
     }
+
+
+    .profile-link-separator {
+        margin: 0 6px;
+    }
+
 
     .about-detail-label {
         font-size: 15px;
     }
 
+
     .education-item {
         column-gap: 6px;
     }
+
 
     .education-place {
         font-size: 23px;
     }
 
+
     .education-degree {
         font-size: 11px;
     }
 
+
     .education-year {
         font-size: 10px;
     }
+
 
     .skill-card {
         height: 165px;
@@ -1093,29 +1239,42 @@
         padding: 16px;
     }
 
+
     .skill-icon {
         width: 48px;
         height: 48px;
     }
 
+
+    .skill-icon svg {
+        width: 26px;
+        height: 26px;
+    }
+
+
     .skill-card h3 {
         font-size: 15px;
     }
 
+
     .skill-card p {
         font-size: 10px;
     }
+
 
     .about-scroll-indicator {
         left: 18px;
         bottom: 20px;
     }
 
+
     .about-scroll-text {
         font-size: 8px;
     }
 
+
     .about-scroll-arrow {
         font-size: 18px;
     }
+
 }
