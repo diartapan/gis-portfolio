@@ -258,6 +258,17 @@
     class="form-result"
     aria-live="polite"
 ></div>
+                           
+                            <a
+    href="#"
+    id="whatsappButton"
+    class="whatsapp-button"
+    target="_blank"
+    rel="noopener noreferrer"
+>
+    Continue to WhatsApp
+</a>
+                            
 
 </form>
 
@@ -301,6 +312,7 @@
         const form = document.getElementById("contactForm");
         const result = document.getElementById("formResult");
         const button = form.querySelector(".contact-submit");
+        const whatsappButton = document.getElementById("whatsappButton");
 
         form.addEventListener("submit", async function (event) {
 
@@ -338,13 +350,37 @@
 
                 if (response.status === 200) {
 
-                    result.textContent =
-                        "Message sent successfully. Thank you for reaching out.";
+    result.textContent =
+        "Message sent successfully. Thank you for reaching out.";
 
-                    result.classList.remove("error");
-                    result.classList.add("success");
+    result.classList.remove("error");
+    result.classList.add("success");
 
-                    form.reset();
+
+    const name = formData.get("name");
+    const company = formData.get("company");
+    const email = formData.get("email");
+    const message = formData.get("message");
+
+
+    const whatsappMessage =
+        "Hello Muhammad Syeh Diarta,%0A%0A" +
+        "Name: " + encodeURIComponent(name) + "%0A" +
+        "Company: " + encodeURIComponent(company || "-") + "%0A" +
+        "Email: " + encodeURIComponent(email) + "%0A%0A" +
+        "Message:%0A" +
+        encodeURIComponent(message) + "%0A%0A" +
+        "I contacted you through your GIS Portfolio.";
+
+
+    whatsappButton.href =
+        "https://wa.me/6281215126774?text=" +
+        whatsappMessage;
+
+    whatsappButton.style.display = "inline-flex";
+
+
+    form.reset();
 
                 } else {
 
