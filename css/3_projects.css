@@ -139,17 +139,15 @@
 
 .projects-hero p {
     width: 100%;
-
-    margin-top: 22px;
-
+    max-width: 100%;
+    margin: 22px auto 0;
     color: var(--text);
-
     font-size: 14px;
     font-weight: 300;
-
     line-height: 1.7;
-
-    white-space: nowrap;
+    text-align: center;
+    white-space: normal;
+    overflow-wrap: normal;
 }
 
 
