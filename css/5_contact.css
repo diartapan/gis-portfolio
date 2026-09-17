@@ -1,477 +1,265 @@
 /* =========================================================
-   DIARTA GIS PORTFOLIO
    CONTACT PAGE
    ========================================================= */
 
-
-/* =========================
-   CONTACT SECTION
-   ========================= */
-
 .contact-section {
+    position: relative;
     background: var(--black);
 }
-
-
-/* =========================
-   BACKGROUND
-   ========================= */
 
 .contact-background {
     position: absolute;
     inset: 0;
-
+    pointer-events: none;
     background:
         radial-gradient(
-            circle at 82% 50%,
-            rgba(155, 92, 255, 0.07),
-            transparent 32%
+            circle at 78% 30%,
+            rgba(155, 92, 255, 0.10),
+            transparent 30%
         ),
-        linear-gradient(
-            rgba(255, 255, 255, 0.015) 1px,
-            transparent 1px
-        ),
-        linear-gradient(
-            90deg,
-            rgba(255, 255, 255, 0.015) 1px,
-            transparent 1px
+        radial-gradient(
+            circle at 15% 80%,
+            rgba(155, 92, 255, 0.06),
+            transparent 28%
         );
-
-    background-size:
-        auto,
-        90px 90px,
-        90px 90px;
-
-    pointer-events: none;
 }
-
-
-/* =========================
-   PURPLE GLOW
-   ========================= */
-
-.contact-section::before {
-
-    content: "";
-
-    position: absolute;
-
-    width: 550px;
-    height: 550px;
-
-    right: -180px;
-    top: 50%;
-
-    transform: translateY(-50%);
-
-    background: var(--purple);
-
-    opacity: 0.045;
-
-    filter: blur(130px);
-
-    border-radius: 50%;
-
-    pointer-events: none;
-}
-
-
-/* =========================
-   INNER
-   ========================= */
 
 .contact-inner {
     position: relative;
-
-    display: flex;
-
-    flex-direction: row;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    gap: 60px;
+    z-index: 2;
+    width: min(1100px, 86%);
+    padding-top: 120px;
+    padding-bottom: 80px;
 }
 
 
-/* =========================
-   CONTACT CONTENT
-   ========================= */
+/* =========================================================
+   HEADER
+   ========================================================= */
 
-.contact-content {
-
-    position: relative;
-
-    z-index: 5;
-
-    width: 58%;
+.contact-header {
+    text-align: center;
+    margin-bottom: 50px;
 }
 
+.contact-header .section-kicker {
+    margin-bottom: 14px;
+}
 
-/* =========================
-   HEADING
-   ========================= */
-
-.contact-content h1 {
-
-    margin-bottom: 22px;
-
+.contact-header h1 {
+    margin: 0;
     color: var(--white);
-
-    font-family:
-        "Cormorant Garamond",
-        serif;
-
-    font-size:
-        clamp(64px, 7vw, 100px);
-
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(60px, 7vw, 96px);
     font-weight: 500;
-
-    line-height: 0.88;
-
+    line-height: 0.92;
     letter-spacing: -0.04em;
 }
 
-
-.contact-content h1 span {
-
-    display: block;
-
+.contact-header h1 span {
     color: var(--purple);
 }
 
-
-/* =========================
-   DESCRIPTION
-   ========================= */
-
-.contact-description {
-
-    max-width: 520px;
-
-    margin-bottom: 32px;
-
+.contact-header p {
+    max-width: 100%;
+    margin: 20px auto 0;
     color: var(--text);
-
     font-size: 14px;
-
+    font-weight: 300;
     line-height: 1.7;
 }
 
 
-/* =========================
-   CONTACT LINKS
-   ========================= */
+/* =========================================================
+   CONTACT CONTENT
+   ========================================================= */
 
-.contact-links {
-
-    display: flex;
-
-    flex-direction: column;
-
+.contact-content {
     width: 100%;
-
-    max-width: 570px;
-
-    border-top: 1px solid var(--border);
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: clamp(55px, 8vw, 110px);
+    align-items: start;
 }
 
 
-/* =========================
-   CONTACT LINK
-   ========================= */
+/* =========================================================
+   CONTACT INFORMATION
+   ========================================================= */
 
-.contact-link {
-
-    position: relative;
-
+.contact-info {
     display: flex;
-
-    align-items: center;
-
-    gap: 18px;
-
-    min-height: 78px;
-
-    padding: 12px 5px;
-
-    border-bottom: 1px solid var(--border);
-
-    transition:
-        padding-left 0.3s ease,
-        background 0.3s ease;
-}
-
-
-.contact-link:hover {
-
-    padding-left: 14px;
-
-    background:
-        rgba(155, 92, 255, 0.035);
-}
-
-
-/* =========================
-   CONTACT ICON
-   ========================= */
-
-.contact-icon {
-
-    width: 42px;
-    height: 42px;
-
-    flex-shrink: 0;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    border: 1px solid
-        rgba(155, 92, 255, 0.30);
-
-    color: var(--purple-light);
-
-    background:
-        rgba(155, 92, 255, 0.045);
-
-    font-size: 13px;
-
-    font-weight: 600;
-
-    transition:
-        background 0.3s ease,
-        border-color 0.3s ease;
-}
-
-
-.contact-link:hover .contact-icon {
-
-    background:
-        rgba(155, 92, 255, 0.12);
-
-    border-color:
-        rgba(155, 92, 255, 0.60);
-}
-
-
-/* =========================
-   LINK CONTENT
-   ========================= */
-
-.contact-link-content {
-
-    display: flex;
-
     flex-direction: column;
-
-    gap: 3px;
-
-    min-width: 0;
+    gap: 34px;
+    padding-top: 8px;
 }
 
-
-/* =========================
-   LABEL
-   ========================= */
+.contact-info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
 
 .contact-label {
-
     color: var(--purple-light);
-
-    font-size: 9px;
-
+    font-size: 10px;
     font-weight: 600;
-
-    letter-spacing: 0.18em;
-
-    text-transform: uppercase;
+    letter-spacing: 0.2em;
 }
 
-
-/* =========================
-   VALUE
-   ========================= */
-
-.contact-value {
-
+.contact-info-item a {
+    width: fit-content;
     color: var(--white);
-
-    font-size: 13px;
-
-    font-weight: 500;
-
-    white-space: nowrap;
-
-    overflow: hidden;
-
-    text-overflow: ellipsis;
-}
-
-
-/* =========================
-   ARROW
-   ========================= */
-
-.contact-arrow {
-
-    margin-left: auto;
-
-    color: var(--text-soft);
-
-    font-size: 20px;
-
+    font-size: 15px;
+    font-weight: 400;
     transition:
         color 0.3s ease,
         transform 0.3s ease;
 }
 
-
-.contact-link:hover .contact-arrow {
-
+.contact-info-item a:hover {
     color: var(--purple-light);
-
-    transform: translateX(5px);
+    transform: translateX(4px);
 }
 
 
-/* =========================
-   CLOSING
-   ========================= */
+/* =========================================================
+   CONTACT FORM
+   ========================================================= */
 
-.contact-closing {
-
-    margin-top: 25px;
-
-    color: var(--text-soft);
-
-    font-size: 10px;
-
-    font-weight: 500;
-
-    letter-spacing: 0.16em;
-
-    text-transform: uppercase;
+.contact-form-wrapper {
+    width: 100%;
 }
 
-
-/* =========================
-   DECORATION
-   ========================= */
-
-.contact-decoration {
-
-    position: relative;
-
-    width: 38%;
-
-    height: 430px;
-
+.contact-form {
+    width: 100%;
     display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    pointer-events: none;
+    flex-direction: column;
+    gap: 24px;
 }
 
-
-/* =========================
-   MAIN ORB
-   ========================= */
-
-.contact-orb {
-
-    position: absolute;
-
-    width: 230px;
-    height: 230px;
-
-    border-radius: 50%;
-
-    background:
-        radial-gradient(
-            circle at 35% 30%,
-            rgba(181, 124, 255, 0.30),
-            rgba(155, 92, 255, 0.10) 45%,
-            rgba(155, 92, 255, 0.025) 70%,
-            transparent 72%
-        );
-
-    filter: blur(1px);
-
-    box-shadow:
-        0 0 80px rgba(155, 92, 255, 0.12);
+.form-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
 }
 
-
-/* =========================
-   DECORATIVE CIRCLES
-   ========================= */
-
-.contact-circle {
-
-    position: absolute;
-
-    border: 1px solid
-        rgba(155, 92, 255, 0.18);
-
-    border-radius: 50%;
-}
-
-
-.circle-one {
-
-    width: 300px;
-    height: 300px;
-}
-
-
-.circle-two {
-
-    width: 390px;
-    height: 390px;
-
-    border-color:
-        rgba(255, 255, 255, 0.055);
-}
-
-
-/* =========================
-   DECORATIVE TEXT
-   ========================= */
-
-.contact-decoration-text {
-
-    position: relative;
-
-    z-index: 2;
-
-    color:
-        rgba(255, 255, 255, 0.07);
-
-    font-family:
-        "Cormorant Garamond",
-        serif;
-
-    font-size: 110px;
-
+.form-group label {
+    color: var(--purple-light);
+    font-size: 10px;
     font-weight: 600;
+    letter-spacing: 0.2em;
+}
 
-    letter-spacing: -0.05em;
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 0;
+    outline: none;
+    background: rgba(255, 255, 255, 0.025);
+    color: var(--white);
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    transition:
+        border-color 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.form-group input {
+    height: 48px;
+    padding: 0 16px;
+}
+
+.form-group textarea {
+    min-height: 130px;
+    padding: 14px 16px;
+    resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--text-soft);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: rgba(155, 92, 255, 0.7);
+    background: rgba(155, 92, 255, 0.035);
+    box-shadow: 0 0 0 1px rgba(155, 92, 255, 0.12);
 }
 
 
-/* =========================
-   PAGE NUMBER
-   ========================= */
+/* =========================================================
+   SUBMIT BUTTON
+   ========================================================= */
 
-.contact-section .page-number {
+.contact-submit {
+    align-self: flex-start;
+    min-width: 150px;
+    height: 46px;
+    padding: 0 24px;
+    border: 1px solid var(--purple);
+    background: var(--purple);
+    color: var(--white);
+    font-family: "DM Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
 
-    z-index: 10;
+.contact-submit:hover {
+    background: var(--purple-dark);
+    border-color: var(--purple-light);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(155, 92, 255, 0.18);
+}
+
+
+/* =========================================================
+   SCROLL INDICATOR
+   ========================================================= */
+
+.contact-section .scroll-indicator {
+    position: absolute;
+    left: clamp(35px, 6vw, 100px);
+    bottom: 42px;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--text-soft);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+}
+
+.contact-section .scroll-arrow {
+    color: var(--purple-light);
+    font-size: 17px;
+    line-height: 1;
+    animation: contactScrollArrow 1.5s ease-in-out infinite;
+}
+
+@keyframes contactScrollArrow {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(5px);
+    }
 }
 
 
@@ -479,274 +267,103 @@
    RESPONSIVE
    ========================================================= */
 
-
-/* =========================
-   1000px
-   ========================= */
-
-@media (max-width: 1000px) {
-
-    .contact-inner {
-
-        gap: 35px;
-    }
-
+@media (max-width: 900px) {
 
     .contact-content {
-
-        width: 62%;
+        grid-template-columns: 1fr;
+        gap: 45px;
     }
 
-
-    .contact-decoration {
-
-        width: 34%;
-
-        height: 360px;
+    .contact-info {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
     }
 
-
-    .contact-orb {
-
-        width: 190px;
-        height: 190px;
-    }
-
-
-    .circle-one {
-
-        width: 250px;
-        height: 250px;
-    }
-
-
-    .circle-two {
-
-        width: 320px;
-        height: 320px;
-    }
-
-
-    .contact-decoration-text {
-
-        font-size: 90px;
+    .contact-header {
+        margin-bottom: 40px;
     }
 
 }
 
-
-/* =========================
-   768px
-   ========================= */
 
 @media (max-width: 768px) {
 
     .contact-inner {
-
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        justify-content: center;
-
-        gap: 25px;
+        padding-top: 100px;
+        padding-bottom: 70px;
     }
 
+    .contact-header {
+        margin-bottom: 35px;
+    }
+
+    .contact-header h1 {
+        font-size: 60px;
+    }
 
     .contact-content {
-
-        width: 100%;
+        gap: 38px;
     }
 
-
-    .contact-content h1 {
-
-        font-size: 68px;
-
-        margin-bottom: 18px;
+    .contact-info {
+        grid-template-columns: 1fr;
+        gap: 22px;
     }
 
-
-    .contact-description {
-
-        max-width: 600px;
-
-        margin-bottom: 25px;
-
-        font-size: 12px;
+    .contact-form {
+        gap: 20px;
     }
 
-
-    .contact-links {
-
-        max-width: 100%;
-    }
-
-
-    .contact-link {
-
-        min-height: 70px;
-    }
-
-
-    .contact-decoration {
-
-        position: absolute;
-
-        width: 320px;
-        height: 320px;
-
-        right: -100px;
-        bottom: -80px;
-
-        opacity: 0.55;
-    }
-
-
-    .contact-orb {
-
-        width: 160px;
-        height: 160px;
-    }
-
-
-    .circle-one {
-
-        width: 220px;
-        height: 220px;
-    }
-
-
-    .circle-two {
-
-        width: 280px;
-        height: 280px;
-    }
-
-
-    .contact-decoration-text {
-
-        font-size: 75px;
+    .contact-section .scroll-indicator {
+        left: 25px;
+        bottom: 30px;
     }
 
 }
 
 
-/* =========================
-   480px
-   ========================= */
-
 @media (max-width: 480px) {
 
     .contact-inner {
-
         width: 90%;
+    }
 
+    .contact-header h1 {
+        font-size: 50px;
+    }
+
+    .contact-header p {
+        font-size: 13px;
+    }
+
+    .contact-content {
+        gap: 32px;
+    }
+
+    .contact-info {
         gap: 20px;
     }
 
-
-    .contact-content h1 {
-
-        font-size: 54px;
-
-        line-height: 0.9;
+    .contact-info-item a {
+        font-size: 14px;
     }
 
-
-    .contact-description {
-
-        font-size: 11px;
-
-        line-height: 1.6;
-
-        margin-bottom: 20px;
+    .form-group input {
+        height: 46px;
     }
 
-
-    .contact-link {
-
-        min-height: 64px;
-
-        gap: 12px;
+    .form-group textarea {
+        min-height: 115px;
     }
 
-
-    .contact-icon {
-
-        width: 36px;
-        height: 36px;
-
-        font-size: 11px;
+    .contact-submit {
+        width: 100%;
     }
 
-
-    .contact-label {
-
-        font-size: 8px;
-    }
-
-
-    .contact-value {
-
-        max-width: 210px;
-
-        font-size: 11px;
-    }
-
-
-    .contact-arrow {
-
-        font-size: 17px;
-    }
-
-
-    .contact-closing {
-
-        margin-top: 18px;
-
-        font-size: 8px;
-
-        letter-spacing: 0.12em;
-    }
-
-
-    .contact-decoration {
-
-        width: 230px;
-        height: 230px;
-
-        right: -80px;
-        bottom: -55px;
-
-        opacity: 0.40;
-    }
-
-
-    .contact-orb {
-
-        width: 120px;
-        height: 120px;
-    }
-
-
-    .circle-one {
-
-        width: 170px;
-        height: 170px;
-    }
-
-
-    .circle-two {
-
-        width: 220px;
-        height: 220px;
-    }
-
-
-    .contact-decoration-text {
-
-        font-size: 55px;
+    .contact-section .scroll-indicator {
+        left: 18px;
+        bottom: 25px;
     }
 
 }
