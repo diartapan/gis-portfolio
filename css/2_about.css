@@ -168,10 +168,6 @@
 ========================================================= */
 
 .profile-name {
-    display: flex;
-
-    flex-direction: column;
-
     margin: 0 0 6px;
 
     font-family:
@@ -183,9 +179,11 @@
 
     font-weight: 500;
 
-    line-height: 0.82;
+    line-height: 0.9;
 
     letter-spacing: -0.045em;
+
+    white-space: nowrap;
 }
 
 
