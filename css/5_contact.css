@@ -366,4 +366,29 @@
         bottom: 25px;
     }
 
+
+   /* =========================================================
+   FORM RESULT
+   ========================================================= */
+
+.form-result {
+    display: none;
+    margin-top: 14px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.form-result.success {
+    color: var(--purple-light);
+}
+
+.form-result.error {
+    color: #ff8f8f;
+}
+
+.contact-submit:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
 }
