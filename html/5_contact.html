@@ -160,8 +160,6 @@
                         <form
     class="contact-form"
     id="contactForm"
-    action="https://api.web3forms.com/submit"
-    method="POST"
 >
 
     <input
@@ -249,11 +247,17 @@
     <!-- SUBMIT -->
 
     <button
-        type="submit"
-        class="contact-submit"
-    >
-        Send Message
-    </button>
+    type="submit"
+    class="contact-submit"
+>
+    Send Message
+</button>
+
+<div
+    id="formResult"
+    class="form-result"
+    aria-live="polite"
+></div>
 
 </form>
 
@@ -287,7 +291,91 @@
 
         </section>
 
-    </div>
+        </div>
+
+
+    <!-- CONTACT FORM SCRIPT -->
+
+    <script>
+
+        const form = document.getElementById("contactForm");
+        const result = document.getElementById("formResult");
+        const button = form.querySelector(".contact-submit");
+
+        form.addEventListener("submit", async function (event) {
+
+            event.preventDefault();
+
+            const formData = new FormData(form);
+
+            const object = Object.fromEntries(formData);
+
+            const json = JSON.stringify(object);
+
+            result.style.display = "block";
+            result.textContent = "Sending message...";
+
+            button.disabled = true;
+            button.textContent = "Sending...";
+
+            try {
+
+                const response = await fetch(
+                    "https://api.web3forms.com/submit",
+                    {
+                        method: "POST",
+
+                        headers: {
+                            "Content-Type": "application/json",
+                            "Accept": "application/json"
+                        },
+
+                        body: json
+                    }
+                );
+
+                const data = await response.json();
+
+                if (response.status === 200) {
+
+                    result.textContent =
+                        "Message sent successfully. Thank you for reaching out.";
+
+                    result.classList.remove("error");
+                    result.classList.add("success");
+
+                    form.reset();
+
+                } else {
+
+                    result.textContent =
+                        data.message || "Something went wrong. Please try again.";
+
+                    result.classList.remove("success");
+                    result.classList.add("error");
+
+                }
+
+            } catch (error) {
+
+                result.textContent =
+                    "Something went wrong. Please try again.";
+
+                result.classList.remove("success");
+                result.classList.add("error");
+
+                console.error(error);
+
+            } finally {
+
+                button.disabled = false;
+                button.textContent = "Send Message";
+
+            }
+
+        });
+
+    </script>
 
 </body>
 </html>
